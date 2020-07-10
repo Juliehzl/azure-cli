@@ -244,7 +244,7 @@ def load_command_table(self, _):  # pylint: disable=too-many-locals, too-many-st
         resource_type=ResourceType.DATA_STORAGE)
 
     blob_client_sdk = CliCommandType(
-        operation_tmpl='azure.multiapi.storagev2.blob._blob_client#BlobClient.{}',
+        operations_tmpl='azure.multiapi.storagev2.blob._blob_client#BlobClient.{}',
         client_factory=cf_blob_client,
         resource_type=ResourceType.DATA_STORAGE_BLOB
     )
@@ -258,6 +258,7 @@ def load_command_table(self, _):  # pylint: disable=too-many-locals, too-many-st
         g.storage_custom_command_oauth('show', 'show_blob_v2', transform=transform_blob_json_output,
                                        table_transformer=transform_blob_output,
                                        exception_handler=show_exception_handler)
+        g.storage_command_oauth('delete', 'delete_blob')
 
     with self.command_group('storage blob', command_type=block_blob_sdk,
                             custom_command_type=get_custom_sdk('blob', blob_data_service_factory)) as g:
