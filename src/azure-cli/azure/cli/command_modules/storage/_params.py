@@ -80,10 +80,12 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
              'ZRS replication types, hence account conversions to geo-redundant accounts would not be possible. '
              'For more information, please refer to https://go.microsoft.com/fwlink/?linkid=2086047.')
     adds_type = CLIArgumentType(arg_type=get_three_state_flag(), min_api='2019-04-01',
+                                arg_group='Azure Files Identity Based Authentication',
                                 help='Enable Azure Files Active Directory Domain Service Authentication for '
                                      'storage account. When --enable-files-adds is set to true, Azure Active '
                                      'Directory Properties arguments must be provided.')
     aadds_type = CLIArgumentType(arg_type=get_three_state_flag(), min_api='2018-11-01',
+                                 arg_group='Azure Files Identity Based Authentication',
                                  help='Enable Azure Active Directory Domain Services authentication for Azure Files')
     domain_name_type = CLIArgumentType(min_api='2019-04-01', arg_group="Azure Active Directory Properties",
                                        help="Specify the primary domain that the AD DNS server is authoritative for. "
@@ -173,6 +175,12 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
         help='Commence only if unmodified since supplied UTC datetime (Y-m-d\'T\'H:M\'Z\')',
         type=get_datetime_type(False))
 
+    t_share_permission = self.get_models('DefaultSharePermission', resource_type=ResourceType.MGMT_STORAGE)
+    default_share_permission_type = CLIArgumentType(
+        arg_type=get_enum_type(t_share_permission), min_api='2020-08-01-preview',
+        arg_group='Azure Files Identity Based Authentication',
+        help='Default share permission for users using Kerberos authentication if RBAC role is not assigned.')
+
     with self.argument_context('storage') as c:
         c.argument('container_name', container_name_type)
         c.argument('directory_name', directory_type)
@@ -204,8 +212,8 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
         c.argument('account_name', acct_name_type, options_list=['--name', '-n'], local_context_attribute=None)
 
     with self.argument_context('storage account create', resource_type=ResourceType.MGMT_STORAGE) as c:
-        t_account_type, t_sku_name, t_kind, t_tls_version = \
-            self.get_models('AccountType', 'SkuName', 'Kind', 'MinimumTlsVersion',
+        t_account_type, t_sku_name, t_kind, t_tls_version, t_share_permission = \
+            self.get_models('AccountType', 'SkuName', 'Kind', 'MinimumTlsVersion', 'DefaultSharePermission',
                             resource_type=ResourceType.MGMT_STORAGE)
 
         c.register_common_storage_account_options()
@@ -265,6 +273,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
         c.argument('min_tls_version', arg_type=get_enum_type(t_tls_version),
                    help='The minimum TLS version to be permitted on requests to storage. '
                         'The default interpretation is TLS 1.0 for this property')
+        c.argument('default_share_permission', default_share_permission_type)
 
     with self.argument_context('storage account private-endpoint-connection',
                                resource_type=ResourceType.MGMT_STORAGE) as c:
@@ -314,6 +323,7 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
         c.argument('min_tls_version', arg_type=get_enum_type(t_tls_version),
                    help='The minimum TLS version to be permitted on requests to storage. '
                         'The default interpretation is TLS 1.0 for this property')
+        c.argument('default_share_permission', default_share_permission_type)
 
     with self.argument_context('storage account update', arg_group='Customer managed key', min_api='2017-06-01') as c:
         t_key_source = self.get_models('KeySource', resource_type=ResourceType.MGMT_STORAGE)
