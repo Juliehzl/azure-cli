@@ -34,7 +34,9 @@ def regenerate_key(cmd, client, account_name, key_name, resource_group_name=None
 
 # pylint: disable=too-many-locals, too-many-statements, too-many-branches
 def create_storage_account(cmd, resource_group_name, account_name, sku=None, location=None, kind=None,
-                           tags=None, custom_domain=None, encryption_services=None, access_tier=None, https_only=None,
+                           tags=None, custom_domain=None, encryption_services=None, encryption_key_source=None,
+                           encryption_key_name=None, encryption_key_vault=None, encryption_key_version=None,
+                           access_tier=None, https_only=None,
                            enable_files_aadds=None, bypass=None, default_action=None, assign_identity=False,
                            enable_large_file_share=None, enable_files_adds=None, domain_name=None,
                            net_bios_domain_name=None, forest_name=None, domain_guid=None, domain_sid=None,
@@ -58,8 +60,20 @@ def create_storage_account(cmd, resource_group_name, account_name, sku=None, loc
 
     if custom_domain:
         params.custom_domain = CustomDomain(name=custom_domain, use_sub_domain=None)
+
+    # Encryption
     if encryption_services:
         params.encryption = Encryption(services=encryption_services)
+    if encryption_key_source is not None:
+        params.encryption.key_source = encryption_key_source
+
+    KeySource = cmd.get_models('KeySource')
+    if params.encryption.key_source == KeySource.microsoft_keyvault:
+        if params.encryption.key_vault_properties is None:
+            KeyVaultProperties = cmd.get_models('KeyVaultProperties')
+            params.encryption.key_vault_properties = KeyVaultProperties(key_name=encryption_key_name,
+                                                                        key_vault_uri=encryption_key_vault,
+                                                                        key_version=encryption_key_version)
     if access_tier:
         params.access_tier = AccessTier(access_tier)
     if assign_identity:

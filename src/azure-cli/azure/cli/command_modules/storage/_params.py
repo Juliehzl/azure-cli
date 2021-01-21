@@ -23,7 +23,7 @@ from ._validators import (get_datetime_type, validate_metadata, get_permission_v
                           validate_fs_public_access, validate_logging_version, validate_or_policy)
 
 
-def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statements, too-many-lines
+def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statements, too-many-lines, too-many-branches
     from argcomplete.completers import FilesCompleter
     from six import u as unicode_string
 
@@ -314,18 +314,19 @@ def load_arguments(self, _):  # pylint: disable=too-many-locals, too-many-statem
         c.argument('min_tls_version', arg_type=get_enum_type(t_tls_version),
                    help='The minimum TLS version to be permitted on requests to storage. '
                         'The default interpretation is TLS 1.0 for this property')
-
-    with self.argument_context('storage account update', arg_group='Customer managed key', min_api='2017-06-01') as c:
-        t_key_source = self.get_models('KeySource', resource_type=ResourceType.MGMT_STORAGE)
-        c.argument('encryption_key_name', help='The name of the KeyVault key.', )
-        c.argument('encryption_key_vault', help='The Uri of the KeyVault.')
-        c.argument('encryption_key_version',
-                   help='The version of the KeyVault key to use, which will opt out of implicit key rotation. '
-                   'Please use "" to opt in key auto-rotation again.')
-        c.argument('encryption_key_source',
-                   arg_type=get_enum_type(t_key_source),
-                   help='The default encryption key source',
-                   validator=validate_encryption_source)
+    for item in ['create', 'update']:
+        with self.argument_context('storage account {}'.format(item), arg_group='Customer managed key',
+                                   min_api='2017-06-01') as c:
+            t_key_source = self.get_models('KeySource', resource_type=ResourceType.MGMT_STORAGE)
+            c.argument('encryption_key_name', help='The name of the KeyVault key.', )
+            c.argument('encryption_key_vault', help='The Uri of the KeyVault.')
+            c.argument('encryption_key_version',
+                       help='The version of the KeyVault key to use, which will opt out of implicit key rotation. '
+                       'Please use "" to opt in key auto-rotation again.')
+            c.argument('encryption_key_source',
+                       arg_type=get_enum_type(t_key_source),
+                       help='The default encryption key source',
+                       validator=validate_encryption_source)
 
     for scope in ['storage account create', 'storage account update']:
         with self.argument_context(scope, resource_type=ResourceType.MGMT_STORAGE, min_api='2017-06-01',
