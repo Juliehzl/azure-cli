@@ -44,7 +44,7 @@ def create_storage_account(cmd, resource_group_name, account_name, sku=None, loc
                            encryption_key_type_for_table=None, encryption_key_type_for_queue=None,
                            routing_choice=None, publish_microsoft_endpoints=None, publish_internet_endpoints=None,
                            require_infrastructure_encryption=None, allow_blob_public_access=None,
-                           min_tls_version=None):
+                           min_tls_version=None, user_assigned_identity=None):
     StorageAccountCreateParameters, Kind, Sku, CustomDomain, AccessTier, Identity, Encryption, NetworkRuleSet = \
         cmd.get_models('StorageAccountCreateParameters', 'Kind', 'Sku', 'CustomDomain', 'AccessTier', 'Identity',
                        'Encryption', 'NetworkRuleSet')
@@ -74,10 +74,14 @@ def create_storage_account(cmd, resource_group_name, account_name, sku=None, loc
             params.encryption.key_vault_properties = KeyVaultProperties(key_name=encryption_key_name,
                                                                         key_vault_uri=encryption_key_vault,
                                                                         key_version=encryption_key_version)
+    if user_assigned_identity is not None:
+        params.identity = Identity(type='UserAssigned', user_assigned_identities={user_assigned_identity: {}})
+        EncryptionIdentity = cmd.get_models('EncryptionIdentity')
+        params.encryption.encryption_identity = EncryptionIdentity(user_assigned_identity=user_assigned_identity)
     if access_tier:
         params.access_tier = AccessTier(access_tier)
     if assign_identity:
-        params.identity = Identity()
+        params.identity = Identity(type='SystemAssigned')
     if https_only is not None:
         params.enable_https_traffic_only = https_only
     if enable_hierarchical_namespace is not None:
