@@ -50,6 +50,8 @@ DEPENDENCIES = [
     'cryptography>=3.2,<3.4',
     'humanfriendly>=4.7,<10.0',
     'jmespath',
+    'configobj',
+    'jinja2~=2.10',
     'knack==0.8.0rc2',
     'msal~=1.9',
     'msrestazure>=0.6.3',
