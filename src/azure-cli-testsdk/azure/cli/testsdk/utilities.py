@@ -82,8 +82,11 @@ class StorageAccountKeyReplacer(RecordingProcessor):
             pass
         for candidate in self._candidates:
             if request.body:
-                body_string = _py3_byte_to_str(request.body)
-                request.body = body_string.replace(candidate, self.KEY_REPLACEMENT)
+                try:
+                    body_string = _py3_byte_to_str(request.body)
+                    request.body = body_string.replace(candidate, self.KEY_REPLACEMENT)
+                except UnicodeDecodeError:
+                    return request
         return request
 
     def process_response(self, response):

@@ -31,7 +31,7 @@ from azure.cli.command_modules.sql.custom import (
     ComputeModelType)
 from datetime import datetime, timedelta
 from time import sleep
-
+from ....storage.tests.storage_test_util import StorageScenarioMixin
 # Constants
 server_name_prefix = 'clitestserver'
 server_name_max_length = 62
@@ -5639,7 +5639,7 @@ class SqlManagedInstanceFailoverScenarionTest(ScenarioTest):
         self.cmd('sql mi failover -g {resource_group} -n {managed_instance_name}', checks=NoneCheck())
 
 
-class SqlManagedDatabaseLogReplayScenarionTest(ScenarioTest):
+class SqlManagedDatabaseLogReplayScenarionTest(StorageScenarioMixin, ScenarioTest):
     @AllowLargeResponse()
     @ResourceGroupPreparer(random_name_length=28, name_prefix='clitest-logreplay', location='westcentralus')
     @StorageAccountPreparer(name_prefix='logreplay', location='westcentralus', kind='StorageV2')
@@ -5648,7 +5648,7 @@ class SqlManagedDatabaseLogReplayScenarionTest(ScenarioTest):
         managed_instance_name = self.create_random_name(managed_instance_name_prefix, managed_instance_name_max_length)
         account = self.cmd('account show').get_output_in_json()
         curr_dir = os.path.dirname(os.path.realpath(__file__))
-        backup_file = os.path.join(curr_dir, 'full.bak')
+        backup_file = self.create_temp_file(16)
 
         self.kwargs.update({
             'loc': resource_group_location,
