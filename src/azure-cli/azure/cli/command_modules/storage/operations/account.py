@@ -59,7 +59,7 @@ def create_storage_account(cmd, resource_group_name, account_name, sku=None, loc
                            min_tls_version=None, allow_shared_key_access=None, edge_zone=None,
                            identity_type=None, user_identity_id=None, key_vault_user_identity_id=None,
                            sas_expiration_period=None, key_expiration_period_in_days=None,
-                           allow_cross_tenant_replication=None, default_share_permission=None)
+                           allow_cross_tenant_replication=None, default_share_permission=None):
 
     StorageAccountCreateParameters, Kind, Sku, CustomDomain, AccessTier, Identity, Encryption, NetworkRuleSet = \
         cmd.get_models('StorageAccountCreateParameters', 'Kind', 'Sku', 'CustomDomain', 'AccessTier', 'Identity',
@@ -280,19 +280,11 @@ def update_storage_account(cmd, instance, sku=None, tags=None, custom_domain=Non
                            domain_name=None, net_bios_domain_name=None, forest_name=None, domain_guid=None,
                            domain_sid=None, azure_storage_sid=None, routing_choice=None,
                            publish_microsoft_endpoints=None, publish_internet_endpoints=None,
-<<<<<<< HEAD
                            allow_blob_public_access=None, min_tls_version=None, allow_shared_key_access=None,
                            identity_type=None, user_identity_id=None, key_vault_user_identity_id=None,
-<<<<<<< HEAD
                            sas_expiration_period=None, key_expiration_period_in_days=None,
                            allow_cross_tenant_replication=None, default_share_permission=None):
 
-=======
-                           sas_expiration_period=None, key_expiration_period_in_days=None):
-=======
-                           allow_blob_public_access=None, min_tls_version=None, default_share_permission=None):
->>>>>>> 9ac43bfd1... support default permission
->>>>>>> b344c0b0b... support default permission
     StorageAccountUpdateParameters, Sku, CustomDomain, AccessTier, Identity, Encryption, NetworkRuleSet = \
         cmd.get_models('StorageAccountUpdateParameters', 'Sku', 'CustomDomain', 'AccessTier', 'Identity', 'Encryption',
                        'NetworkRuleSet')
