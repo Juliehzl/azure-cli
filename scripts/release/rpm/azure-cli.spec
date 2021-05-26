@@ -26,6 +26,8 @@ Release:        %{release}
 Url:            https://docs.microsoft.com/cli/azure/install-azure-cli
 BuildArch:      x86_64
 Requires:       %{python_cmd}
+Prefix:         /usr
+Prefix:         /etc
 
 BuildRequires:  gcc, libffi-devel, openssl-devel, perl
 BuildRequires:  %{python_cmd}-devel
@@ -41,7 +43,7 @@ A great cloud needs great tools; we're excited to introduce Azure CLI,
 # Create a fully instantiated virtual environment, ready to use the CLI.
 %{python_cmd} -m venv %{buildroot}%{cli_lib_dir}
 source %{buildroot}%{cli_lib_dir}/bin/activate
-
+%{python_cmd} -m pip install --upgrade pip==21.0.1
 source %{repo_path}/scripts/install_full.sh
 
 deactivate
@@ -52,8 +54,13 @@ for d in %{buildroot}%{cli_lib_dir}/bin/*; do perl -p -i -e "s#%{buildroot}##g" 
 # Create executable
 mkdir -p %{buildroot}%{_bindir}
 python_version=$(ls %{buildroot}%{cli_lib_dir}/lib/ | head -n 1)
-printf "#!/usr/bin/env bash\nAZ_INSTALLER=RPM PYTHONPATH=%{cli_lib_dir}/lib/${python_version}/site-packages /usr/bin/%{python_cmd} -sm azure.cli \"\$@\"" > %{buildroot}%{_bindir}/az
+printf "#!/usr/bin/env bash\nbin_dir=\`cd \"\$(dirname \"\$BASH_SOURCE[0]\")\"; pwd\`\nAZ_INSTALLER=RPM PYTHONPATH=\"\$bin_dir\"/../%{_lib}/az/lib/${python_version}/site-packages %{python_cmd} -sm azure.cli \"\$@\"" > %{buildroot}%{_bindir}/az
 rm %{buildroot}%{cli_lib_dir}/bin/python* %{buildroot}%{cli_lib_dir}/bin/pip*
+
+# Remove unused Network SDK API versions
+pushd %{buildroot}%{cli_lib_dir}/lib/${python_version}/site-packages/azure/mgmt/network/ > /dev/null
+rm -rf v2016_09_01 v2016_12_01 v2017_03_01 v2017_06_01 v2017_08_01 v2017_09_01 v2017_11_01 v2018_02_01 v2018_04_01 v2018_06_01 v2018_10_01 v2018_12_01 v2019_04_01 v2019_08_01 v2019_09_01 v2019_11_01 v2019_12_01 v2020_03_01
+popd > /dev/null
 
 # Set up tab completion
 mkdir -p %{buildroot}%{_sysconfdir}/bash_completion.d/

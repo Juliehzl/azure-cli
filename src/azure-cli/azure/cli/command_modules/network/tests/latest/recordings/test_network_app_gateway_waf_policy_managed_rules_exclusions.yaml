@@ -13,15 +13,12 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-resource/16.1.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001","name":"cli_test_app_gateway_waf_policy_managed_rules_exclusion000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2020-07-14T12:36:51Z"},"properties":{"provisioningState":"Succeeded"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001","name":"cli_test_app_gateway_waf_policy_managed_rules_exclusion000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2021-05-14T05:51:12Z"},"properties":{"provisioningState":"Succeeded"}}'
     headers:
       cache-control:
       - no-cache
@@ -30,7 +27,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:36:52 GMT
+      - Fri, 14 May 2021 05:51:13 GMT
       expires:
       - '-1'
       pragma:
@@ -59,20 +56,17 @@ interactions:
       Content-Length:
       - '128'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"d2deb32e-94ee-49d0-8b5c-0dc77b245d35\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"62610967-d1a5-42c0-9da1-5d8834c8d744\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Updating\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -86,7 +80,7 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/85628f7a-0b09-4493-8101-93fffa38c03e?api-version=2020-05-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/286436ef-6d87-423d-9b13-1862aa976787?api-version=2021-02-01
       cache-control:
       - no-cache
       content-length:
@@ -94,7 +88,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:36:58 GMT
+      - Fri, 14 May 2021 05:51:19 GMT
       expires:
       - '-1'
       pragma:
@@ -107,9 +101,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 15ac728a-83f3-402f-98a8-987ae439e793
+      - 91062117-091c-422e-9ddf-6756d38b7094
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1175'
+      - '1194'
     status:
       code: 201
       message: Created
@@ -127,16 +121,13 @@ interactions:
       ParameterSetName:
       - -g --policy-name --match-variable --selector-match-operator --selector
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"b79e03a4-4df1-49df-95a0-33cd951e79d8\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"64e4b7d9-f01e-4082-a1c4-101a0451d4c0\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Succeeded\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -154,9 +145,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:36:59 GMT
+      - Fri, 14 May 2021 05:51:19 GMT
       etag:
-      - W/"b79e03a4-4df1-49df-95a0-33cd951e79d8"
+      - W/"64e4b7d9-f01e-4082-a1c4-101a0451d4c0"
       expires:
       - '-1'
       pragma:
@@ -173,18 +164,18 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - b7afb207-00f8-4a31-a212-233ecd0bb7eb
+      - b12523d8-3cc6-4d45-b9d2-a9c2ee2267c4
     status:
       code: 200
       message: OK
 - request:
-    body: 'b''{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1",
+    body: '{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1",
       "location": "westus", "properties": {"policySettings": {"state": "Disabled",
       "mode": "Detection", "requestBodyCheck": true, "maxRequestBodySizeInKb": 128,
       "fileUploadLimitInMb": 100}, "customRules": [], "managedRules": {"exclusions":
       [{"matchVariable": "RequestHeaderNames", "selectorMatchOperator": "StartsWith",
       "selector": "Bing"}], "managedRuleSets": [{"ruleSetType": "OWASP", "ruleSetVersion":
-      "3.0", "ruleGroupOverrides": []}]}}}'''
+      "3.0", "ruleGroupOverrides": []}]}}}'
     headers:
       Accept:
       - application/json
@@ -197,20 +188,17 @@ interactions:
       Content-Length:
       - '670'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -g --policy-name --match-variable --selector-match-operator --selector
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"902d79b5-a2b9-4103-b4ca-45766a29130c\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"39cf882b-9b71-4c02-a75d-771831b0b3c3\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Updating\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -224,7 +212,7 @@ interactions:
         \"Bing\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/0041a673-134a-45be-941c-cf9373adb580?api-version=2020-05-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/d03c0e2a-6cfa-42ac-ae20-66be3a285e6a?api-version=2021-02-01
       cache-control:
       - no-cache
       content-length:
@@ -232,7 +220,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:36:59 GMT
+      - Fri, 14 May 2021 05:51:20 GMT
       expires:
       - '-1'
       pragma:
@@ -249,9 +237,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - e02ffdb2-cb0b-41dd-aae1-19e2a88a614f
+      - b6de7869-5b01-49f2-8c05-c66b36cba753
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1177'
+      - '1193'
     status:
       code: 200
       message: OK
@@ -269,16 +257,13 @@ interactions:
       ParameterSetName:
       - -g --policy-name
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"8f7812b9-b224-427f-a1a0-36944ea88a60\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"03268c70-f82a-4b04-ac60-996b21678007\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Succeeded\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -298,9 +283,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:00 GMT
+      - Fri, 14 May 2021 05:51:21 GMT
       etag:
-      - W/"8f7812b9-b224-427f-a1a0-36944ea88a60"
+      - W/"03268c70-f82a-4b04-ac60-996b21678007"
       expires:
       - '-1'
       pragma:
@@ -317,7 +302,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 404ac744-8e01-4876-afe4-ed95d6657811
+      - 04c76ed5-8a56-4ee4-a15c-d3eda3bac75d
     status:
       code: 200
       message: OK
@@ -335,16 +320,13 @@ interactions:
       ParameterSetName:
       - -g --policy-name --match-variable --selector-match-operator --selector
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"8f7812b9-b224-427f-a1a0-36944ea88a60\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"03268c70-f82a-4b04-ac60-996b21678007\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Succeeded\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -364,9 +346,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:01 GMT
+      - Fri, 14 May 2021 05:51:21 GMT
       etag:
-      - W/"8f7812b9-b224-427f-a1a0-36944ea88a60"
+      - W/"03268c70-f82a-4b04-ac60-996b21678007"
       expires:
       - '-1'
       pragma:
@@ -383,19 +365,19 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 4490e86a-27a6-405b-bbe6-c8ae478350a8
+      - 9a03f094-605e-47a7-81b2-670baaa87928
     status:
       code: 200
       message: OK
 - request:
-    body: 'b''{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1",
+    body: '{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1",
       "location": "westus", "properties": {"policySettings": {"state": "Disabled",
       "mode": "Detection", "requestBodyCheck": true, "maxRequestBodySizeInKb": 128,
       "fileUploadLimitInMb": 100}, "customRules": [], "managedRules": {"exclusions":
       [{"matchVariable": "RequestHeaderNames", "selectorMatchOperator": "StartsWith",
       "selector": "Bing"}, {"matchVariable": "RequestHeaderNames", "selectorMatchOperator":
       "Contains", "selector": "Azure"}], "managedRuleSets": [{"ruleSetType": "OWASP",
-      "ruleSetVersion": "3.0", "ruleGroupOverrides": []}]}}}'''
+      "ruleSetVersion": "3.0", "ruleGroupOverrides": []}]}}}'
     headers:
       Accept:
       - application/json
@@ -408,20 +390,17 @@ interactions:
       Content-Length:
       - '769'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -g --policy-name --match-variable --selector-match-operator --selector
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"dfd69d6a-f84a-4bee-8773-82ad0dda8138\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"a701660b-c01a-4ae9-b04d-f575cda579aa\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Updating\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -437,7 +416,7 @@ interactions:
         \"Azure\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/1506e80d-23d3-4895-8604-4cd77cd65f9d?api-version=2020-05-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/c48b92fa-8a42-440d-9a9c-ebc86987bc1a?api-version=2021-02-01
       cache-control:
       - no-cache
       content-length:
@@ -445,7 +424,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:01 GMT
+      - Fri, 14 May 2021 05:51:22 GMT
       expires:
       - '-1'
       pragma:
@@ -462,9 +441,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 10609759-b3e0-4f54-82a4-c2acd28a82c2
+      - e688b882-36c5-48a9-b084-e9ac1d0498c1
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1160'
+      - '1190'
     status:
       code: 200
       message: OK
@@ -482,16 +461,13 @@ interactions:
       ParameterSetName:
       - -g --policy-name
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"719fbbd7-ec22-4ce0-abf4-086720f0f798\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"adcc731c-f33a-4a7e-8f6a-fc8cf70b22d5\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Succeeded\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -513,9 +489,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:02 GMT
+      - Fri, 14 May 2021 05:51:22 GMT
       etag:
-      - W/"719fbbd7-ec22-4ce0-abf4-086720f0f798"
+      - W/"adcc731c-f33a-4a7e-8f6a-fc8cf70b22d5"
       expires:
       - '-1'
       pragma:
@@ -532,7 +508,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 38e179bf-bd68-4c84-93a6-0f520b3dc020
+      - a64944aa-20e7-44b4-9174-896165a52334
     status:
       code: 200
       message: OK
@@ -550,16 +526,13 @@ interactions:
       ParameterSetName:
       - -g --policy-name
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"719fbbd7-ec22-4ce0-abf4-086720f0f798\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"adcc731c-f33a-4a7e-8f6a-fc8cf70b22d5\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Succeeded\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -581,9 +554,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:02 GMT
+      - Fri, 14 May 2021 05:51:22 GMT
       etag:
-      - W/"719fbbd7-ec22-4ce0-abf4-086720f0f798"
+      - W/"adcc731c-f33a-4a7e-8f6a-fc8cf70b22d5"
       expires:
       - '-1'
       pragma:
@@ -600,17 +573,17 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 60725dcb-84b5-470b-a876-cde31dd2dc02
+      - 3edd4216-8aa5-4acf-894b-689dd5704842
     status:
       code: 200
       message: OK
 - request:
-    body: 'b''{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1",
+    body: '{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1",
       "location": "westus", "properties": {"policySettings": {"state": "Disabled",
       "mode": "Detection", "requestBodyCheck": true, "maxRequestBodySizeInKb": 128,
       "fileUploadLimitInMb": 100}, "customRules": [], "managedRules": {"exclusions":
       [], "managedRuleSets": [{"ruleSetType": "OWASP", "ruleSetVersion": "3.0", "ruleGroupOverrides":
-      []}]}}}'''
+      []}]}}}'
     headers:
       Accept:
       - application/json
@@ -623,20 +596,17 @@ interactions:
       Content-Length:
       - '572'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -g --policy-name
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"41d01cb9-6e68-4f96-ad4d-cafb42bedeea\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"33e020a4-0bc2-451c-90a0-f27f10716c88\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Updating\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -648,7 +618,7 @@ interactions:
         \     \"exclusions\": []\r\n    }\r\n  }\r\n}"
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/a52e57f3-279c-494b-8132-f499e1fef85c?api-version=2020-05-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/westus/operations/8db276f7-bd23-4711-b4b1-7bce6fa6fa32?api-version=2021-02-01
       cache-control:
       - no-cache
       content-length:
@@ -656,7 +626,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:03 GMT
+      - Fri, 14 May 2021 05:51:23 GMT
       expires:
       - '-1'
       pragma:
@@ -673,9 +643,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - d92ac815-d47a-4b36-972e-c7beb277ab55
+      - 22b30c81-d273-41aa-b77d-976c13ae4d41
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1176'
+      - '1193'
     status:
       code: 200
       message: OK
@@ -693,16 +663,13 @@ interactions:
       ParameterSetName:
       - -g --policy-name
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1?api-version=2021-02-01
   response:
     body:
       string: "{\r\n  \"name\": \"agp1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_app_gateway_waf_policy_managed_rules_exclusion000001/providers/Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies/agp1\",\r\n
-        \ \"etag\": \"W/\\\"6e85fd6b-97ea-4834-8c2b-51c459f1f2ab\\\"\",\r\n  \"type\":
+        \ \"etag\": \"W/\\\"e2488916-6e38-4de9-a74b-c5670425d530\\\"\",\r\n  \"type\":
         \"Microsoft.Network/ApplicationGatewayWebApplicationFirewallPolicies\",\r\n
         \ \"location\": \"westus\",\r\n  \"properties\": {\r\n    \"provisioningState\":
         \"Succeeded\",\r\n    \"customRules\": [],\r\n    \"policySettings\": {\r\n
@@ -720,9 +687,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 14 Jul 2020 12:37:04 GMT
+      - Fri, 14 May 2021 05:51:24 GMT
       etag:
-      - W/"6e85fd6b-97ea-4834-8c2b-51c459f1f2ab"
+      - W/"e2488916-6e38-4de9-a74b-c5670425d530"
       expires:
       - '-1'
       pragma:
@@ -739,7 +706,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - bd289bab-5b4e-48c7-81ef-354d31a90b7d
+      - 556994eb-0f74-4a5c-bd80-707fe3eb878d
     status:
       code: 200
       message: OK

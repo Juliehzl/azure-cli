@@ -12,16 +12,17 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001","name":"cli_test_vm_msi000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2020-07-20T03:08:55Z"},"properties":{"provisioningState":"Succeeded"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001","name":"cli_test_vm_msi000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2021-02-09T07:00:28Z"},"properties":{"provisioningState":"Succeeded"}}'
     headers:
       cache-control:
       - no-cache
@@ -30,7 +31,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:08:57 GMT
+      - Tue, 09 Feb 2021 07:00:31 GMT
       expires:
       - '-1'
       pragma:
@@ -54,7 +55,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.25.1
     method: GET
     uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-compute/quickstart-templates/aliases.json
   response:
@@ -109,36 +110,35 @@ interactions:
       content-type:
       - text/plain; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:08:57 GMT
+      - Tue, 09 Feb 2021 07:00:31 GMT
       etag:
       - W/"540044b4084c3c314537f1baa1770f248628b2bc9ba0328f1004c33862e049da"
       expires:
-      - Mon, 20 Jul 2020 03:13:57 GMT
+      - Tue, 09 Feb 2021 07:05:31 GMT
       source-age:
-      - '129'
+      - '216'
       strict-transport-security:
       - max-age=31536000
       vary:
       - Authorization,Accept-Encoding, Accept-Encoding
       via:
-      - 1.1 varnish (Varnish/6.0)
       - 1.1 varnish
       x-cache:
-      - HIT, HIT
+      - HIT
       x-cache-hits:
-      - 1, 1
+      - '2'
       x-content-type-options:
       - nosniff
       x-fastly-request-id:
-      - cdfe1cb3fc416c48100f5d40ea81c8a497fcb217
+      - d7c9af4f4a90fdd0b75daf6de8f964b1c38c78a8
       x-frame-options:
       - deny
       x-github-request-id:
-      - 2748:34A4:2932D6:2C24C0:5F15021B
+      - 5F66:4D94:DC2B:ECD5:60217BA5
       x-served-by:
-      - cache-sin18034-SIN
+      - cache-sin18049-SIN
       x-timer:
-      - S1595214538.934550,VS0,VE1
+      - S1612854032.650266,VS0,VE0
       x-xss-protection:
       - 1; mode=block
     status:
@@ -148,7 +148,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -157,11 +157,9 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks?api-version=2018-01-01
   response:
@@ -175,7 +173,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:08:58 GMT
+      - Tue, 09 Feb 2021 07:00:31 GMT
       expires:
       - '-1'
       pragma:
@@ -202,32 +200,34 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-authorization/0.52.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleDefinitions?$filter=roleName%20eq%20%27Contributor%27&api-version=2018-01-01-preview
   response:
     body:
-      string: '{"value":[{"properties":{"roleName":"Contributor","type":"BuiltInRole","description":"Lets
-        you manage everything except access to resources.","assignableScopes":["/"],"permissions":[{"actions":["*"],"notActions":["Microsoft.Authorization/*/Delete","Microsoft.Authorization/*/Write","Microsoft.Authorization/elevateAccess/Action","Microsoft.Blueprint/blueprintAssignments/write","Microsoft.Blueprint/blueprintAssignments/delete"],"dataActions":[],"notDataActions":[]}],"createdOn":"2015-02-02T21:55:09.8806423Z","updatedOn":"2019-02-05T21:24:38.4580610Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c","type":"Microsoft.Authorization/roleDefinitions","name":"b24988ac-6180-42a0-ab88-20f7382dd24c"}]}'
+      string: '{"value":[{"properties":{"roleName":"Contributor","type":"BuiltInRole","description":"Grants
+        full access to manage all resources, but does not allow you to assign roles
+        in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries.","assignableScopes":["/"],"permissions":[{"actions":["*"],"notActions":["Microsoft.Authorization/*/Delete","Microsoft.Authorization/*/Write","Microsoft.Authorization/elevateAccess/Action","Microsoft.Blueprint/blueprintAssignments/write","Microsoft.Blueprint/blueprintAssignments/delete","Microsoft.Compute/galleries/share/action"],"dataActions":[],"notDataActions":[]}],"createdOn":"2015-02-02T21:55:09.8806423Z","updatedOn":"2020-12-04T00:34:54.8501087Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c","type":"Microsoft.Authorization/roleDefinitions","name":"b24988ac-6180-42a0-ab88-20f7382dd24c"}]}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '832'
+      - '984'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:08:58 GMT
+      - Tue, 09 Feb 2021 07:00:32 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       set-cookie:
-      - x-ms-gateway-slice=Production; path=/; SameSite=None; secure; HttpOnly
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
       strict-transport-security:
       - max-age=31536000; includeSubDomains
       transfer-encoding:
@@ -240,7 +240,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: 'b''{"properties": {"template": {"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    body: '{"properties": {"template": {"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
       "contentVersion": "1.0.0.0", "parameters": {"adminPassword": {"type": "securestring",
       "metadata": {"description": "Secure adminPassword"}}}, "variables": {}, "resources":
       [{"name": "vm1VNET", "type": "Microsoft.Network/virtualNetworks", "location":
@@ -248,25 +248,21 @@ interactions:
       {"addressSpace": {"addressPrefixes": ["10.0.0.0/16"]}, "subnets": [{"name":
       "vm1Subnet", "properties": {"addressPrefix": "10.0.0.0/24"}}]}}, {"type": "Microsoft.Network/networkSecurityGroups",
       "name": "vm1NSG", "apiVersion": "2015-06-15", "location": "westus", "tags":
-      {}, "dependsOn": [], "properties": {"securityRules": [{"name": "default-allow-ssh",
-      "properties": {"protocol": "Tcp", "sourcePortRange": "*", "destinationPortRange":
-      "22", "sourceAddressPrefix": "*", "destinationAddressPrefix": "*", "access":
-      "Allow", "priority": 1000, "direction": "Inbound"}}]}}, {"apiVersion": "2018-01-01",
-      "type": "Microsoft.Network/publicIPAddresses", "name": "vm1PublicIP", "location":
-      "westus", "tags": {}, "dependsOn": [], "properties": {"publicIPAllocationMethod":
-      null}}, {"apiVersion": "2015-06-15", "type": "Microsoft.Network/networkInterfaces",
+      {}, "dependsOn": []}, {"apiVersion": "2018-01-01", "type": "Microsoft.Network/publicIPAddresses",
+      "name": "vm1PublicIP", "location": "westus", "tags": {}, "dependsOn": [], "properties":
+      {"publicIPAllocationMethod": null}}, {"apiVersion": "2015-06-15", "type": "Microsoft.Network/networkInterfaces",
       "name": "vm1VMNic", "location": "westus", "tags": {}, "dependsOn": ["Microsoft.Network/virtualNetworks/vm1VNET",
       "Microsoft.Network/networkSecurityGroups/vm1NSG", "Microsoft.Network/publicIpAddresses/vm1PublicIP"],
       "properties": {"ipConfigurations": [{"name": "ipconfigvm1", "properties": {"privateIPAllocationMethod":
       "Dynamic", "subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET/subnets/vm1Subnet"},
       "publicIPAddress": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP"}}}],
       "networkSecurityGroup": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG"}}},
-      {"name": "5c5640bd-f5b9-460e-9f1c-d8836b65079f", "type": "Microsoft.Authorization/roleAssignments",
+      {"name": "4fb9fb98-22b9-434b-837b-594f50e9b25b", "type": "Microsoft.Authorization/roleAssignments",
       "apiVersion": "2015-07-01", "dependsOn": ["Microsoft.Compute/virtualMachines/vm1"],
       "properties": {"roleDefinitionId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c",
-      "principalId": "[reference(\''/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1\'',
-      \''2019-07-01\'', \''Full\'').identity.principalId]", "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001"}},
-      {"apiVersion": "2020-06-01", "type": "Microsoft.Compute/virtualMachines", "name":
+      "principalId": "[reference(''/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1'',
+      ''2019-07-01'', ''Full'').identity.principalId]", "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001"}},
+      {"apiVersion": "2020-12-01", "type": "Microsoft.Compute/virtualMachines", "name":
       "vm1", "location": "westus", "tags": {}, "dependsOn": ["Microsoft.Network/networkInterfaces/vm1VMNic"],
       "properties": {"hardwareProfile": {"vmSize": "Standard_DS1_v2"}, "networkProfile":
       {"networkInterfaces": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic"}]},
@@ -274,9 +270,9 @@ interactions:
       "ReadWrite", "managedDisk": {"storageAccountType": null}}, "imageReference":
       {"publisher": "Debian", "offer": "debian-10", "sku": "10", "version": "latest"}},
       "osProfile": {"computerName": "vm1", "adminUsername": "admin123", "adminPassword":
-      "[parameters(\''adminPassword\'')]"}}, "identity": {"type": "SystemAssigned"}}],
+      "[parameters(''adminPassword'')]"}}, "identity": {"type": "SystemAssigned"}}],
       "outputs": {}}, "parameters": {"adminPassword": {"value": "PasswordPassword1!"}},
-      "mode": "Incremental"}}'''
+      "mode": "Incremental"}}'
     headers:
       Accept:
       - application/json
@@ -287,32 +283,33 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '4129'
+      - '3852'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_Q4lPzaKW3MzCXQs4SkAKD5r8QiAUjw3e","name":"vm_deploy_Q4lPzaKW3MzCXQs4SkAKD5r8QiAUjw3e","type":"Microsoft.Resources/deployments","properties":{"templateHash":"16651714257036948978","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2020-07-20T03:09:02.4336989Z","duration":"PT2.2574536S","correlationId":"4a2081b1-e910-4bbe-83f7-6400c10100fe","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Authorization","resourceTypes":[{"resourceType":"roleAssignments","locations":[null]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"vm1VNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm1NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm1PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleAssignments/5c5640bd-f5b9-460e-9f1c-d8836b65079f","resourceType":"Microsoft.Authorization/roleAssignments","resourceName":"5c5640bd-f5b9-460e-9f1c-d8836b65079f"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_UiKAIDp3IOKVe9HsI3Urq3kiBxCYOTYa","name":"vm_deploy_UiKAIDp3IOKVe9HsI3Urq3kiBxCYOTYa","type":"Microsoft.Resources/deployments","properties":{"templateHash":"11612317344701350116","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2021-02-09T07:00:36.2472858Z","duration":"PT2.319133S","correlationId":"bd68cbaa-cc70-4262-b699-fcf422cb486b","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Authorization","resourceTypes":[{"resourceType":"roleAssignments","locations":[null]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"vm1VNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm1NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm1PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleAssignments/4fb9fb98-22b9-434b-837b-594f50e9b25b","resourceType":"Microsoft.Authorization/roleAssignments","resourceName":"4fb9fb98-22b9-434b-837b-594f50e9b25b"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"}]}}'
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_Q4lPzaKW3MzCXQs4SkAKD5r8QiAUjw3e/operationStatuses/08586063923453013958?api-version=2020-06-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_UiKAIDp3IOKVe9HsI3Urq3kiBxCYOTYa/operationStatuses/08585887528515494904?api-version=2020-10-01
       cache-control:
       - no-cache
       content-length:
-      - '3828'
+      - '3827'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:09:02 GMT
+      - Tue, 09 Feb 2021 07:00:37 GMT
       expires:
       - '-1'
       pragma:
@@ -322,7 +319,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1151'
+      - '1181'
     status:
       code: 201
       message: Created
@@ -339,11 +336,12 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063923453013958?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887528515494904?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -355,7 +353,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:09:33 GMT
+      - Tue, 09 Feb 2021 07:01:07 GMT
       expires:
       - '-1'
       pragma:
@@ -382,11 +380,12 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063923453013958?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887528515494904?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -398,7 +397,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:03 GMT
+      - Tue, 09 Feb 2021 07:01:38 GMT
       expires:
       - '-1'
       pragma:
@@ -425,11 +424,12 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063923453013958?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887528515494904?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Succeeded"}'
@@ -441,7 +441,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:34 GMT
+      - Tue, 09 Feb 2021 07:02:08 GMT
       expires:
       - '-1'
       pragma:
@@ -468,23 +468,24 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_Q4lPzaKW3MzCXQs4SkAKD5r8QiAUjw3e","name":"vm_deploy_Q4lPzaKW3MzCXQs4SkAKD5r8QiAUjw3e","type":"Microsoft.Resources/deployments","properties":{"templateHash":"16651714257036948978","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2020-07-20T03:10:24.175517Z","duration":"PT1M23.9992717S","correlationId":"4a2081b1-e910-4bbe-83f7-6400c10100fe","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Authorization","resourceTypes":[{"resourceType":"roleAssignments","locations":[null]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"vm1VNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm1NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm1PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleAssignments/5c5640bd-f5b9-460e-9f1c-d8836b65079f","resourceType":"Microsoft.Authorization/roleAssignments","resourceName":"5c5640bd-f5b9-460e-9f1c-d8836b65079f"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"}],"outputs":{},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleAssignments/5c5640bd-f5b9-460e-9f1c-d8836b65079f"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_UiKAIDp3IOKVe9HsI3Urq3kiBxCYOTYa","name":"vm_deploy_UiKAIDp3IOKVe9HsI3Urq3kiBxCYOTYa","type":"Microsoft.Resources/deployments","properties":{"templateHash":"11612317344701350116","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2021-02-09T07:01:52.9578003Z","duration":"PT1M19.0296475S","correlationId":"bd68cbaa-cc70-4262-b699-fcf422cb486b","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"virtualNetworks","locations":["westus"]},{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Authorization","resourceTypes":[{"resourceType":"roleAssignments","locations":[null]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET","resourceType":"Microsoft.Network/virtualNetworks","resourceName":"vm1VNET"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm1NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm1PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleAssignments/4fb9fb98-22b9-434b-837b-594f50e9b25b","resourceType":"Microsoft.Authorization/roleAssignments","resourceName":"4fb9fb98-22b9-434b-837b-594f50e9b25b"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm1VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm1"}],"outputs":{},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Authorization/roleAssignments/4fb9fb98-22b9-434b-837b-594f50e9b25b"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET"}]}}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '5133'
+      - '5134'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:34 GMT
+      - Tue, 09 Feb 2021 07:02:09 GMT
       expires:
       - '-1'
       pragma:
@@ -511,52 +512,51 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1?$expand=instanceView&api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1?$expand=instanceView&api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
         \ \"tags\": {},\r\n  \"identity\": {\r\n    \"type\": \"SystemAssigned\",\r\n
-        \   \"principalId\": \"3691f816-07f6-4008-b595-3850e3a9b00e\",\r\n    \"tenantId\":
+        \   \"principalId\": \"ac0ba0db-ada8-4b9e-84f6-d376f5b866b6\",\r\n    \"tenantId\":
         \"54826b22-38d6-4fb2-bad9-b7b93a3e9c5a\"\r\n  },\r\n  \"properties\": {\r\n
-        \   \"vmId\": \"60ecf855-876e-4c1c-810a-42aaa0eea888\",\r\n    \"hardwareProfile\":
+        \   \"vmId\": \"57cdb855-bada-4406-ac9d-fd0542ed57cf\",\r\n    \"hardwareProfile\":
         {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n    \"storageProfile\":
         {\r\n      \"imageReference\": {\r\n        \"publisher\": \"Debian\",\r\n
         \       \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n        \"version\":
-        \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n      },\r\n
+        \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n      },\r\n
         \     \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm1_OsDisk_1_97b589001aa1434cafedf34b09c0afcd\",\r\n        \"createOption\":
+        \"vm1_OsDisk_1_0670bf21b1364267b0da43aa4187a680\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm1_OsDisk_1_97b589001aa1434cafedf34b09c0afcd\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm1_OsDisk_1_0670bf21b1364267b0da43aa4187a680\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm1\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic\"}]},\r\n
         \   \"provisioningState\": \"Succeeded\",\r\n    \"instanceView\": {\r\n      \"computerName\":
-        \"vm1\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.4\",\r\n
+        \"vm1\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.8\",\r\n
         \     \"vmAgent\": {\r\n        \"vmAgentVersion\": \"2.2.45\",\r\n        \"statuses\":
         [\r\n          {\r\n            \"code\": \"ProvisioningState/succeeded\",\r\n
         \           \"level\": \"Info\",\r\n            \"displayStatus\": \"Ready\",\r\n
         \           \"message\": \"Guest Agent is running\",\r\n            \"time\":
-        \"2020-07-20T03:10:35+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
-        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm1_OsDisk_1_97b589001aa1434cafedf34b09c0afcd\",\r\n
+        \"2021-02-09T07:01:55+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
+        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm1_OsDisk_1_0670bf21b1364267b0da43aa4187a680\",\r\n
         \         \"statuses\": [\r\n            {\r\n              \"code\": \"ProvisioningState/succeeded\",\r\n
         \             \"level\": \"Info\",\r\n              \"displayStatus\": \"Provisioning
-        succeeded\",\r\n              \"time\": \"2020-07-20T03:09:30.6864407+00:00\"\r\n
+        succeeded\",\r\n              \"time\": \"2021-02-09T07:01:25.8073946+00:00\"\r\n
         \           }\r\n          ]\r\n        }\r\n      ],\r\n      \"hyperVGeneration\":
         \"V1\",\r\n      \"statuses\": [\r\n        {\r\n          \"code\": \"ProvisioningState/succeeded\",\r\n
         \         \"level\": \"Info\",\r\n          \"displayStatus\": \"Provisioning
-        succeeded\",\r\n          \"time\": \"2020-07-20T03:10:07.858336+00:00\"\r\n
+        succeeded\",\r\n          \"time\": \"2021-02-09T07:01:45.6051567+00:00\"\r\n
         \       },\r\n        {\r\n          \"code\": \"PowerState/running\",\r\n
         \         \"level\": \"Info\",\r\n          \"displayStatus\": \"VM running\"\r\n
         \       }\r\n      ]\r\n    }\r\n  }\r\n}"
@@ -564,11 +564,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '3334'
+      - '3414'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:36 GMT
+      - Tue, 09 Feb 2021 07:02:10 GMT
       expires:
       - '-1'
       pragma:
@@ -585,7 +585,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3978,Microsoft.Compute/LowCostGet30Min;31726
+      - Microsoft.Compute/LowCostGet3Min;3986,Microsoft.Compute/LowCostGet30Min;31682
     status:
       code: 200
       message: OK
@@ -593,7 +593,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -602,22 +602,20 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm1VMNic\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic\",\r\n
-        \ \"etag\": \"W/\\\"28dc8fa9-854e-43a0-8c00-e3c9e35605d0\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"0a01b7c0-f24c-466a-b7f0-d0482a317365\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"5e6242b8-916c-4d0e-8f0b-8c1fff15f3c1\",\r\n
+        \"Succeeded\",\r\n    \"resourceGuid\": \"75003b14-5501-4005-abef-bfba982498c1\",\r\n
         \   \"ipConfigurations\": [\r\n      {\r\n        \"name\": \"ipconfigvm1\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic/ipConfigurations/ipconfigvm1\",\r\n
-        \       \"etag\": \"W/\\\"28dc8fa9-854e-43a0-8c00-e3c9e35605d0\\\"\",\r\n
+        \       \"etag\": \"W/\\\"0a01b7c0-f24c-466a-b7f0-d0482a317365\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/networkInterfaces/ipConfigurations\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"privateIPAddress\": \"10.0.0.4\",\r\n          \"privateIPAllocationMethod\":
@@ -626,8 +624,8 @@ interactions:
         \         },\r\n          \"primary\": true,\r\n          \"privateIPAddressVersion\":
         \"IPv4\"\r\n        }\r\n      }\r\n    ],\r\n    \"dnsSettings\": {\r\n      \"dnsServers\":
         [],\r\n      \"appliedDnsServers\": [],\r\n      \"internalDomainNameSuffix\":
-        \"xopdgqn55amexhwt2cysurceyc.dx.internal.cloudapp.net\"\r\n    },\r\n    \"macAddress\":
-        \"00-22-48-08-22-74\",\r\n    \"enableAcceleratedNetworking\": false,\r\n
+        \"fc31qmp0h5iuvhgscy3ofmy15h.dx.internal.cloudapp.net\"\r\n    },\r\n    \"macAddress\":
+        \"00-22-48-06-D9-62\",\r\n    \"enableAcceleratedNetworking\": false,\r\n
         \   \"enableIPForwarding\": false,\r\n    \"networkSecurityGroup\": {\r\n
         \     \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm1NSG\"\r\n
         \   },\r\n    \"primary\": true,\r\n    \"virtualMachine\": {\r\n      \"id\":
@@ -641,9 +639,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:36 GMT
+      - Tue, 09 Feb 2021 07:02:10 GMT
       etag:
-      - W/"28dc8fa9-854e-43a0-8c00-e3c9e35605d0"
+      - W/"0a01b7c0-f24c-466a-b7f0-d0482a317365"
       expires:
       - '-1'
       pragma:
@@ -660,7 +658,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - fb2d4f5f-bb8a-4936-8330-f0a9f0e9180e
+      - f806f0bb-2304-4a60-b4a4-5fb5b483d0e6
     status:
       code: 200
       message: OK
@@ -668,7 +666,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -677,20 +675,18 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --admin-username --admin-password --scope
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm1PublicIP\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm1PublicIP\",\r\n
-        \ \"etag\": \"W/\\\"c4b4d191-bfb3-4131-be60-0372448dc230\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"9694e943-d8f9-431e-826f-97fa5ed1119d\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"ea434440-c864-4ab9-b3d8-93567bb55385\",\r\n
-        \   \"ipAddress\": \"168.62.218.31\",\r\n    \"publicIPAddressVersion\": \"IPv4\",\r\n
+        \"Succeeded\",\r\n    \"resourceGuid\": \"5a1582c7-be3e-4c5d-a5fe-efa0d411a92e\",\r\n
+        \   \"ipAddress\": \"13.88.26.199\",\r\n    \"publicIPAddressVersion\": \"IPv4\",\r\n
         \   \"publicIPAllocationMethod\": \"Dynamic\",\r\n    \"idleTimeoutInMinutes\":
         4,\r\n    \"ipTags\": [],\r\n    \"ipConfiguration\": {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic/ipConfigurations/ipconfigvm1\"\r\n
         \   }\r\n  },\r\n  \"type\": \"Microsoft.Network/publicIPAddresses\",\r\n
@@ -699,13 +695,13 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '997'
+      - '996'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:36 GMT
+      - Tue, 09 Feb 2021 07:02:10 GMT
       etag:
-      - W/"c4b4d191-bfb3-4131-be60-0372448dc230"
+      - W/"9694e943-d8f9-431e-826f-97fa5ed1119d"
       expires:
       - '-1'
       pragma:
@@ -722,7 +718,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - e90d8a49-6645-4793-94a1-3a406c3f9f4a
+      - a4901d00-e79b-4831-a576-fd1172b44249
     status:
       code: 200
       message: OK
@@ -739,16 +735,17 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001","name":"cli_test_vm_msi000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2020-07-20T03:08:55Z"},"properties":{"provisioningState":"Succeeded"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001","name":"cli_test_vm_msi000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2021-02-09T07:00:28Z"},"properties":{"provisioningState":"Succeeded"}}'
     headers:
       cache-control:
       - no-cache
@@ -757,7 +754,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:36 GMT
+      - Tue, 09 Feb 2021 07:02:12 GMT
       expires:
       - '-1'
       pragma:
@@ -781,7 +778,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.25.1
     method: GET
     uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-compute/quickstart-templates/aliases.json
   response:
@@ -836,36 +833,35 @@ interactions:
       content-type:
       - text/plain; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:38 GMT
+      - Tue, 09 Feb 2021 07:02:12 GMT
       etag:
       - W/"540044b4084c3c314537f1baa1770f248628b2bc9ba0328f1004c33862e049da"
       expires:
-      - Mon, 20 Jul 2020 03:15:38 GMT
+      - Tue, 09 Feb 2021 07:07:12 GMT
       source-age:
-      - '229'
+      - '5'
       strict-transport-security:
       - max-age=31536000
       vary:
       - Authorization,Accept-Encoding, Accept-Encoding
       via:
-      - 1.1 varnish (Varnish/6.0)
       - 1.1 varnish
       x-cache:
-      - HIT, HIT
+      - HIT
       x-cache-hits:
-      - 1, 1
+      - '1'
       x-content-type-options:
       - nosniff
       x-fastly-request-id:
-      - d7f4a04793659946076da15ac485a78a4ecc2285
+      - f2f1925f0f3f8baa3448b986a62a0ac360d9a4af
       x-frame-options:
       - deny
       x-github-request-id:
-      - 2748:34A4:2932D6:2C24C0:5F15021B
+      - 5F66:4D94:DC2B:ECD5:60217BA5
       x-served-by:
-      - cache-sin18035-SIN
+      - cache-sin18045-SIN
       x-timer:
-      - S1595214638.067810,VS0,VE1
+      - S1612854133.597894,VS0,VE1
       x-xss-protection:
       - 1; mode=block
     status:
@@ -875,7 +871,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -884,25 +880,23 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"value\": [\r\n    {\r\n      \"name\": \"vm1VNET\",\r\n      \"id\":
         \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET\",\r\n
-        \     \"etag\": \"W/\\\"453edc03-15eb-439b-9cd0-3428ff54d0f3\\\"\",\r\n      \"type\":
+        \     \"etag\": \"W/\\\"c586e7e6-f686-424d-a411-9ff27fcfcc93\\\"\",\r\n      \"type\":
         \"Microsoft.Network/virtualNetworks\",\r\n      \"location\": \"westus\",\r\n
         \     \"tags\": {},\r\n      \"properties\": {\r\n        \"provisioningState\":
-        \"Succeeded\",\r\n        \"resourceGuid\": \"41339ebb-f8bf-4b18-9ed3-e0b12a4444c2\",\r\n
+        \"Succeeded\",\r\n        \"resourceGuid\": \"31b8bb28-3ffa-4ad1-9cd2-163ae2b31bff\",\r\n
         \       \"addressSpace\": {\r\n          \"addressPrefixes\": [\r\n            \"10.0.0.0/16\"\r\n
         \         ]\r\n        },\r\n        \"subnets\": [\r\n          {\r\n            \"name\":
         \"vm1Subnet\",\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET/subnets/vm1Subnet\",\r\n
-        \           \"etag\": \"W/\\\"453edc03-15eb-439b-9cd0-3428ff54d0f3\\\"\",\r\n
+        \           \"etag\": \"W/\\\"c586e7e6-f686-424d-a411-9ff27fcfcc93\\\"\",\r\n
         \           \"properties\": {\r\n              \"provisioningState\": \"Succeeded\",\r\n
         \             \"addressPrefix\": \"10.0.0.0/24\",\r\n              \"ipConfigurations\":
         [\r\n                {\r\n                  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic/ipConfigurations/ipconfigvm1\"\r\n
@@ -918,7 +912,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:38 GMT
+      - Tue, 09 Feb 2021 07:02:12 GMT
       expires:
       - '-1'
       pragma:
@@ -935,7 +929,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - a716a012-c991-45c6-9ebc-4e1943bc5d2c
+      - 376fd92b-61a4-4166-9da2-29330eca26eb
     status:
       code: 200
       message: OK
@@ -952,32 +946,33 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-authorization/0.52.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleDefinitions?$filter=roleName%20eq%20%27reader%27&api-version=2018-01-01-preview
   response:
     body:
-      string: '{"value":[{"properties":{"roleName":"Reader","type":"BuiltInRole","description":"Lets
-        you view everything, but not make any changes.","assignableScopes":["/"],"permissions":[{"actions":["*/read"],"notActions":[],"dataActions":[],"notDataActions":[]}],"createdOn":"2015-02-02T21:55:09.8806423Z","updatedOn":"2019-02-05T21:24:35.7424745Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7","type":"Microsoft.Authorization/roleDefinitions","name":"acdd72a7-3385-48ef-bd42-f606fba81ae7"}]}'
+      string: '{"value":[{"properties":{"roleName":"Reader","type":"BuiltInRole","description":"View
+        all resources, but does not allow you to make any changes.","assignableScopes":["/"],"permissions":[{"actions":["*/read"],"notActions":[],"dataActions":[],"notDataActions":[]}],"createdOn":"2015-02-02T21:55:09.8806423Z","updatedOn":"2020-08-14T20:16:04.3791205Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7","type":"Microsoft.Authorization/roleDefinitions","name":"acdd72a7-3385-48ef-bd42-f606fba81ae7"}]}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '615'
+      - '627'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:38 GMT
+      - Tue, 09 Feb 2021 07:02:12 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       set-cookie:
-      - x-ms-gateway-slice=Production; path=/; SameSite=None; secure; HttpOnly
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
       strict-transport-security:
       - max-age=31536000; includeSubDomains
       transfer-encoding:
@@ -990,14 +985,11 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: 'b''{"properties": {"template": {"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    body: '{"properties": {"template": {"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
       "contentVersion": "1.0.0.0", "parameters": {"adminPassword": {"type": "securestring",
       "metadata": {"description": "Secure adminPassword"}}}, "variables": {}, "resources":
       [{"type": "Microsoft.Network/networkSecurityGroups", "name": "vm2NSG", "apiVersion":
-      "2015-06-15", "location": "westus", "tags": {}, "dependsOn": [], "properties":
-      {"securityRules": [{"name": "rdp", "properties": {"protocol": "Tcp", "sourcePortRange":
-      "*", "destinationPortRange": "3389", "sourceAddressPrefix": "*", "destinationAddressPrefix":
-      "*", "access": "Allow", "priority": 1000, "direction": "Inbound"}}]}}, {"apiVersion":
+      "2015-06-15", "location": "westus", "tags": {}, "dependsOn": []}, {"apiVersion":
       "2018-01-01", "type": "Microsoft.Network/publicIPAddresses", "name": "vm2PublicIP",
       "location": "westus", "tags": {}, "dependsOn": [], "properties": {"publicIPAllocationMethod":
       null}}, {"apiVersion": "2015-06-15", "type": "Microsoft.Network/networkInterfaces",
@@ -1007,13 +999,13 @@ interactions:
       "subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET/subnets/vm1Subnet"},
       "publicIPAddress": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP"}}}],
       "networkSecurityGroup": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG"}}},
-      {"name": "vm1/Microsoft.Authorization/96218419-567f-49b2-966c-3aaa6e0418b3",
+      {"name": "vm1/Microsoft.Authorization/d431008e-e952-4d65-9c72-7b04003afe0b",
       "type": "Microsoft.Compute/virtualMachines/providers/roleAssignments", "apiVersion":
       "2015-07-01", "dependsOn": ["Microsoft.Compute/virtualMachines/vm2"], "properties":
       {"roleDefinitionId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
-      "principalId": "[reference(\''/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2\'',
-      \''2019-07-01\'', \''Full\'').identity.principalId]", "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1"}},
-      {"apiVersion": "2020-06-01", "type": "Microsoft.Compute/virtualMachines", "name":
+      "principalId": "[reference(''/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2'',
+      ''2019-07-01'', ''Full'').identity.principalId]", "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1"}},
+      {"apiVersion": "2020-12-01", "type": "Microsoft.Compute/virtualMachines", "name":
       "vm2", "location": "westus", "tags": {}, "dependsOn": ["Microsoft.Network/networkInterfaces/vm2VMNic"],
       "properties": {"hardwareProfile": {"vmSize": "Standard_DS1_v2"}, "networkProfile":
       {"networkInterfaces": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic"}]},
@@ -1021,9 +1013,9 @@ interactions:
       "ReadWrite", "managedDisk": {"storageAccountType": null}}, "imageReference":
       {"publisher": "MicrosoftWindowsServer", "offer": "WindowsServer", "sku": "2016-Datacenter",
       "version": "latest"}}, "osProfile": {"computerName": "vm2", "adminUsername":
-      "admin123", "adminPassword": "[parameters(\''adminPassword\'')]"}}, "identity":
+      "admin123", "adminPassword": "[parameters(''adminPassword'')]"}}, "identity":
       {"type": "SystemAssigned"}}], "outputs": {}}, "parameters": {"adminPassword":
-      {"value": "PasswordPassword1!"}}, "mode": "Incremental"}}'''
+      {"value": "PasswordPassword1!"}}, "mode": "Incremental"}}'
     headers:
       Accept:
       - application/json
@@ -1034,32 +1026,33 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '3902'
+      - '3637'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_KnCDwnn0DWJs6odcIfs3T1ypgMAfVtzf","name":"vm_deploy_KnCDwnn0DWJs6odcIfs3T1ypgMAfVtzf","type":"Microsoft.Resources/deployments","properties":{"templateHash":"1744846093675348619","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2020-07-20T03:10:43.5015113Z","duration":"PT2.8139055S","correlationId":"340a817b-7dee-4926-879c-cff52a73ef2f","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines/providers/roleAssignments","locations":[null]},{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm2NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm2PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/96218419-567f-49b2-966c-3aaa6e0418b3","resourceType":"Microsoft.Compute/virtualMachines/providers/roleAssignments","resourceName":"vm1/Microsoft.Authorization/96218419-567f-49b2-966c-3aaa6e0418b3"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_ci8lETzUuXh23VRWlcBMR9TIxuo1xZTg","name":"vm_deploy_ci8lETzUuXh23VRWlcBMR9TIxuo1xZTg","type":"Microsoft.Resources/deployments","properties":{"templateHash":"16566610745733587368","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2021-02-09T07:02:17.2592748Z","duration":"PT2.1426519S","correlationId":"41b7d427-bebd-4ab2-b3ef-b7f6312c17ac","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines/providers/roleAssignments","locations":[null]},{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm2NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm2PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/d431008e-e952-4d65-9c72-7b04003afe0b","resourceType":"Microsoft.Compute/virtualMachines/providers/roleAssignments","resourceName":"vm1/Microsoft.Authorization/d431008e-e952-4d65-9c72-7b04003afe0b"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"}]}}'
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_KnCDwnn0DWJs6odcIfs3T1ypgMAfVtzf/operationStatuses/08586063922447900279?api-version=2020-06-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_ci8lETzUuXh23VRWlcBMR9TIxuo1xZTg/operationStatuses/08585887527503610334?api-version=2020-10-01
       cache-control:
       - no-cache
       content-length:
-      - '3553'
+      - '3554'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:10:44 GMT
+      - Tue, 09 Feb 2021 07:02:17 GMT
       expires:
       - '-1'
       pragma:
@@ -1069,7 +1062,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1166'
+      - '1155'
     status:
       code: 201
       message: Created
@@ -1086,11 +1079,12 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063922447900279?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887527503610334?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -1102,7 +1096,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:15 GMT
+      - Tue, 09 Feb 2021 07:02:48 GMT
       expires:
       - '-1'
       pragma:
@@ -1129,11 +1123,188 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063922447900279?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887527503610334?api-version=2020-10-01
+  response:
+    body:
+      string: '{"status":"Running"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '20'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 09 Feb 2021 07:03:18 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vm create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
+      User-Agent:
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887527503610334?api-version=2020-10-01
+  response:
+    body:
+      string: '{"status":"Running"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '20'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 09 Feb 2021 07:03:50 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vm create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
+      User-Agent:
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887527503610334?api-version=2020-10-01
+  response:
+    body:
+      string: '{"status":"Running"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '20'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 09 Feb 2021 07:04:20 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vm create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
+      User-Agent:
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887527503610334?api-version=2020-10-01
+  response:
+    body:
+      string: '{"status":"Running"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '20'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 09 Feb 2021 07:04:50 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vm create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
+      User-Agent:
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887527503610334?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Succeeded"}'
@@ -1145,7 +1316,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:45 GMT
+      - Tue, 09 Feb 2021 07:05:21 GMT
       expires:
       - '-1'
       pragma:
@@ -1172,23 +1343,24 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_KnCDwnn0DWJs6odcIfs3T1ypgMAfVtzf","name":"vm_deploy_KnCDwnn0DWJs6odcIfs3T1ypgMAfVtzf","type":"Microsoft.Resources/deployments","properties":{"templateHash":"1744846093675348619","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2020-07-20T03:11:36.1227389Z","duration":"PT55.4351331S","correlationId":"340a817b-7dee-4926-879c-cff52a73ef2f","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines/providers/roleAssignments","locations":[null]},{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm2NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm2PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/96218419-567f-49b2-966c-3aaa6e0418b3","resourceType":"Microsoft.Compute/virtualMachines/providers/roleAssignments","resourceName":"vm1/Microsoft.Authorization/96218419-567f-49b2-966c-3aaa6e0418b3"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"}],"outputs":{},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/96218419-567f-49b2-966c-3aaa6e0418b3"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_ci8lETzUuXh23VRWlcBMR9TIxuo1xZTg","name":"vm_deploy_ci8lETzUuXh23VRWlcBMR9TIxuo1xZTg","type":"Microsoft.Resources/deployments","properties":{"templateHash":"16566610745733587368","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2021-02-09T07:04:58.6773073Z","duration":"PT2M43.5606844S","correlationId":"41b7d427-bebd-4ab2-b3ef-b7f6312c17ac","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines/providers/roleAssignments","locations":[null]},{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm2NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm2PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2","apiVersion":"2019-07-01"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/d431008e-e952-4d65-9c72-7b04003afe0b","resourceType":"Microsoft.Compute/virtualMachines/providers/roleAssignments","resourceName":"vm1/Microsoft.Authorization/d431008e-e952-4d65-9c72-7b04003afe0b"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm2VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm2"}],"outputs":{},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/d431008e-e952-4d65-9c72-7b04003afe0b"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP"}]}}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '4701'
+      - '4704'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:46 GMT
+      - Tue, 09 Feb 2021 07:05:21 GMT
       expires:
       - '-1'
       pragma:
@@ -1215,30 +1387,28 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2?$expand=instanceView&api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2?$expand=instanceView&api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm2\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm2\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
         \ \"tags\": {},\r\n  \"identity\": {\r\n    \"type\": \"SystemAssigned\",\r\n
-        \   \"principalId\": \"6e90e06b-b4c5-4adc-93ce-0114f30873f3\",\r\n    \"tenantId\":
+        \   \"principalId\": \"229febea-53ac-4abc-aab1-216ab74a448e\",\r\n    \"tenantId\":
         \"54826b22-38d6-4fb2-bad9-b7b93a3e9c5a\"\r\n  },\r\n  \"properties\": {\r\n
-        \   \"vmId\": \"a9642374-27e3-4b0f-ad83-642153f51f2a\",\r\n    \"hardwareProfile\":
+        \   \"vmId\": \"6a8db56b-04b1-4058-a1ff-fff937057f23\",\r\n    \"hardwareProfile\":
         {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n    \"storageProfile\":
         {\r\n      \"imageReference\": {\r\n        \"publisher\": \"MicrosoftWindowsServer\",\r\n
         \       \"offer\": \"WindowsServer\",\r\n        \"sku\": \"2016-Datacenter\",\r\n
-        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"14393.3808.2007101707\"\r\n
+        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"14393.4169.2101090332\"\r\n
         \     },\r\n      \"osDisk\": {\r\n        \"osType\": \"Windows\",\r\n        \"name\":
-        \"vm2_disk1_9f574da1791447c3a8e580a2d7bf2553\",\r\n        \"createOption\":
+        \"vm2_OsDisk_1_2383478d37424f0da64bc82788a2cf1b\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm2_disk1_9f574da1791447c3a8e580a2d7bf2553\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm2_OsDisk_1_2383478d37424f0da64bc82788a2cf1b\"\r\n
         \       },\r\n        \"diskSizeGB\": 127\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm2\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"windowsConfiguration\":
@@ -1252,16 +1422,16 @@ interactions:
         \         {\r\n            \"code\": \"ProvisioningState/Unavailable\",\r\n
         \           \"level\": \"Warning\",\r\n            \"displayStatus\": \"Not
         Ready\",\r\n            \"message\": \"VM status blob is found but not yet
-        populated.\",\r\n            \"time\": \"2020-07-20T03:11:47+00:00\"\r\n          }\r\n
+        populated.\",\r\n            \"time\": \"2021-02-09T07:05:23+00:00\"\r\n          }\r\n
         \       ]\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\":
-        \"vm2_disk1_9f574da1791447c3a8e580a2d7bf2553\",\r\n          \"statuses\":
+        \"vm2_OsDisk_1_2383478d37424f0da64bc82788a2cf1b\",\r\n          \"statuses\":
         [\r\n            {\r\n              \"code\": \"ProvisioningState/succeeded\",\r\n
         \             \"level\": \"Info\",\r\n              \"displayStatus\": \"Provisioning
-        succeeded\",\r\n              \"time\": \"2020-07-20T03:11:08.9208263+00:00\"\r\n
+        succeeded\",\r\n              \"time\": \"2021-02-09T07:03:36.4695264+00:00\"\r\n
         \           }\r\n          ]\r\n        }\r\n      ],\r\n      \"hyperVGeneration\":
         \"V1\",\r\n      \"statuses\": [\r\n        {\r\n          \"code\": \"ProvisioningState/succeeded\",\r\n
         \         \"level\": \"Info\",\r\n          \"displayStatus\": \"Provisioning
-        succeeded\",\r\n          \"time\": \"2020-07-20T03:11:26.3584017+00:00\"\r\n
+        succeeded\",\r\n          \"time\": \"2021-02-09T07:04:53.51985+00:00\"\r\n
         \       },\r\n        {\r\n          \"code\": \"PowerState/running\",\r\n
         \         \"level\": \"Info\",\r\n          \"displayStatus\": \"VM running\"\r\n
         \       }\r\n      ]\r\n    }\r\n  }\r\n}"
@@ -1269,11 +1439,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '3358'
+      - '3365'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:47 GMT
+      - Tue, 09 Feb 2021 07:05:23 GMT
       expires:
       - '-1'
       pragma:
@@ -1290,7 +1460,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3975,Microsoft.Compute/LowCostGet30Min;31715
+      - Microsoft.Compute/LowCostGet3Min;3988,Microsoft.Compute/LowCostGet30Min;31775
     status:
       code: 200
       message: OK
@@ -1298,7 +1468,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -1307,22 +1477,20 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm2VMNic\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic\",\r\n
-        \ \"etag\": \"W/\\\"47c1d683-fcbb-4454-92e3-5f71c36ec992\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"625690be-60fc-4abd-a8ba-70bac88fa970\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"b8063f7c-c984-4f36-b7df-a36e6667aa87\",\r\n
+        \"Succeeded\",\r\n    \"resourceGuid\": \"dc87f825-1031-4785-baea-0811726b7846\",\r\n
         \   \"ipConfigurations\": [\r\n      {\r\n        \"name\": \"ipconfigvm2\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic/ipConfigurations/ipconfigvm2\",\r\n
-        \       \"etag\": \"W/\\\"47c1d683-fcbb-4454-92e3-5f71c36ec992\\\"\",\r\n
+        \       \"etag\": \"W/\\\"625690be-60fc-4abd-a8ba-70bac88fa970\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/networkInterfaces/ipConfigurations\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"privateIPAddress\": \"10.0.0.5\",\r\n          \"privateIPAllocationMethod\":
@@ -1331,8 +1499,8 @@ interactions:
         \         },\r\n          \"primary\": true,\r\n          \"privateIPAddressVersion\":
         \"IPv4\"\r\n        }\r\n      }\r\n    ],\r\n    \"dnsSettings\": {\r\n      \"dnsServers\":
         [],\r\n      \"appliedDnsServers\": [],\r\n      \"internalDomainNameSuffix\":
-        \"xopdgqn55amexhwt2cysurceyc.dx.internal.cloudapp.net\"\r\n    },\r\n    \"macAddress\":
-        \"00-22-48-08-22-48\",\r\n    \"enableAcceleratedNetworking\": false,\r\n
+        \"fc31qmp0h5iuvhgscy3ofmy15h.dx.internal.cloudapp.net\"\r\n    },\r\n    \"macAddress\":
+        \"00-22-48-04-A5-9C\",\r\n    \"enableAcceleratedNetworking\": false,\r\n
         \   \"enableIPForwarding\": false,\r\n    \"networkSecurityGroup\": {\r\n
         \     \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm2NSG\"\r\n
         \   },\r\n    \"primary\": true,\r\n    \"virtualMachine\": {\r\n      \"id\":
@@ -1346,9 +1514,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:48 GMT
+      - Tue, 09 Feb 2021 07:05:23 GMT
       etag:
-      - W/"47c1d683-fcbb-4454-92e3-5f71c36ec992"
+      - W/"625690be-60fc-4abd-a8ba-70bac88fa970"
       expires:
       - '-1'
       pragma:
@@ -1365,7 +1533,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - c6606cf5-fbcb-4a9d-be00-537bc72e1e72
+      - 5ff7a8ff-8199-4765-9a03-e06837b802e4
     status:
       code: 200
       message: OK
@@ -1373,7 +1541,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -1382,21 +1550,19 @@ interactions:
       - keep-alive
       ParameterSetName:
       - -g -n --image --assign-identity --scope --role --admin-username --admin-password
+        --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm2PublicIP\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm2PublicIP\",\r\n
-        \ \"etag\": \"W/\\\"719b9996-043a-4dc6-aa47-1111a3723afe\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"48eccd12-3c7b-43bf-b296-ff4658d3b676\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"d5c648ca-9155-453f-974b-0aa9278469b2\",\r\n
-        \   \"ipAddress\": \"104.42.43.49\",\r\n    \"publicIPAddressVersion\": \"IPv4\",\r\n
-        \   \"publicIPAllocationMethod\": \"Dynamic\",\r\n    \"idleTimeoutInMinutes\":
+        \"Succeeded\",\r\n    \"resourceGuid\": \"33f65896-3dc7-4440-9d9d-f52542b12228\",\r\n
+        \   \"ipAddress\": \"40.118.241.216\",\r\n    \"publicIPAddressVersion\":
+        \"IPv4\",\r\n    \"publicIPAllocationMethod\": \"Dynamic\",\r\n    \"idleTimeoutInMinutes\":
         4,\r\n    \"ipTags\": [],\r\n    \"ipConfiguration\": {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm2VMNic/ipConfigurations/ipconfigvm2\"\r\n
         \   }\r\n  },\r\n  \"type\": \"Microsoft.Network/publicIPAddresses\",\r\n
         \ \"sku\": {\r\n    \"name\": \"Basic\"\r\n  }\r\n}"
@@ -1404,13 +1570,13 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '996'
+      - '998'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:49 GMT
+      - Tue, 09 Feb 2021 07:05:24 GMT
       etag:
-      - W/"719b9996-043a-4dc6-aa47-1111a3723afe"
+      - W/"48eccd12-3c7b-43bf-b296-ff4658d3b676"
       expires:
       - '-1'
       pragma:
@@ -1427,7 +1593,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 1900249d-b0f6-4d1a-962e-3261aa6633ea
+      - 6f6ccb4a-2fea-41dd-89bd-8487a337ae46
     status:
       code: 200
       message: OK
@@ -1443,17 +1609,17 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001","name":"cli_test_vm_msi000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2020-07-20T03:08:55Z"},"properties":{"provisioningState":"Succeeded"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001","name":"cli_test_vm_msi000001","type":"Microsoft.Resources/resourceGroups","location":"westus","tags":{"product":"azurecli","cause":"automation","date":"2021-02-09T07:00:28Z"},"properties":{"provisioningState":"Succeeded"}}'
     headers:
       cache-control:
       - no-cache
@@ -1462,7 +1628,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:49 GMT
+      - Tue, 09 Feb 2021 07:05:24 GMT
       expires:
       - '-1'
       pragma:
@@ -1486,7 +1652,7 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python-requests/2.22.0
+      - python-requests/2.25.1
     method: GET
     uri: https://raw.githubusercontent.com/Azure/azure-rest-api-specs/master/arm-compute/quickstart-templates/aliases.json
   response:
@@ -1541,36 +1707,35 @@ interactions:
       content-type:
       - text/plain; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:50 GMT
+      - Tue, 09 Feb 2021 07:05:25 GMT
       etag:
       - W/"540044b4084c3c314537f1baa1770f248628b2bc9ba0328f1004c33862e049da"
       expires:
-      - Mon, 20 Jul 2020 03:16:50 GMT
+      - Tue, 09 Feb 2021 07:10:25 GMT
       source-age:
-      - '308'
+      - '198'
       strict-transport-security:
       - max-age=31536000
       vary:
       - Authorization,Accept-Encoding, Accept-Encoding
       via:
-      - 1.1 varnish (Varnish/6.0)
       - 1.1 varnish
       x-cache:
-      - HIT, HIT
+      - HIT
       x-cache-hits:
-      - 1, 1
+      - '4'
       x-content-type-options:
       - nosniff
       x-fastly-request-id:
-      - 6e57f0b231506327c28b8b447830eff89bce3064
+      - f8def378265cf682da64f71fe5566168ca9476cd
       x-frame-options:
       - deny
       x-github-request-id:
-      - 2748:34A4:2932D6:2C24C0:5F15021B
+      - 5F66:4D94:DC2B:ECD5:60217BA5
       x-served-by:
-      - cache-sin18023-SIN
+      - cache-sin18045-SIN
       x-timer:
-      - S1595214710.085562,VS0,VE248
+      - S1612854325.286892,VS0,VE0
       x-xss-protection:
       - 1; mode=block
     status:
@@ -1580,7 +1745,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -1588,26 +1753,23 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"value\": [\r\n    {\r\n      \"name\": \"vm1VNET\",\r\n      \"id\":
         \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET\",\r\n
-        \     \"etag\": \"W/\\\"7b83c230-55c8-41a3-a774-5a5bb2ad30d1\\\"\",\r\n      \"type\":
+        \     \"etag\": \"W/\\\"b209da78-eaee-4e7a-81ee-0be881b131d9\\\"\",\r\n      \"type\":
         \"Microsoft.Network/virtualNetworks\",\r\n      \"location\": \"westus\",\r\n
         \     \"tags\": {},\r\n      \"properties\": {\r\n        \"provisioningState\":
-        \"Succeeded\",\r\n        \"resourceGuid\": \"41339ebb-f8bf-4b18-9ed3-e0b12a4444c2\",\r\n
+        \"Succeeded\",\r\n        \"resourceGuid\": \"31b8bb28-3ffa-4ad1-9cd2-163ae2b31bff\",\r\n
         \       \"addressSpace\": {\r\n          \"addressPrefixes\": [\r\n            \"10.0.0.0/16\"\r\n
         \         ]\r\n        },\r\n        \"subnets\": [\r\n          {\r\n            \"name\":
         \"vm1Subnet\",\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET/subnets/vm1Subnet\",\r\n
-        \           \"etag\": \"W/\\\"7b83c230-55c8-41a3-a774-5a5bb2ad30d1\\\"\",\r\n
+        \           \"etag\": \"W/\\\"b209da78-eaee-4e7a-81ee-0be881b131d9\\\"\",\r\n
         \           \"properties\": {\r\n              \"provisioningState\": \"Succeeded\",\r\n
         \             \"addressPrefix\": \"10.0.0.0/24\",\r\n              \"ipConfigurations\":
         [\r\n                {\r\n                  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm1VMNic/ipConfigurations/ipconfigvm1\"\r\n
@@ -1624,7 +1786,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:50 GMT
+      - Tue, 09 Feb 2021 07:05:25 GMT
       expires:
       - '-1'
       pragma:
@@ -1641,29 +1803,26 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - d696029f-964c-43b9-a243-125277f4585f
+      - 19b718b2-385c-4c43-8376-6d42c938f239
     status:
       code: 200
       message: OK
 - request:
-    body: 'b''{"properties": {"template": {"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    body: '{"properties": {"template": {"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
       "contentVersion": "1.0.0.0", "parameters": {"adminPassword": {"type": "securestring",
       "metadata": {"description": "Secure adminPassword"}}}, "variables": {}, "resources":
       [{"type": "Microsoft.Network/networkSecurityGroups", "name": "vm3NSG", "apiVersion":
-      "2015-06-15", "location": "westus", "tags": {}, "dependsOn": [], "properties":
-      {"securityRules": [{"name": "default-allow-ssh", "properties": {"protocol":
-      "Tcp", "sourcePortRange": "*", "destinationPortRange": "22", "sourceAddressPrefix":
-      "*", "destinationAddressPrefix": "*", "access": "Allow", "priority": 1000, "direction":
-      "Inbound"}}]}}, {"apiVersion": "2018-01-01", "type": "Microsoft.Network/publicIPAddresses",
-      "name": "vm3PublicIP", "location": "westus", "tags": {}, "dependsOn": [], "properties":
-      {"publicIPAllocationMethod": null}}, {"apiVersion": "2015-06-15", "type": "Microsoft.Network/networkInterfaces",
+      "2015-06-15", "location": "westus", "tags": {}, "dependsOn": []}, {"apiVersion":
+      "2018-01-01", "type": "Microsoft.Network/publicIPAddresses", "name": "vm3PublicIP",
+      "location": "westus", "tags": {}, "dependsOn": [], "properties": {"publicIPAllocationMethod":
+      null}}, {"apiVersion": "2015-06-15", "type": "Microsoft.Network/networkInterfaces",
       "name": "vm3VMNic", "location": "westus", "tags": {}, "dependsOn": ["Microsoft.Network/networkSecurityGroups/vm3NSG",
       "Microsoft.Network/publicIpAddresses/vm3PublicIP"], "properties": {"ipConfigurations":
       [{"name": "ipconfigvm3", "properties": {"privateIPAllocationMethod": "Dynamic",
       "subnet": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/virtualNetworks/vm1VNET/subnets/vm1Subnet"},
       "publicIPAddress": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP"}}}],
       "networkSecurityGroup": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG"}}},
-      {"apiVersion": "2020-06-01", "type": "Microsoft.Compute/virtualMachines", "name":
+      {"apiVersion": "2020-12-01", "type": "Microsoft.Compute/virtualMachines", "name":
       "vm3", "location": "westus", "tags": {}, "dependsOn": ["Microsoft.Network/networkInterfaces/vm3VMNic"],
       "properties": {"hardwareProfile": {"vmSize": "Standard_DS1_v2"}, "networkProfile":
       {"networkInterfaces": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic"}]},
@@ -1671,8 +1830,8 @@ interactions:
       "ReadWrite", "managedDisk": {"storageAccountType": null}}, "imageReference":
       {"publisher": "Debian", "offer": "debian-10", "sku": "10", "version": "latest"}},
       "osProfile": {"computerName": "vm3", "adminUsername": "admin123", "adminPassword":
-      "[parameters(\''adminPassword\'')]"}}}], "outputs": {}}, "parameters": {"adminPassword":
-      {"value": "PasswordPassword1!"}}, "mode": "Incremental"}}'''
+      "[parameters(''adminPassword'')]"}}}], "outputs": {}}, "parameters": {"adminPassword":
+      {"value": "PasswordPassword1!"}}, "mode": "Incremental"}}'
     headers:
       Accept:
       - application/json
@@ -1683,24 +1842,24 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2960'
+      - '2683'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_pClLEi8V8A3T1b4FRwQKHzFc7bvDfT4t","name":"vm_deploy_pClLEi8V8A3T1b4FRwQKHzFc7bvDfT4t","type":"Microsoft.Resources/deployments","properties":{"templateHash":"9065409111134971845","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2020-07-20T03:11:55.0904366Z","duration":"PT2.5942168S","correlationId":"7173dc54-2d28-44eb-9c89-8c626c3e5ea1","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm3NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm3PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm3"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_ghW6gr6b5mXhuplKBLC7SwEevOknPHnD","name":"vm_deploy_ghW6gr6b5mXhuplKBLC7SwEevOknPHnD","type":"Microsoft.Resources/deployments","properties":{"templateHash":"5285502683256876837","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Accepted","timestamp":"2021-02-09T07:05:29.5207159Z","duration":"PT1.4983031S","correlationId":"f78d5f87-e4cd-44ba-a4ed-b93a9dc40b3c","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm3NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm3PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm3"}]}}'
     headers:
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_pClLEi8V8A3T1b4FRwQKHzFc7bvDfT4t/operationStatuses/08586063921729814120?api-version=2020-06-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_ghW6gr6b5mXhuplKBLC7SwEevOknPHnD/operationStatuses/08585887525574552170?api-version=2020-10-01
       cache-control:
       - no-cache
       content-length:
@@ -1708,7 +1867,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:11:55 GMT
+      - Tue, 09 Feb 2021 07:05:29 GMT
       expires:
       - '-1'
       pragma:
@@ -1718,7 +1877,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1162'
+      - '1176'
     status:
       code: 201
       message: Created
@@ -1734,12 +1893,12 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063921729814120?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887525574552170?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Running"}'
@@ -1751,7 +1910,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:12:25 GMT
+      - Tue, 09 Feb 2021 07:06:00 GMT
       expires:
       - '-1'
       pragma:
@@ -1777,12 +1936,55 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08586063921729814120?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887525574552170?api-version=2020-10-01
+  response:
+    body:
+      string: '{"status":"Running"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '20'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 09 Feb 2021 07:06:30 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - vm create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --image --admin-username --admin-password --nsg-rule
+      User-Agent:
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment/operationStatuses/08585887525574552170?api-version=2020-10-01
   response:
     body:
       string: '{"status":"Succeeded"}'
@@ -1794,7 +1996,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:12:56 GMT
+      - Tue, 09 Feb 2021 07:07:01 GMT
       expires:
       - '-1'
       pragma:
@@ -1820,24 +2022,24 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-resource/10.1.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-resource/12.0.0 Azure-SDK-For-Python AZURECLI/2.19.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/mock-deployment?api-version=2020-10-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_pClLEi8V8A3T1b4FRwQKHzFc7bvDfT4t","name":"vm_deploy_pClLEi8V8A3T1b4FRwQKHzFc7bvDfT4t","type":"Microsoft.Resources/deployments","properties":{"templateHash":"9065409111134971845","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2020-07-20T03:12:54.0398947Z","duration":"PT1M1.5436749S","correlationId":"7173dc54-2d28-44eb-9c89-8c626c3e5ea1","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm3NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm3PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm3"}],"outputs":{},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Resources/deployments/vm_deploy_ghW6gr6b5mXhuplKBLC7SwEevOknPHnD","name":"vm_deploy_ghW6gr6b5mXhuplKBLC7SwEevOknPHnD","type":"Microsoft.Resources/deployments","properties":{"templateHash":"5285502683256876837","parameters":{"adminPassword":{"type":"SecureString"}},"mode":"Incremental","provisioningState":"Succeeded","timestamp":"2021-02-09T07:06:39.1862445Z","duration":"PT1M11.1638317S","correlationId":"f78d5f87-e4cd-44ba-a4ed-b93a9dc40b3c","providers":[{"namespace":"Microsoft.Network","resourceTypes":[{"resourceType":"networkSecurityGroups","locations":["westus"]},{"resourceType":"publicIPAddresses","locations":["westus"]},{"resourceType":"networkInterfaces","locations":["westus"]}]},{"namespace":"Microsoft.Compute","resourceTypes":[{"resourceType":"virtualMachines","locations":["westus"]}]}],"dependencies":[{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG","resourceType":"Microsoft.Network/networkSecurityGroups","resourceName":"vm3NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP","resourceType":"Microsoft.Network/publicIPAddresses","resourceName":"vm3PublicIP"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"},{"dependsOn":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic","resourceType":"Microsoft.Network/networkInterfaces","resourceName":"vm3VMNic"}],"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3","resourceType":"Microsoft.Compute/virtualMachines","resourceName":"vm3"}],"outputs":{},"outputResources":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG"},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP"}]}}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '3305'
+      - '3306'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:12:57 GMT
+      - Tue, 09 Feb 2021 07:07:02 GMT
       expires:
       - '-1'
       pragma:
@@ -1863,50 +2065,48 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?$expand=instanceView&api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?$expand=instanceView&api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
-        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n
+        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n
         \   \"hardwareProfile\": {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n
         \   \"storageProfile\": {\r\n      \"imageReference\": {\r\n        \"publisher\":
         \"Debian\",\r\n        \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n
-        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n
+        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n
         \     },\r\n      \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
         \   \"provisioningState\": \"Succeeded\",\r\n    \"instanceView\": {\r\n      \"computerName\":
-        \"vm3\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.4\",\r\n
+        \"vm3\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.8\",\r\n
         \     \"vmAgent\": {\r\n        \"vmAgentVersion\": \"2.2.45\",\r\n        \"statuses\":
         [\r\n          {\r\n            \"code\": \"ProvisioningState/succeeded\",\r\n
         \           \"level\": \"Info\",\r\n            \"displayStatus\": \"Ready\",\r\n
         \           \"message\": \"Guest Agent is running\",\r\n            \"time\":
-        \"2020-07-20T03:12:58+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
-        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n
+        \"2021-02-09T07:07:00+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
+        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n
         \         \"statuses\": [\r\n            {\r\n              \"code\": \"ProvisioningState/succeeded\",\r\n
         \             \"level\": \"Info\",\r\n              \"displayStatus\": \"Provisioning
-        succeeded\",\r\n              \"time\": \"2020-07-20T03:12:13.4992484+00:00\"\r\n
+        succeeded\",\r\n              \"time\": \"2021-02-09T07:06:15.5705014+00:00\"\r\n
         \           }\r\n          ]\r\n        }\r\n      ],\r\n      \"hyperVGeneration\":
         \"V1\",\r\n      \"statuses\": [\r\n        {\r\n          \"code\": \"ProvisioningState/succeeded\",\r\n
         \         \"level\": \"Info\",\r\n          \"displayStatus\": \"Provisioning
-        succeeded\",\r\n          \"time\": \"2020-07-20T03:12:50.6401043+00:00\"\r\n
+        succeeded\",\r\n          \"time\": \"2021-02-09T07:06:36.0245189+00:00\"\r\n
         \       },\r\n        {\r\n          \"code\": \"PowerState/running\",\r\n
         \         \"level\": \"Info\",\r\n          \"displayStatus\": \"VM running\"\r\n
         \       }\r\n      ]\r\n    }\r\n  }\r\n}"
@@ -1914,11 +2114,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '3165'
+      - '3244'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:12:58 GMT
+      - Tue, 09 Feb 2021 07:07:03 GMT
       expires:
       - '-1'
       pragma:
@@ -1935,7 +2135,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3970,Microsoft.Compute/LowCostGet30Min;31710
+      - Microsoft.Compute/LowCostGet3Min;3990,Microsoft.Compute/LowCostGet30Min;31770
     status:
       code: 200
       message: OK
@@ -1943,7 +2143,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -1951,23 +2151,20 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3VMNic\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\",\r\n
-        \ \"etag\": \"W/\\\"d11732e7-785b-4791-bcdb-5ce9cec5462a\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"490b80e8-f291-4ae5-9ab9-b612d9fa3a02\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"51296a4d-3984-4d8d-9fe7-36d5cdb509bb\",\r\n
+        \"Succeeded\",\r\n    \"resourceGuid\": \"f4888941-bd6a-4626-b420-c425965687b5\",\r\n
         \   \"ipConfigurations\": [\r\n      {\r\n        \"name\": \"ipconfigvm3\",\r\n
         \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic/ipConfigurations/ipconfigvm3\",\r\n
-        \       \"etag\": \"W/\\\"d11732e7-785b-4791-bcdb-5ce9cec5462a\\\"\",\r\n
+        \       \"etag\": \"W/\\\"490b80e8-f291-4ae5-9ab9-b612d9fa3a02\\\"\",\r\n
         \       \"type\": \"Microsoft.Network/networkInterfaces/ipConfigurations\",\r\n
         \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
         \         \"privateIPAddress\": \"10.0.0.6\",\r\n          \"privateIPAllocationMethod\":
@@ -1976,8 +2173,8 @@ interactions:
         \         },\r\n          \"primary\": true,\r\n          \"privateIPAddressVersion\":
         \"IPv4\"\r\n        }\r\n      }\r\n    ],\r\n    \"dnsSettings\": {\r\n      \"dnsServers\":
         [],\r\n      \"appliedDnsServers\": [],\r\n      \"internalDomainNameSuffix\":
-        \"xopdgqn55amexhwt2cysurceyc.dx.internal.cloudapp.net\"\r\n    },\r\n    \"macAddress\":
-        \"00-22-48-08-26-1B\",\r\n    \"enableAcceleratedNetworking\": false,\r\n
+        \"fc31qmp0h5iuvhgscy3ofmy15h.dx.internal.cloudapp.net\"\r\n    },\r\n    \"macAddress\":
+        \"00-22-48-08-5E-9A\",\r\n    \"enableAcceleratedNetworking\": false,\r\n
         \   \"enableIPForwarding\": false,\r\n    \"networkSecurityGroup\": {\r\n
         \     \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkSecurityGroups/vm3NSG\"\r\n
         \   },\r\n    \"primary\": true,\r\n    \"virtualMachine\": {\r\n      \"id\":
@@ -1991,9 +2188,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:12:59 GMT
+      - Tue, 09 Feb 2021 07:07:03 GMT
       etag:
-      - W/"d11732e7-785b-4791-bcdb-5ce9cec5462a"
+      - W/"490b80e8-f291-4ae5-9ab9-b612d9fa3a02"
       expires:
       - '-1'
       pragma:
@@ -2010,7 +2207,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - f735eb70-3ce3-43f2-a9ea-89fb4553c040
+      - a33b1246-6331-487c-aff3-c37745e0ba19
     status:
       code: 200
       message: OK
@@ -2018,7 +2215,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - application/json, text/json
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -2026,21 +2223,18 @@ interactions:
       Connection:
       - keep-alive
       ParameterSetName:
-      - -g -n --image --admin-username --admin-password
+      - -g -n --image --admin-username --admin-password --nsg-rule
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-network/11.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-network/17.0.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP?api-version=2018-01-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3PublicIP\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/publicIPAddresses/vm3PublicIP\",\r\n
-        \ \"etag\": \"W/\\\"43082714-6e04-46c6-a48a-3f80da87865e\\\"\",\r\n  \"location\":
+        \ \"etag\": \"W/\\\"f4f0d9a7-c3c7-46e5-b305-997777342e94\\\"\",\r\n  \"location\":
         \"westus\",\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":
-        \"Succeeded\",\r\n    \"resourceGuid\": \"b0cff36a-b85f-4f78-bdf9-7770365352e0\",\r\n
-        \   \"ipAddress\": \"104.42.41.81\",\r\n    \"publicIPAddressVersion\": \"IPv4\",\r\n
+        \"Succeeded\",\r\n    \"resourceGuid\": \"c682aeff-4d97-4dd0-883c-ba843adebdf5\",\r\n
+        \   \"ipAddress\": \"13.91.57.9\",\r\n    \"publicIPAddressVersion\": \"IPv4\",\r\n
         \   \"publicIPAllocationMethod\": \"Dynamic\",\r\n    \"idleTimeoutInMinutes\":
         4,\r\n    \"ipTags\": [],\r\n    \"ipConfiguration\": {\r\n      \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic/ipConfigurations/ipconfigvm3\"\r\n
         \   }\r\n  },\r\n  \"type\": \"Microsoft.Network/publicIPAddresses\",\r\n
@@ -2049,13 +2243,13 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '996'
+      - '994'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:12:59 GMT
+      - Tue, 09 Feb 2021 07:07:04 GMT
       etag:
-      - W/"43082714-6e04-46c6-a48a-3f80da87865e"
+      - W/"f4f0d9a7-c3c7-46e5-b305-997777342e94"
       expires:
       - '-1'
       pragma:
@@ -2072,7 +2266,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-arm-service-request-id:
-      - 18fc2fa1-c229-4980-8355-46e345714755
+      - af085c7a-5bcd-47a2-93ee-d0369258f086
     status:
       code: 200
       message: OK
@@ -2090,31 +2284,31 @@ interactions:
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-authorization/0.52.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleDefinitions?$filter=roleName%20eq%20%27reader%27&api-version=2018-01-01-preview
   response:
     body:
-      string: '{"value":[{"properties":{"roleName":"Reader","type":"BuiltInRole","description":"Lets
-        you view everything, but not make any changes.","assignableScopes":["/"],"permissions":[{"actions":["*/read"],"notActions":[],"dataActions":[],"notDataActions":[]}],"createdOn":"2015-02-02T21:55:09.8806423Z","updatedOn":"2019-02-05T21:24:35.7424745Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7","type":"Microsoft.Authorization/roleDefinitions","name":"acdd72a7-3385-48ef-bd42-f606fba81ae7"}]}'
+      string: '{"value":[{"properties":{"roleName":"Reader","type":"BuiltInRole","description":"View
+        all resources, but does not allow you to make any changes.","assignableScopes":["/"],"permissions":[{"actions":["*/read"],"notActions":[],"dataActions":[],"notDataActions":[]}],"createdOn":"2015-02-02T21:55:09.8806423Z","updatedOn":"2020-08-14T20:16:04.3791205Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7","type":"Microsoft.Authorization/roleDefinitions","name":"acdd72a7-3385-48ef-bd42-f606fba81ae7"}]}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '615'
+      - '627'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:00 GMT
+      - Tue, 09 Feb 2021 07:07:04 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       set-cookie:
-      - x-ms-gateway-slice=Production; path=/; SameSite=None; secure; HttpOnly
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
       strict-transport-security:
       - max-age=31536000; includeSubDomains
       transfer-encoding:
@@ -2140,43 +2334,58 @@ interactions:
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?$expand=instanceView&api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
-        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n
+        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n
         \   \"hardwareProfile\": {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n
         \   \"storageProfile\": {\r\n      \"imageReference\": {\r\n        \"publisher\":
         \"Debian\",\r\n        \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n
-        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n
+        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n
         \     },\r\n      \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
-        \   \"provisioningState\": \"Succeeded\"\r\n  }\r\n}"
+        \   \"provisioningState\": \"Succeeded\",\r\n    \"instanceView\": {\r\n      \"computerName\":
+        \"vm3\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.8\",\r\n
+        \     \"vmAgent\": {\r\n        \"vmAgentVersion\": \"2.2.45\",\r\n        \"statuses\":
+        [\r\n          {\r\n            \"code\": \"ProvisioningState/succeeded\",\r\n
+        \           \"level\": \"Info\",\r\n            \"displayStatus\": \"Ready\",\r\n
+        \           \"message\": \"Guest Agent is running\",\r\n            \"time\":
+        \"2021-02-09T07:07:03+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
+        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n
+        \         \"statuses\": [\r\n            {\r\n              \"code\": \"ProvisioningState/succeeded\",\r\n
+        \             \"level\": \"Info\",\r\n              \"displayStatus\": \"Provisioning
+        succeeded\",\r\n              \"time\": \"2021-02-09T07:06:15.5705014+00:00\"\r\n
+        \           }\r\n          ]\r\n        }\r\n      ],\r\n      \"hyperVGeneration\":
+        \"V1\",\r\n      \"statuses\": [\r\n        {\r\n          \"code\": \"ProvisioningState/succeeded\",\r\n
+        \         \"level\": \"Info\",\r\n          \"displayStatus\": \"Provisioning
+        succeeded\",\r\n          \"time\": \"2021-02-09T07:06:36.0245189+00:00\"\r\n
+        \       },\r\n        {\r\n          \"code\": \"PowerState/running\",\r\n
+        \         \"level\": \"Info\",\r\n          \"displayStatus\": \"VM running\"\r\n
+        \       }\r\n      ]\r\n    }\r\n  }\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '1874'
+      - '3244'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:00 GMT
+      - Tue, 09 Feb 2021 07:07:04 GMT
       expires:
       - '-1'
       pragma:
@@ -2193,7 +2402,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3979,Microsoft.Compute/LowCostGet30Min;31709
+      - Microsoft.Compute/LowCostGet3Min;3989,Microsoft.Compute/LowCostGet30Min;31769
     status:
       code: 200
       message: OK
@@ -2211,38 +2420,36 @@ interactions:
       Content-Length:
       - '40'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: PATCH
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
         \ \"tags\": {},\r\n  \"identity\": {\r\n    \"type\": \"SystemAssigned\",\r\n
-        \   \"principalId\": \"bf66d072-0731-45a3-867b-fb24e08545df\",\r\n    \"tenantId\":
+        \   \"principalId\": \"6b2bb0e6-e8e7-490a-ada7-24d6db609f06\",\r\n    \"tenantId\":
         \"54826b22-38d6-4fb2-bad9-b7b93a3e9c5a\"\r\n  },\r\n  \"properties\": {\r\n
-        \   \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n    \"hardwareProfile\":
+        \   \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n    \"hardwareProfile\":
         {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n    \"storageProfile\":
         {\r\n      \"imageReference\": {\r\n        \"publisher\": \"Debian\",\r\n
         \       \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n        \"version\":
-        \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n      },\r\n
+        \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n      },\r\n
         \     \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
         \   \"provisioningState\": \"Updating\"\r\n  }\r\n}"
@@ -2250,15 +2457,15 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/1279bb8a-4230-4c3b-b8a2-971753aeebbf?api-version=2020-06-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/a32c4956-3cbc-4fcb-900b-caf96e49998f?api-version=2020-12-01
       cache-control:
       - no-cache
       content-length:
-      - '2043'
+      - '2122'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:08 GMT
+      - Tue, 09 Feb 2021 07:07:11 GMT
       expires:
       - '-1'
       pragma:
@@ -2275,9 +2482,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/PutVM3Min;236,Microsoft.Compute/PutVM30Min;1160
+      - Microsoft.Compute/PutVM3Min;237,Microsoft.Compute/PutVM30Min;1168
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1149'
+      - '1180'
     status:
       code: 200
       message: OK
@@ -2285,7 +2492,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -2295,24 +2502,23 @@ interactions:
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/1279bb8a-4230-4c3b-b8a2-971753aeebbf?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/a32c4956-3cbc-4fcb-900b-caf96e49998f?api-version=2020-12-01
   response:
     body:
-      string: "{\r\n  \"startTime\": \"2020-07-20T03:13:06.5464353+00:00\",\r\n  \"endTime\":
-        \"2020-07-20T03:13:09.7808296+00:00\",\r\n  \"status\": \"Succeeded\",\r\n
-        \ \"name\": \"1279bb8a-4230-4c3b-b8a2-971753aeebbf\"\r\n}"
+      string: "{\r\n  \"startTime\": \"2021-02-09T07:07:08.9169551+00:00\",\r\n  \"endTime\":
+        \"2021-02-09T07:07:13.589127+00:00\",\r\n  \"status\": \"Succeeded\",\r\n
+        \ \"name\": \"a32c4956-3cbc-4fcb-900b-caf96e49998f\"\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '184'
+      - '183'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:39 GMT
+      - Tue, 09 Feb 2021 07:07:41 GMT
       expires:
       - '-1'
       pragma:
@@ -2329,7 +2535,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetOperation3Min;14969,Microsoft.Compute/GetOperation30Min;29606
+      - Microsoft.Compute/GetOperation3Min;14979,Microsoft.Compute/GetOperation30Min;29631
     status:
       code: 200
       message: OK
@@ -2337,7 +2543,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -2347,32 +2553,32 @@ interactions:
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
         \ \"tags\": {},\r\n  \"identity\": {\r\n    \"type\": \"SystemAssigned\",\r\n
-        \   \"principalId\": \"bf66d072-0731-45a3-867b-fb24e08545df\",\r\n    \"tenantId\":
+        \   \"principalId\": \"6b2bb0e6-e8e7-490a-ada7-24d6db609f06\",\r\n    \"tenantId\":
         \"54826b22-38d6-4fb2-bad9-b7b93a3e9c5a\"\r\n  },\r\n  \"properties\": {\r\n
-        \   \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n    \"hardwareProfile\":
+        \   \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n    \"hardwareProfile\":
         {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n    \"storageProfile\":
         {\r\n      \"imageReference\": {\r\n        \"publisher\": \"Debian\",\r\n
         \       \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n        \"version\":
-        \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n      },\r\n
+        \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n      },\r\n
         \     \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
         \   \"provisioningState\": \"Succeeded\"\r\n  }\r\n}"
@@ -2380,11 +2586,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '2044'
+      - '2123'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:39 GMT
+      - Tue, 09 Feb 2021 07:07:41 GMT
       expires:
       - '-1'
       pragma:
@@ -2401,13 +2607,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3979,Microsoft.Compute/LowCostGet30Min;31702
+      - Microsoft.Compute/LowCostGet3Min;3985,Microsoft.Compute/LowCostGet30Min;31762
     status:
       code: 200
       message: OK
 - request:
     body: '{"properties": {"roleDefinitionId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
-      "principalId": "bf66d072-0731-45a3-867b-fb24e08545df"}}'
+      "principalId": "6b2bb0e6-e8e7-490a-ada7-24d6db609f06"}}'
     headers:
       Accept:
       - application/json
@@ -2424,36 +2630,36 @@ interactions:
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-authorization/0.52.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - python/3.7.4 (Windows-10-10.0.19041-SP0) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.19.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/88888888-0000-0000-0000-000000000001?api-version=2018-09-01-preview
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/88888888-0000-0000-0000-000000000001?api-version=2020-04-01-preview
   response:
     body:
-      string: '{"properties":{"roleDefinitionId":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7","principalId":"bf66d072-0731-45a3-867b-fb24e08545df","principalType":"ServicePrincipal","scope":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","createdOn":"2020-07-20T03:13:40.9681673Z","updatedOn":"2020-07-20T03:13:40.9681673Z","createdBy":null,"updatedBy":"9ac534f1-d577-4034-a32d-48de400dacbf"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/88888888-0000-0000-0000-000000000001","type":"Microsoft.Authorization/roleAssignments","name":"88888888-0000-0000-0000-000000000001"}'
+      string: '{"properties":{"roleDefinitionId":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7","principalId":"6b2bb0e6-e8e7-490a-ada7-24d6db609f06","principalType":"ServicePrincipal","scope":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1","condition":null,"conditionVersion":null,"createdOn":"2021-02-09T07:07:43.3314511Z","updatedOn":"2021-02-09T07:07:43.6514489Z","createdBy":null,"updatedBy":"181c08fa-7ac8-48a6-a869-342ab74566a4","delegatedManagedIdentityResourceId":null,"description":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm1/providers/Microsoft.Authorization/roleAssignments/88888888-0000-0000-0000-000000000001","type":"Microsoft.Authorization/roleAssignments","name":"88888888-0000-0000-0000-000000000001"}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '999'
+      - '1101'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:47 GMT
+      - Tue, 09 Feb 2021 07:07:47 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
       set-cookie:
-      - x-ms-gateway-slice=Production; path=/; SameSite=None; secure; HttpOnly
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
       strict-transport-security:
       - max-age=31536000; includeSubDomains
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1136'
+      - '1171'
     status:
       code: 201
       message: Created
@@ -2471,46 +2677,61 @@ interactions:
       ParameterSetName:
       - -g -n --scope --role
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?$expand=instanceView&api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
         \ \"tags\": {},\r\n  \"identity\": {\r\n    \"type\": \"SystemAssigned\",\r\n
-        \   \"principalId\": \"bf66d072-0731-45a3-867b-fb24e08545df\",\r\n    \"tenantId\":
+        \   \"principalId\": \"6b2bb0e6-e8e7-490a-ada7-24d6db609f06\",\r\n    \"tenantId\":
         \"54826b22-38d6-4fb2-bad9-b7b93a3e9c5a\"\r\n  },\r\n  \"properties\": {\r\n
-        \   \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n    \"hardwareProfile\":
+        \   \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n    \"hardwareProfile\":
         {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n    \"storageProfile\":
         {\r\n      \"imageReference\": {\r\n        \"publisher\": \"Debian\",\r\n
         \       \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n        \"version\":
-        \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n      },\r\n
+        \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n      },\r\n
         \     \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
-        \   \"provisioningState\": \"Succeeded\"\r\n  }\r\n}"
+        \   \"provisioningState\": \"Succeeded\",\r\n    \"instanceView\": {\r\n      \"computerName\":
+        \"vm3\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.8\",\r\n
+        \     \"vmAgent\": {\r\n        \"vmAgentVersion\": \"2.2.45\",\r\n        \"statuses\":
+        [\r\n          {\r\n            \"code\": \"ProvisioningState/succeeded\",\r\n
+        \           \"level\": \"Info\",\r\n            \"displayStatus\": \"Ready\",\r\n
+        \           \"message\": \"Guest Agent is running\",\r\n            \"time\":
+        \"2021-02-09T07:07:45+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
+        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n
+        \         \"statuses\": [\r\n            {\r\n              \"code\": \"ProvisioningState/succeeded\",\r\n
+        \             \"level\": \"Info\",\r\n              \"displayStatus\": \"Provisioning
+        succeeded\",\r\n              \"time\": \"2021-02-09T07:06:15.5705014+00:00\"\r\n
+        \           }\r\n          ]\r\n        }\r\n      ],\r\n      \"hyperVGeneration\":
+        \"V1\",\r\n      \"statuses\": [\r\n        {\r\n          \"code\": \"ProvisioningState/succeeded\",\r\n
+        \         \"level\": \"Info\",\r\n          \"displayStatus\": \"Provisioning
+        succeeded\",\r\n          \"time\": \"2021-02-09T07:07:13.5735024+00:00\"\r\n
+        \       },\r\n        {\r\n          \"code\": \"PowerState/running\",\r\n
+        \         \"level\": \"Info\",\r\n          \"displayStatus\": \"VM running\"\r\n
+        \       }\r\n      ]\r\n    }\r\n  }\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '2044'
+      - '3414'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:47 GMT
+      - Tue, 09 Feb 2021 07:07:46 GMT
       expires:
       - '-1'
       pragma:
@@ -2527,7 +2748,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3978,Microsoft.Compute/LowCostGet30Min;31701
+      - Microsoft.Compute/LowCostGet3Min;3984,Microsoft.Compute/LowCostGet30Min;31761
     status:
       code: 200
       message: OK
@@ -2545,34 +2766,32 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
         \ \"tags\": {},\r\n  \"identity\": {\r\n    \"type\": \"SystemAssigned\",\r\n
-        \   \"principalId\": \"bf66d072-0731-45a3-867b-fb24e08545df\",\r\n    \"tenantId\":
+        \   \"principalId\": \"6b2bb0e6-e8e7-490a-ada7-24d6db609f06\",\r\n    \"tenantId\":
         \"54826b22-38d6-4fb2-bad9-b7b93a3e9c5a\"\r\n  },\r\n  \"properties\": {\r\n
-        \   \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n    \"hardwareProfile\":
+        \   \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n    \"hardwareProfile\":
         {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n    \"storageProfile\":
         {\r\n      \"imageReference\": {\r\n        \"publisher\": \"Debian\",\r\n
         \       \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n        \"version\":
-        \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n      },\r\n
+        \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n      },\r\n
         \     \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
         \   \"provisioningState\": \"Succeeded\"\r\n  }\r\n}"
@@ -2580,11 +2799,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '2044'
+      - '2123'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:48 GMT
+      - Tue, 09 Feb 2021 07:07:48 GMT
       expires:
       - '-1'
       pragma:
@@ -2601,7 +2820,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3977,Microsoft.Compute/LowCostGet30Min;31700
+      - Microsoft.Compute/LowCostGet3Min;3983,Microsoft.Compute/LowCostGet30Min;31760
     status:
       code: 200
       message: OK
@@ -2619,35 +2838,33 @@ interactions:
       Content-Length:
       - '30'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: PATCH
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
-        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n
+        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n
         \   \"hardwareProfile\": {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n
         \   \"storageProfile\": {\r\n      \"imageReference\": {\r\n        \"publisher\":
         \"Debian\",\r\n        \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n
-        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n
+        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n
         \     },\r\n      \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
         \   \"provisioningState\": \"Updating\"\r\n  }\r\n}"
@@ -2655,15 +2872,15 @@ interactions:
       azure-asyncnotification:
       - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/d79d4161-4e51-4298-8b34-7e685a3db52a?api-version=2020-06-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/135a4909-f360-4849-8a2c-a4f82d9b5e72?api-version=2020-12-01
       cache-control:
       - no-cache
       content-length:
-      - '1873'
+      - '1952'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:13:56 GMT
+      - Tue, 09 Feb 2021 07:07:53 GMT
       expires:
       - '-1'
       pragma:
@@ -2680,9 +2897,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/PutVM3Min;235,Microsoft.Compute/PutVM30Min;1159
+      - Microsoft.Compute/PutVM3Min;235,Microsoft.Compute/PutVM30Min;1166
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1195'
+      - '1170'
     status:
       code: 200
       message: OK
@@ -2690,7 +2907,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -2700,15 +2917,14 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/d79d4161-4e51-4298-8b34-7e685a3db52a?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus/operations/135a4909-f360-4849-8a2c-a4f82d9b5e72?api-version=2020-12-01
   response:
     body:
-      string: "{\r\n  \"startTime\": \"2020-07-20T03:13:51.7186043+00:00\",\r\n  \"endTime\":
-        \"2020-07-20T03:13:55.2967321+00:00\",\r\n  \"status\": \"Succeeded\",\r\n
-        \ \"name\": \"d79d4161-4e51-4298-8b34-7e685a3db52a\"\r\n}"
+      string: "{\r\n  \"startTime\": \"2021-02-09T07:07:51.6064874+00:00\",\r\n  \"endTime\":
+        \"2021-02-09T07:07:55.2003692+00:00\",\r\n  \"status\": \"Succeeded\",\r\n
+        \ \"name\": \"135a4909-f360-4849-8a2c-a4f82d9b5e72\"\r\n}"
     headers:
       cache-control:
       - no-cache
@@ -2717,7 +2933,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:14:26 GMT
+      - Tue, 09 Feb 2021 07:08:24 GMT
       expires:
       - '-1'
       pragma:
@@ -2734,7 +2950,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/GetOperation3Min;14965,Microsoft.Compute/GetOperation30Min;29596
+      - Microsoft.Compute/GetOperation3Min;14973,Microsoft.Compute/GetOperation30Min;29623
     status:
       code: 200
       message: OK
@@ -2742,7 +2958,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -2752,29 +2968,29 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
-        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n
+        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n
         \   \"hardwareProfile\": {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n
         \   \"storageProfile\": {\r\n      \"imageReference\": {\r\n        \"publisher\":
         \"Debian\",\r\n        \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n
-        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n
+        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n
         \     },\r\n      \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
         \   \"provisioningState\": \"Succeeded\"\r\n  }\r\n}"
@@ -2782,11 +2998,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '1874'
+      - '1953'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:14:27 GMT
+      - Tue, 09 Feb 2021 07:08:24 GMT
       expires:
       - '-1'
       pragma:
@@ -2803,7 +3019,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3973,Microsoft.Compute/LowCostGet30Min;31691
+      - Microsoft.Compute/LowCostGet3Min;3978,Microsoft.Compute/LowCostGet30Min;31753
     status:
       code: 200
       message: OK
@@ -2821,43 +3037,58 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.8.0 (Windows-10-10.0.19041-SP0) msrest/0.6.9 msrest_azure/0.6.3 azure-mgmt-compute/13.0.0
-        Azure-SDK-For-Python AZURECLI/2.9.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.19.0 azsdk-python-azure-mgmt-compute/18.2.0 Python/3.7.4 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?api-version=2020-06-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3?$expand=instanceView&api-version=2020-12-01
   response:
     body:
       string: "{\r\n  \"name\": \"vm3\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/virtualMachines/vm3\",\r\n
         \ \"type\": \"Microsoft.Compute/virtualMachines\",\r\n  \"location\": \"westus\",\r\n
-        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"0f7fd08f-9b3b-4171-be03-7a0f24cb3468\",\r\n
+        \ \"tags\": {},\r\n  \"properties\": {\r\n    \"vmId\": \"a9566e24-5b32-40b9-b99d-f9d2dc2230b4\",\r\n
         \   \"hardwareProfile\": {\r\n      \"vmSize\": \"Standard_DS1_v2\"\r\n    },\r\n
         \   \"storageProfile\": {\r\n      \"imageReference\": {\r\n        \"publisher\":
         \"Debian\",\r\n        \"offer\": \"debian-10\",\r\n        \"sku\": \"10\",\r\n
-        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20200610.293\"\r\n
+        \       \"version\": \"latest\",\r\n        \"exactVersion\": \"0.20210208.542\"\r\n
         \     },\r\n      \"osDisk\": {\r\n        \"osType\": \"Linux\",\r\n        \"name\":
-        \"vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\",\r\n        \"createOption\":
+        \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n        \"createOption\":
         \"FromImage\",\r\n        \"caching\": \"ReadWrite\",\r\n        \"managedDisk\":
         {\r\n          \"storageAccountType\": \"Premium_LRS\",\r\n          \"id\":
-        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/CLI_TEST_VM_MSI5EKS6IMGOF62JCINQ2GEUJ7R7CUN7RQH7ATHZGIGHHWKOEW2AJV7BGILXY3D/providers/Microsoft.Compute/disks/vm3_OsDisk_1_ec9436e7db8f47e5a0dd20a1b31181b3\"\r\n
+        \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Compute/disks/vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\"\r\n
         \       },\r\n        \"diskSizeGB\": 30\r\n      },\r\n      \"dataDisks\":
         []\r\n    },\r\n    \"osProfile\": {\r\n      \"computerName\": \"vm3\",\r\n
         \     \"adminUsername\": \"admin123\",\r\n      \"linuxConfiguration\": {\r\n
         \       \"disablePasswordAuthentication\": false,\r\n        \"provisionVMAgent\":
-        true\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
+        true,\r\n        \"patchSettings\": {\r\n          \"patchMode\": \"ImageDefault\"\r\n
+        \       }\r\n      },\r\n      \"secrets\": [],\r\n      \"allowExtensionOperations\":
         true,\r\n      \"requireGuestProvisionSignal\": true\r\n    },\r\n    \"networkProfile\":
         {\"networkInterfaces\":[{\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_vm_msi000001/providers/Microsoft.Network/networkInterfaces/vm3VMNic\"}]},\r\n
-        \   \"provisioningState\": \"Succeeded\"\r\n  }\r\n}"
+        \   \"provisioningState\": \"Succeeded\",\r\n    \"instanceView\": {\r\n      \"computerName\":
+        \"vm3\",\r\n      \"osName\": \"debian\",\r\n      \"osVersion\": \"10.8\",\r\n
+        \     \"vmAgent\": {\r\n        \"vmAgentVersion\": \"2.2.45\",\r\n        \"statuses\":
+        [\r\n          {\r\n            \"code\": \"ProvisioningState/succeeded\",\r\n
+        \           \"level\": \"Info\",\r\n            \"displayStatus\": \"Ready\",\r\n
+        \           \"message\": \"Guest Agent is running\",\r\n            \"time\":
+        \"2021-02-09T07:08:24+00:00\"\r\n          }\r\n        ],\r\n        \"extensionHandlers\":
+        []\r\n      },\r\n      \"disks\": [\r\n        {\r\n          \"name\": \"vm3_OsDisk_1_309e19dde6684d0fa52878b3e0c9c137\",\r\n
+        \         \"statuses\": [\r\n            {\r\n              \"code\": \"ProvisioningState/succeeded\",\r\n
+        \             \"level\": \"Info\",\r\n              \"displayStatus\": \"Provisioning
+        succeeded\",\r\n              \"time\": \"2021-02-09T07:06:15.5705014+00:00\"\r\n
+        \           }\r\n          ]\r\n        }\r\n      ],\r\n      \"hyperVGeneration\":
+        \"V1\",\r\n      \"statuses\": [\r\n        {\r\n          \"code\": \"ProvisioningState/succeeded\",\r\n
+        \         \"level\": \"Info\",\r\n          \"displayStatus\": \"Provisioning
+        succeeded\",\r\n          \"time\": \"2021-02-09T07:07:55.184742+00:00\"\r\n
+        \       },\r\n        {\r\n          \"code\": \"PowerState/running\",\r\n
+        \         \"level\": \"Info\",\r\n          \"displayStatus\": \"VM running\"\r\n
+        \       }\r\n      ]\r\n    }\r\n  }\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '1874'
+      - '3243'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 20 Jul 2020 03:14:28 GMT
+      - Tue, 09 Feb 2021 07:08:26 GMT
       expires:
       - '-1'
       pragma:
@@ -2874,7 +3105,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-resource:
-      - Microsoft.Compute/LowCostGet3Min;3972,Microsoft.Compute/LowCostGet30Min;31690
+      - Microsoft.Compute/LowCostGet3Min;3977,Microsoft.Compute/LowCostGet30Min;31752
     status:
       code: 200
       message: OK

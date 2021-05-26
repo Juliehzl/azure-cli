@@ -2,6 +2,8 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
+import base64
+from urllib.parse import quote
 
 
 def _dont_fail_on_exist(ex, error_code):
@@ -39,7 +41,6 @@ def _if_none_match(if_none_match, **kwargs):
 
 
 def _encode_bytes(b):
-    import base64
     if isinstance(b, (bytes, bytearray)):
         return base64.b64encode(b).decode('utf-8')
     return b
@@ -58,3 +59,37 @@ def underline_to_hump(underline_str):
     import re
     sub = re.sub(r'(_\w)', lambda x: x.group(1)[1].upper(), underline_str)
     return sub
+
+
+def list_generator(pages, num_results):
+    result = []
+
+    # get first page items
+    page = list(next(pages))
+    result += page
+
+    while True:
+        if not pages.continuation_token:
+            break
+
+        # handle num results
+        if num_results is not None:
+            if num_results == len(result):
+                break
+
+        page = list(next(pages))
+        result += page
+
+    return result
+
+
+def url_quote(url):
+    return quote(url)
+
+
+def encode_base64(data):
+    import six
+    if isinstance(data, six.text_type):
+        data = data.encode('utf-8')
+    encoded = base64.b64encode(data)
+    return encoded.decode('utf-8')

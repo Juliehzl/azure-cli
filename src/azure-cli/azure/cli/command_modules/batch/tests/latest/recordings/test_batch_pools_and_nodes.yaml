@@ -1,5 +1,108 @@
 interactions:
 - request:
+    body: '{"location": "westus"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - batch account create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '22'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -l
+      User-Agent:
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-batch/9.0.0 Azure-SDK-For-Python AZURECLI/2.23.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002?api-version=2020-05-01
+  response:
+    body:
+      string: ''
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '0'
+      date:
+      - Fri, 07 May 2021 17:16:18 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002/operationResults/63588ca8-dcf3-41a8-99c5-af33909834e0?api-version=2020-05-01
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - batch account create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -l
+      User-Agent:
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-batch/9.0.0 Azure-SDK-For-Python AZURECLI/2.23.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002/operationResults/63588ca8-dcf3-41a8-99c5-af33909834e0?api-version=2020-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002","name":"clibatch000002","type":"Microsoft.Batch/batchAccounts","location":"westus","properties":{"accountEndpoint":"clibatch000002.westus.batch.azure.com","provisioningState":"Succeeded","dedicatedCoreQuota":700,"dedicatedCoreQuotaPerVMFamily":[{"name":"standardAv2Family","coreQuota":100},{"name":"standardDv2Family","coreQuota":100},{"name":"standardDv3Family","coreQuota":100},{"name":"standardEv3Family","coreQuota":50},{"name":"standardDSv2Family","coreQuota":100},{"name":"standardDSv3Family","coreQuota":100},{"name":"standardESv3Family","coreQuota":50},{"name":"standardFFamily","coreQuota":50},{"name":"standardFSFamily","coreQuota":50},{"name":"standardA0_A7Family","coreQuota":0},{"name":"standardA8_A11Family","coreQuota":0},{"name":"standardDFamily","coreQuota":0},{"name":"standardGFamily","coreQuota":0},{"name":"basicAFamily","coreQuota":0},{"name":"standardNVFamily","coreQuota":0},{"name":"standardNVPromoFamily","coreQuota":0},{"name":"standardNCFamily","coreQuota":0},{"name":"standardNCPromoFamily","coreQuota":0},{"name":"standardHFamily","coreQuota":0},{"name":"standardHPromoFamily","coreQuota":0},{"name":"standardMSFamily","coreQuota":0},{"name":"standardDSFamily","coreQuota":0},{"name":"standardGSFamily","coreQuota":0},{"name":"standardLSFamily","coreQuota":0},{"name":"standardLSv2Family","coreQuota":0},{"name":"standardNCSv2Family","coreQuota":0},{"name":"standardNDSFamily","coreQuota":0},{"name":"standardNCSv3Family","coreQuota":0},{"name":"standardFSv2Family","coreQuota":0},{"name":"standardHBSFamily","coreQuota":0},{"name":"standardHCSFamily","coreQuota":0},{"name":"standardNVSv3Family","coreQuota":0},{"name":"standardHBrsv2Family","coreQuota":0},{"name":"standardDAv4Family","coreQuota":0},{"name":"standardDASv4Family","coreQuota":0},{"name":"standardEAv4Family","coreQuota":0},{"name":"standardEASv4Family","coreQuota":0},{"name":"standardDDv4Family","coreQuota":0},{"name":"standardDDSv4Family","coreQuota":0},{"name":"standardEDv4Family","coreQuota":0},{"name":"standardEDSv4Family","coreQuota":0},{"name":"standardMSv2Family","coreQuota":0},{"name":"standardEIv3Family","coreQuota":0},{"name":"standardNVSv4Family","coreQuota":0},{"name":"Standard
+        NCASv3_T4 Family","coreQuota":0},{"name":"standardXEIDSv4Family","coreQuota":0},{"name":"standardDCSv2Family","coreQuota":0},{"name":"standardHBv3Family","coreQuota":0}],"dedicatedCoreQuotaPerVMFamilyEnforced":true,"lowPriorityCoreQuota":500,"poolQuota":100,"activeJobAndJobScheduleQuota":300,"poolAllocationMode":"BatchService","publicNetworkAccess":"Enabled","encryption":{"keySource":"Microsoft.Batch"}},"identity":{"type":"None"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2865'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Fri, 07 May 2021 17:16:33 GMT
+      etag:
+      - '"0x8D9117BDD278EFE"'
+      expires:
+      - '-1'
+      last-modified:
+      - Fri, 07 May 2021 17:16:33 GMT
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
     body: null
     headers:
       Accept:
@@ -15,24 +118,24 @@ interactions:
       ParameterSetName:
       - -n -g --query -o
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-batch/7.0.0 Azure-SDK-For-Python AZURECLI/2.3.1
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-batch/9.0.0 Azure-SDK-For-Python AZURECLI/2.23.0
       accept-language:
       - en-US
     method: POST
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sdktest/providers/Microsoft.Batch/batchAccounts/sdktest2/listKeys?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002/listKeys?api-version=2020-05-01
   response:
     body:
-      string: '{"accountName":"sdktest2","primary":"lrCy/cm87CTTLd8yfM/ojizRGUNceCr6nWajz1mWKN45lMTJcGPF4zet+H+SkXYgJ5BGD3ab4m4b7U+wAwpC2A==","secondary":"eAS2NXIlOIAA8ovAf8a5RxnVXil/3CyuMt9cDBGUi1w7810IHN/5MF21otvBrTPOLAUFq/2sjA3dKYY7IvTpXA=="}'
+      string: '{"accountName":"clibatch000002","primary":"veryFakedStorageAccountKey==","secondary":"fakeBatchAccountKey0=="}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '230'
+      - '246'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 03 Apr 2020 18:08:26 GMT
+      - Fri, 07 May 2021 17:16:34 GMT
       expires:
       - '-1'
       pragma:
@@ -66,30 +169,31 @@ interactions:
       ParameterSetName:
       - -n -g
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-mgmt-batch/7.0.0 Azure-SDK-For-Python AZURECLI/2.3.1
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-mgmt-batch/9.0.0 Azure-SDK-For-Python AZURECLI/2.23.0
       accept-language:
       - en-US
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sdktest/providers/Microsoft.Batch/batchAccounts/sdktest2?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002?api-version=2020-05-01
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sdktest/providers/Microsoft.Batch/batchAccounts/sdktest2","name":"sdktest2","type":"Microsoft.Batch/batchAccounts","location":"westcentralus","properties":{"accountEndpoint":"sdktest2.westcentralus.batch.azure.com","provisioningState":"Succeeded","dedicatedCoreQuota":20,"dedicatedCoreQuotaPerVMFamily":[{"name":"standardA0_A7Family","coreQuota":20},{"name":"standardDv2Family","coreQuota":20},{"name":"standardA8_A11Family","coreQuota":0},{"name":"standardDFamily","coreQuota":0},{"name":"standardGFamily","coreQuota":0},{"name":"basicAFamily","coreQuota":0},{"name":"standardFFamily","coreQuota":0},{"name":"standardNVFamily","coreQuota":0},{"name":"standardNVPromoFamily","coreQuota":0},{"name":"standardNCFamily","coreQuota":0},{"name":"standardNCPromoFamily","coreQuota":0},{"name":"standardHFamily","coreQuota":0},{"name":"standardHPromoFamily","coreQuota":0},{"name":"standardAv2Family","coreQuota":0},{"name":"standardMSFamily","coreQuota":0},{"name":"standardDv3Family","coreQuota":0},{"name":"standardEv3Family","coreQuota":0},{"name":"standardDSFamily","coreQuota":0},{"name":"standardDSv2Family","coreQuota":0},{"name":"standardDSv3Family","coreQuota":0},{"name":"standardFSFamily","coreQuota":0},{"name":"standardESv3Family","coreQuota":0},{"name":"standardGSFamily","coreQuota":0},{"name":"standardLSFamily","coreQuota":0},{"name":"standardNCSv2Family","coreQuota":0},{"name":"standardNDSFamily","coreQuota":0},{"name":"standardNCSv3Family","coreQuota":0},{"name":"standardFSv2Family","coreQuota":0},{"name":"standardHBSFamily","coreQuota":0},{"name":"standardHCSFamily","coreQuota":0},{"name":"standardNVSv3Family","coreQuota":0},{"name":"standardHBrsv2Family","coreQuota":0}],"dedicatedCoreQuotaPerVMFamilyEnforced":false,"lowPriorityCoreQuota":100,"poolQuota":100,"activeJobAndJobScheduleQuota":300,"autoStorage":{"storageAccountId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/sdktest/providers/Microsoft.Storage/storageAccounts/sdkteststore2","lastKeySync":"2020-01-09T20:16:08.6234908Z"},"poolAllocationMode":"BatchService"},"tags":{"rawr":"test"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Batch/batchAccounts/clibatch000002","name":"clibatch000002","type":"Microsoft.Batch/batchAccounts","location":"westus","properties":{"accountEndpoint":"clibatch000002.westus.batch.azure.com","provisioningState":"Succeeded","dedicatedCoreQuota":700,"dedicatedCoreQuotaPerVMFamily":[{"name":"standardAv2Family","coreQuota":100},{"name":"standardDv2Family","coreQuota":100},{"name":"standardDv3Family","coreQuota":100},{"name":"standardEv3Family","coreQuota":50},{"name":"standardDSv2Family","coreQuota":100},{"name":"standardDSv3Family","coreQuota":100},{"name":"standardESv3Family","coreQuota":50},{"name":"standardFFamily","coreQuota":50},{"name":"standardFSFamily","coreQuota":50},{"name":"standardA0_A7Family","coreQuota":0},{"name":"standardA8_A11Family","coreQuota":0},{"name":"standardDFamily","coreQuota":0},{"name":"standardGFamily","coreQuota":0},{"name":"basicAFamily","coreQuota":0},{"name":"standardNVFamily","coreQuota":0},{"name":"standardNVPromoFamily","coreQuota":0},{"name":"standardNCFamily","coreQuota":0},{"name":"standardNCPromoFamily","coreQuota":0},{"name":"standardHFamily","coreQuota":0},{"name":"standardHPromoFamily","coreQuota":0},{"name":"standardMSFamily","coreQuota":0},{"name":"standardDSFamily","coreQuota":0},{"name":"standardGSFamily","coreQuota":0},{"name":"standardLSFamily","coreQuota":0},{"name":"standardLSv2Family","coreQuota":0},{"name":"standardNCSv2Family","coreQuota":0},{"name":"standardNDSFamily","coreQuota":0},{"name":"standardNCSv3Family","coreQuota":0},{"name":"standardFSv2Family","coreQuota":0},{"name":"standardHBSFamily","coreQuota":0},{"name":"standardHCSFamily","coreQuota":0},{"name":"standardNVSv3Family","coreQuota":0},{"name":"standardHBrsv2Family","coreQuota":0},{"name":"standardDAv4Family","coreQuota":0},{"name":"standardDASv4Family","coreQuota":0},{"name":"standardEAv4Family","coreQuota":0},{"name":"standardEASv4Family","coreQuota":0},{"name":"standardDDv4Family","coreQuota":0},{"name":"standardDDSv4Family","coreQuota":0},{"name":"standardEDv4Family","coreQuota":0},{"name":"standardEDSv4Family","coreQuota":0},{"name":"standardMSv2Family","coreQuota":0},{"name":"standardEIv3Family","coreQuota":0},{"name":"standardNVSv4Family","coreQuota":0},{"name":"Standard
+        NCASv3_T4 Family","coreQuota":0},{"name":"standardXEIDSv4Family","coreQuota":0},{"name":"standardDCSv2Family","coreQuota":0},{"name":"standardHBv3Family","coreQuota":0}],"dedicatedCoreQuotaPerVMFamilyEnforced":true,"lowPriorityCoreQuota":500,"poolQuota":100,"activeJobAndJobScheduleQuota":300,"poolAllocationMode":"BatchService","publicNetworkAccess":"Enabled","encryption":{"keySource":"Microsoft.Batch"}},"identity":{"type":"None"}}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '2165'
+      - '2865'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 03 Apr 2020 18:08:27 GMT
+      - Fri, 07 May 2021 17:16:35 GMT
       etag:
-      - '"0x8D79540C37A571C"'
+      - '"0x8D9117BD68011D5"'
       expires:
       - '-1'
       last-modified:
-      - Thu, 09 Jan 2020 20:16:08 GMT
+      - Fri, 07 May 2021 17:16:22 GMT
       pragma:
       - no-cache
       server:
@@ -120,32 +224,34 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:16 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-paas
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:28 GMT
+      - Fri, 07 May 2021 17:16:35 GMT
       etag:
-      - '0x8D7D7FA02A3CA44'
+      - '0x8D9117BDE59FCAB'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:28 GMT
+      - Fri, 07 May 2021 17:16:35 GMT
       location:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas
+      - https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas
       request-id:
-      - 78308109-5c97-4a3d-a3f0-4b8ea21f7c29
+      - bd3ffe09-febe-4bf0-bdab-9fa690bdcaf2
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -173,32 +279,34 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:17 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-iaas
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:28 GMT
+      - Fri, 07 May 2021 17:16:36 GMT
       etag:
-      - '0x8D7D7FA03334F71'
+      - '0x8D9117BDEB6E9F6'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:29 GMT
+      - Fri, 07 May 2021 17:16:36 GMT
       location:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas
+      - https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas
       request-id:
-      - 22912df8-f86d-4cba-9f3c-7bd0b056b96d
+      - 28c5941b-ecd1-4cbf-939f-27bae7125f1f
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -214,8 +322,8 @@ interactions:
     body: '{"id": "azure-cli-test-json", "vmSize": "small", "cloudServiceConfiguration":
       {"osFamily": "4"}, "resizeTimeout": "PT15M", "targetLowPriorityNodes": 2, "startTask":
       {"commandLine": "cmd /c echo test", "userIdentity": {"username": "cliTestUser"},
-      "waitForSuccess": true}, "userAccounts": [{"name": "cliTestUser", "password":
-      "SRYES@#%#_DSFH", "elevationLevel": "admin"}]}'
+      "waitForSuccess": true}, "taskSlotsPerNode": 3, "userAccounts": [{"name": "cliTestUser",
+      "password": "SRYES@#%#_DSFH", "elevationLevel": "admin"}]}'
     headers:
       Accept:
       - application/json
@@ -224,36 +332,38 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '370'
+      - '393'
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:18 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-json
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:30 GMT
+      - Fri, 07 May 2021 17:16:36 GMT
       etag:
-      - '0x8D7D7FA040B1D28'
+      - '0x8D9117BDF0A88A1'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:30 GMT
+      - Fri, 07 May 2021 17:16:37 GMT
       location:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json
+      - https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json
       request-id:
-      - c6d4b90b-d98e-49b2-9fe5-3a5298f2e113
+      - 0e9512b4-eac6-457b-bb4a-7d6ff416920b
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -275,21 +385,23 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:18 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"id\":\"azure-cli-test-json\",\"url\":\"https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json\",\"eTag\":\"0x8D7D7FA040B1D28\",\"lastModified\":\"2020-04-03T18:08:30.5847592Z\",\"creationTime\":\"2020-04-03T18:08:30.5847592Z\",\"state\":\"active\",\"stateTransitionTime\":\"2020-04-03T18:08:30.5847592Z\",\"allocationState\":\"resizing\",\"allocationStateTransitionTime\":\"2020-04-03T18:08:30.5847592Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":2,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"startTask\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools/@Element\",\"id\":\"azure-cli-test-json\",\"url\":\"https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json\",\"eTag\":\"0x8D9117BDF0A88A1\",\"lastModified\":\"2021-05-07T17:16:37.0294945Z\",\"creationTime\":\"2021-05-07T17:16:37.0294945Z\",\"state\":\"active\",\"stateTransitionTime\":\"2021-05-07T17:16:37.0294945Z\",\"allocationState\":\"resizing\",\"allocationStateTransitionTime\":\"2021-05-07T17:16:37.0294945Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":2,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"startTask\":{\r\n
         \   \"commandLine\":\"cmd /c echo test\",\"userIdentity\":{\r\n      \"username\":\"cliTestUser\"\r\n
         \   },\"maxTaskRetryCount\":0,\"waitForSuccess\":true\r\n  },\"userAccounts\":[\r\n
         \   {\r\n      \"name\":\"cliTestUser\",\"elevationLevel\":\"admin\",\"windowsUserConfiguration\":{\r\n
-        \       \"loginMode\":\"interactive\"\r\n      }\r\n    }\r\n  ],\"maxTasksPerNode\":1,\"taskSchedulingPolicy\":{\r\n
+        \       \"loginMode\":\"interactive\"\r\n      }\r\n    }\r\n  ],\"taskSlotsPerNode\":3,\"taskSchedulingPolicy\":{\r\n
         \   \"nodeFillType\":\"Spread\"\r\n  },\"cloudServiceConfiguration\":{\r\n
         \   \"osFamily\":\"4\",\"osVersion\":\"*\"\r\n  }\r\n}"
     headers:
@@ -298,13 +410,13 @@ interactions:
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:31 GMT
+      - Fri, 07 May 2021 17:16:36 GMT
       etag:
-      - '0x8D7D7FA040B1D28'
+      - '0x8D9117BDF0A88A1'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:30 GMT
+      - Fri, 07 May 2021 17:16:37 GMT
       request-id:
-      - 28173eb1-6a0b-48e8-a1c1-d82edd75328a
+      - 2202ec9a-f621-42e6-8164-a8c9fffb059e
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -326,29 +438,31 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:18 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools?api-version=2020-03-01.11.0&maxresults=1000&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools?api-version=2020-09-01.12.0&maxresults=1000&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools\",\"value\":[\r\n
-        \   {\r\n      \"id\":\"azure-cli-test-iaas\",\"url\":\"https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas\",\"eTag\":\"0x8D7D7FA03334F71\",\"lastModified\":\"2020-04-03T18:08:29.1704689Z\",\"creationTime\":\"2020-04-03T18:08:29.1704689Z\",\"state\":\"active\",\"stateTransitionTime\":\"2020-04-03T18:08:29.1704689Z\",\"allocationState\":\"steady\",\"allocationStateTransitionTime\":\"2020-04-03T18:08:29.5454674Z\",\"vmSize\":\"standard_a1\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":0,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"maxTasksPerNode\":1,\"taskSchedulingPolicy\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools\",\"value\":[\r\n
+        \   {\r\n      \"id\":\"azure-cli-test-iaas\",\"url\":\"https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas\",\"eTag\":\"0x8D9117BDEB6E9F6\",\"lastModified\":\"2021-05-07T17:16:36.4814838Z\",\"creationTime\":\"2021-05-07T17:16:36.4814838Z\",\"state\":\"active\",\"stateTransitionTime\":\"2021-05-07T17:16:36.4814838Z\",\"allocationState\":\"resizing\",\"allocationStateTransitionTime\":\"2021-05-07T17:16:36.4814838Z\",\"vmSize\":\"standard_a1\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":0,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"taskSlotsPerNode\":1,\"taskSchedulingPolicy\":{\r\n
         \       \"nodeFillType\":\"Spread\"\r\n      },\"virtualMachineConfiguration\":{\r\n
         \       \"imageReference\":{\r\n          \"publisher\":\"Canonical\",\"offer\":\"UbuntuServer\",\"sku\":\"16.04.0-LTS\",\"version\":\"latest\"\r\n
         \       },\"nodeAgentSKUId\":\"batch.node.ubuntu 16.04\"\r\n      }\r\n    },{\r\n
-        \     \"id\":\"azure-cli-test-json\",\"url\":\"https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json\",\"eTag\":\"0x8D7D7FA040B1D28\",\"lastModified\":\"2020-04-03T18:08:30.5847592Z\",\"creationTime\":\"2020-04-03T18:08:30.5847592Z\",\"state\":\"active\",\"stateTransitionTime\":\"2020-04-03T18:08:30.5847592Z\",\"allocationState\":\"resizing\",\"allocationStateTransitionTime\":\"2020-04-03T18:08:30.5847592Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":2,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"startTask\":{\r\n
+        \     \"id\":\"azure-cli-test-json\",\"url\":\"https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json\",\"eTag\":\"0x8D9117BDF0A88A1\",\"lastModified\":\"2021-05-07T17:16:37.0294945Z\",\"creationTime\":\"2021-05-07T17:16:37.0294945Z\",\"state\":\"active\",\"stateTransitionTime\":\"2021-05-07T17:16:37.0294945Z\",\"allocationState\":\"resizing\",\"allocationStateTransitionTime\":\"2021-05-07T17:16:37.0294945Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":2,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"startTask\":{\r\n
         \       \"commandLine\":\"cmd /c echo test\",\"userIdentity\":{\r\n          \"username\":\"cliTestUser\"\r\n
         \       },\"maxTaskRetryCount\":0,\"waitForSuccess\":true\r\n      },\"userAccounts\":[\r\n
         \       {\r\n          \"name\":\"cliTestUser\",\"elevationLevel\":\"admin\",\"windowsUserConfiguration\":{\r\n
         \           \"loginMode\":\"interactive\"\r\n          }\r\n        }\r\n
-        \     ],\"maxTasksPerNode\":1,\"taskSchedulingPolicy\":{\r\n        \"nodeFillType\":\"Spread\"\r\n
+        \     ],\"taskSlotsPerNode\":3,\"taskSchedulingPolicy\":{\r\n        \"nodeFillType\":\"Spread\"\r\n
         \     },\"cloudServiceConfiguration\":{\r\n        \"osFamily\":\"4\",\"osVersion\":\"*\"\r\n
-        \     }\r\n    },{\r\n      \"id\":\"azure-cli-test-paas\",\"url\":\"https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas\",\"eTag\":\"0x8D7D7FA02A3CA44\",\"lastModified\":\"2020-04-03T18:08:28.2298948Z\",\"creationTime\":\"2020-04-03T18:08:28.2298948Z\",\"state\":\"active\",\"stateTransitionTime\":\"2020-04-03T18:08:28.2298948Z\",\"allocationState\":\"steady\",\"allocationStateTransitionTime\":\"2020-04-03T18:08:28.6844657Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":0,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"maxTasksPerNode\":1,\"taskSchedulingPolicy\":{\r\n
+        \     }\r\n    },{\r\n      \"id\":\"azure-cli-test-paas\",\"url\":\"https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas\",\"eTag\":\"0x8D9117BDE59FCAB\",\"lastModified\":\"2021-05-07T17:16:35.8724779Z\",\"creationTime\":\"2021-05-07T17:16:35.8724779Z\",\"state\":\"active\",\"stateTransitionTime\":\"2021-05-07T17:16:35.8724779Z\",\"allocationState\":\"steady\",\"allocationStateTransitionTime\":\"2021-05-07T17:16:37.3254968Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":0,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"taskSlotsPerNode\":1,\"taskSchedulingPolicy\":{\r\n
         \       \"nodeFillType\":\"Spread\"\r\n      },\"cloudServiceConfiguration\":{\r\n
         \       \"osFamily\":\"4\",\"osVersion\":\"*\"\r\n      }\r\n    }\r\n  ]\r\n}"
     headers:
@@ -357,9 +471,9 @@ interactions:
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:32 GMT
+      - Fri, 07 May 2021 17:16:37 GMT
       request-id:
-      - 0747a6fa-c89e-467f-b7a1-c9acd387f2a7
+      - 03a20eeb-b28e-4a36-8f4c-b1ca3edf8e4f
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -381,18 +495,20 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:19 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools?api-version=2020-03-01.11.0&$filter=id%20eq%20%27azure-cli-test-paas%27&maxresults=1000&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools?api-version=2020-09-01.12.0&$filter=id%20eq%20%27azure-cli-test-paas%27&maxresults=1000&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools\",\"value\":[\r\n
-        \   {\r\n      \"id\":\"azure-cli-test-paas\",\"url\":\"https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas\",\"eTag\":\"0x8D7D7FA02A3CA44\",\"lastModified\":\"2020-04-03T18:08:28.2298948Z\",\"creationTime\":\"2020-04-03T18:08:28.2298948Z\",\"state\":\"active\",\"stateTransitionTime\":\"2020-04-03T18:08:28.2298948Z\",\"allocationState\":\"steady\",\"allocationStateTransitionTime\":\"2020-04-03T18:08:28.6844657Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":0,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"maxTasksPerNode\":1,\"taskSchedulingPolicy\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools\",\"value\":[\r\n
+        \   {\r\n      \"id\":\"azure-cli-test-paas\",\"url\":\"https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas\",\"eTag\":\"0x8D9117BDE59FCAB\",\"lastModified\":\"2021-05-07T17:16:35.8724779Z\",\"creationTime\":\"2021-05-07T17:16:35.8724779Z\",\"state\":\"active\",\"stateTransitionTime\":\"2021-05-07T17:16:35.8724779Z\",\"allocationState\":\"steady\",\"allocationStateTransitionTime\":\"2021-05-07T17:16:37.3254968Z\",\"vmSize\":\"small\",\"resizeTimeout\":\"PT15M\",\"currentDedicatedNodes\":0,\"targetDedicatedNodes\":0,\"currentLowPriorityNodes\":0,\"targetLowPriorityNodes\":0,\"enableAutoScale\":false,\"enableInterNodeCommunication\":false,\"taskSlotsPerNode\":1,\"taskSchedulingPolicy\":{\r\n
         \       \"nodeFillType\":\"Spread\"\r\n      },\"cloudServiceConfiguration\":{\r\n
         \       \"osFamily\":\"4\",\"osVersion\":\"*\"\r\n      }\r\n    }\r\n  ]\r\n}"
     headers:
@@ -401,9 +517,9 @@ interactions:
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:32 GMT
+      - Fri, 07 May 2021 17:16:37 GMT
       request-id:
-      - fc03e3b4-87aa-49e6-9ca0-5b2d9ef7fe94
+      - 849fc8f7-fbba-437a-b921-6ed78147be1e
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -429,30 +545,32 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:19 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas/resize?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas/resize?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas/resize
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-paas/resize
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:33 GMT
+      - Fri, 07 May 2021 17:16:37 GMT
       etag:
-      - '0x8D7D7FA05DBE9A8'
+      - '0x8D9117BE009F4CB'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:33 GMT
+      - Fri, 07 May 2021 17:16:38 GMT
       request-id:
-      - 120aed89-2b56-4a73-aca0-236645891dc9
+      - ea0d19b2-f831-4789-a89b-0ee010bb3ece
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -474,30 +592,32 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:20 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas?api-version=2020-03-01.11.0&$select=allocationState%2C%20targetLowPriorityNodes&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas?api-version=2020-09-01.12.0&$select=allocationState%2C%20targetLowPriorityNodes&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"allocationState\":\"resizing\",\"targetLowPriorityNodes\":5\r\n}"
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools/@Element\",\"allocationState\":\"resizing\",\"targetLowPriorityNodes\":5\r\n}"
     headers:
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:34 GMT
+      - Fri, 07 May 2021 17:16:38 GMT
       etag:
-      - '0x8D7D7FA05DBE9A8'
+      - '0x8D9117BE009F4CB'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:33 GMT
+      - Fri, 07 May 2021 17:16:38 GMT
       request-id:
-      - 0c51137b-c52a-4ace-925a-299dea609359
+      - 2bb36a66-7c73-454d-9946-c05c73523db3
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -521,30 +641,32 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:20 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas/stopresize?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas/stopresize?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas/stopresize
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-paas/stopresize
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:33 GMT
+      - Fri, 07 May 2021 17:16:38 GMT
       etag:
-      - '0x8D7D7FA05DBE9A8'
+      - '0x8D9117BE009F4CB'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:33 GMT
+      - Fri, 07 May 2021 17:16:38 GMT
       request-id:
-      - ca65dde0-6fe1-497d-8edd-9afa3a1b3f63
+      - 0a465fd9-6cfd-4d8d-9c00-675056468042
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -570,30 +692,32 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:20 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas/enableautoscale?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas/enableautoscale?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas/enableautoscale
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-iaas/enableautoscale
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:34 GMT
+      - Fri, 07 May 2021 17:16:39 GMT
       etag:
-      - '0x8D7D7FA06D3980D'
+      - '0x8D9117BE0BE11F9'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:39 GMT
       request-id:
-      - e4119b8f-db69-49ff-a03a-0ed1acc76f53
+      - 623245e4-5683-43c7-9945-a14843da0ce8
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -615,30 +739,32 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:21 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-03-01.11.0&$select=enableAutoScale&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-09-01.12.0&$select=enableAutoScale&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"enableAutoScale\":true\r\n}"
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools/@Element\",\"enableAutoScale\":true\r\n}"
     headers:
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:39 GMT
       etag:
-      - '0x8D7D7FA06D3980D'
+      - '0x8D9117BE0BE11F9'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:39 GMT
       request-id:
-      - 933bc385-9202-4bfa-89ad-4cc8fc2afe9a
+      - f7f6fcfc-721c-44dd-9199-c0bb43a509ea
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -664,28 +790,30 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:21 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas/evaluateautoscale?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas/evaluateautoscale?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#Microsoft.Azure.Batch.Protocol.Entities.AutoScaleRun\",\"timestamp\":\"2020-04-03T18:08:36.0421749Z\",\"results\":\"$TargetDedicatedNodes=0;$TargetLowPriorityNodes=3;$NodeDeallocationOption=requeue\"\r\n}"
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#Microsoft.Azure.Batch.Protocol.Entities.AutoScaleRun\",\"timestamp\":\"2021-05-07T17:16:40.6937716Z\",\"results\":\"$TargetDedicatedNodes=0;$TargetLowPriorityNodes=3;$NodeDeallocationOption=requeue\"\r\n}"
     headers:
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas/evaluateautoscale
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-iaas/evaluateautoscale
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:40 GMT
       request-id:
-      - 1a643d20-221f-4cf4-9e74-dac42e331804
+      - 231232ca-c93b-44a9-b2ad-17985ab03e19
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -709,30 +837,32 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:22 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas/disableautoscale?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas/disableautoscale?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas/disableautoscale
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-iaas/disableautoscale
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:40 GMT
       etag:
-      - '0x8D7D7FA06D3980D'
+      - '0x8D9117BE0BE11F9'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:39 GMT
       request-id:
-      - 664ca1fb-d11f-4230-953f-39e944d0c4eb
+      - f94548fb-6225-4078-b190-69aa58f58d8b
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -754,30 +884,32 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:22 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-03-01.11.0&$select=enableAutoScale&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-09-01.12.0&$select=enableAutoScale&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"enableAutoScale\":false\r\n}"
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools/@Element\",\"enableAutoScale\":false\r\n}"
     headers:
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:36 GMT
+      - Fri, 07 May 2021 17:16:41 GMT
       etag:
-      - '0x8D7D7FA06D3980D'
+      - '0x8D9117BE0BE11F9'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:35 GMT
+      - Fri, 07 May 2021 17:16:39 GMT
       request-id:
-      - c32de939-1895-4347-8827-a35fbad87f30
+      - 5d0d43d9-0bfd-49e7-91db-c812e7e559dc
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -799,28 +931,29 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:22 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/poolusagemetrics?api-version=2020-03-01.11.0&maxresults=1000&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/poolusagemetrics?api-version=2020-09-01.12.0&maxresults=1000&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#poolusagemetrics\",\"value\":[\r\n
-        \   {\r\n      \"poolId\":\"win2019\",\"startTime\":\"2020-03-19T22:30:00Z\",\"endTime\":\"2020-03-19T23:00:00Z\",\"vmSize\":\"standard_d1_v2\",\"totalCoreHours\":0.49999999997222216\r\n
-        \   }\r\n  ]\r\n}"
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#poolusagemetrics\",\"value\":[\r\n
+        \   \r\n  ]\r\n}"
     headers:
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:38 GMT
+      - Fri, 07 May 2021 17:16:41 GMT
       request-id:
-      - cd8a26e6-28a2-4f03-a504-4a5c5be3e2a9
+      - 637f19d6-2193-47ba-b22f-841146f22791
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -842,17 +975,19 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:23 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-03-01.11.0&$select=startTask&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-09-01.12.0&$select=startTask&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"startTask\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools/@Element\",\"startTask\":{\r\n
         \   \"commandLine\":\"cmd /c echo test\",\"userIdentity\":{\r\n      \"username\":\"cliTestUser\"\r\n
         \   },\"maxTaskRetryCount\":0,\"waitForSuccess\":true\r\n  }\r\n}"
     headers:
@@ -861,13 +996,13 @@ interactions:
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:37 GMT
+      - Fri, 07 May 2021 17:16:42 GMT
       etag:
-      - '0x8D7D7FA040B1D28'
+      - '0x8D9117BDF0A88A1'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:30 GMT
+      - Fri, 07 May 2021 17:16:37 GMT
       request-id:
-      - 26c2d2a0-1c9e-4241-9532-91bd2228066f
+      - ccaf4ad0-9bd7-43e1-ba82-a046eb81a8db
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -893,30 +1028,32 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:23 GMT
       return-client-request-id:
       - 'false'
     method: PATCH
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
     headers:
       dataserviceid:
-      - https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json
+      - https://clibatchjdkdmomnvqfwt35h.westus.batch.azure.com/pools/azure-cli-test-json
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:38 GMT
+      - Fri, 07 May 2021 17:16:42 GMT
       etag:
-      - '0x8D7D7FA0929C3DB'
+      - '0x8D9117BE28690F7'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:39 GMT
+      - Fri, 07 May 2021 17:16:42 GMT
       request-id:
-      - 6123d162-50b2-467e-a706-c38b57148c64
+      - c66700eb-e6db-479d-9a81-4e0bfaa3f241
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -938,17 +1075,19 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:24 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-03-01.11.0&$select=startTask&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-json?api-version=2020-09-01.12.0&$select=startTask&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"startTask\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#pools/@Element\",\"startTask\":{\r\n
         \   \"commandLine\":\"new_value\",\"userIdentity\":{\r\n      \"autoUser\":{\r\n
         \       \"scope\":\"pool\",\"elevationLevel\":\"nonadmin\"\r\n      }\r\n
         \   },\"maxTaskRetryCount\":0,\"waitForSuccess\":true\r\n  }\r\n}"
@@ -958,13 +1097,13 @@ interactions:
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:39 GMT
+      - Fri, 07 May 2021 17:16:43 GMT
       etag:
-      - '0x8D7D7FA0929C3DB'
+      - '0x8D9117BE28690F7'
       last-modified:
-      - Fri, 03 Apr 2020 18:08:39 GMT
+      - Fri, 07 May 2021 17:16:42 GMT
       request-id:
-      - b4ff7691-f5fa-483e-900b-1b25451d1df4
+      - f3f3847b-700a-489d-ba6d-07a11fe663d2
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -986,23 +1125,31 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:24 GMT
       return-client-request-id:
       - 'false'
     method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/supportedimages?api-version=2020-03-01.11.0&maxresults=1000&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/supportedimages?api-version=2020-09-01.12.0&maxresults=1000&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#supportedimages\",\"value\":[\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#supportedimages\",\"value\":[\r\n
         \   {\r\n      \"imageReference\":{\r\n        \"publisher\":\"batch\",\"offer\":\"rendering-centos73\",\"sku\":\"rendering\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"batch\",\"offer\":\"rendering-windows2016\",\"sku\":\"rendering\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"canonical\",\"offer\":\"ubuntuserver\",\"sku\":\"16.04-lts\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"canonical\",\"offer\":\"0001-com-ubuntu-server-focal\",\"sku\":\"20_04-lts\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
+        20.04\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"canonical\",\"offer\":\"0001-com-ubuntu-server-focal\",\"sku\":\"20_04-lts-gen2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
+        20.04\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"canonical\",\"offer\":\"ubuntuserver\",\"sku\":\"16.04-lts\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
         16.04\",\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
         \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"canonical\",\"offer\":\"ubuntuserver\",\"sku\":\"16.04.0-lts\",\"version\":\"latest\"\r\n
@@ -1010,29 +1157,16 @@ interactions:
         16.04\",\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
         \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"canonical\",\"offer\":\"ubuntuserver\",\"sku\":\"16_04-lts-gen2\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
-        16.04\",\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
+        16.04\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
         \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"canonical\",\"offer\":\"ubuntuserver\",\"sku\":\"18.04-lts\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
         18.04\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
         \       \"publisher\":\"canonical\",\"offer\":\"ubuntuserver\",\"sku\":\"18_04-lts-gen2\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
-        18.04\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"credativ\",\"offer\":\"debian\",\"sku\":\"8\",\"version\":\"latest\"\r\n
+        18.04\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"debian\",\"offer\":\"debian-10\",\"sku\":\"10\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.debian
-        8\",\"batchSupportEndOfLife\":\"2020-07-30T00:00:00Z\",\"osType\":\"linux\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"credativ\",\"offer\":\"debian\",\"sku\":\"9\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.debian
-        9\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"debian\",\"offer\":\"debian-10\",\"sku\":\"10\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.debian
-        10\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container\",\"sku\":\"7-4\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
-        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container\",\"sku\":\"7-5\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
-        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container\",\"sku\":\"7-6\",\"version\":\"latest\"\r\n
+        10\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container\",\"sku\":\"7-6\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
         \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
@@ -1040,11 +1174,11 @@ interactions:
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
         \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container-rdma\",\"sku\":\"7-4\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container\",\"sku\":\"8-2\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
-        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container-rdma\",\"sku\":\"7-6\",\"version\":\"latest\"\r\n
+        8\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
+        \     ],\"batchSupportEndOfLife\":\"2021-12-31T00:00:00Z\",\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container-rdma\",\"sku\":\"7-6\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
         \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
@@ -1052,34 +1186,33 @@ interactions:
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
         \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"ubuntu-server-container\",\"sku\":\"16-04-lts\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"centos-container-rdma\",\"sku\":\"8-1\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
+        8\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
+        \     ],\"batchSupportEndOfLife\":\"2021-12-31T00:00:00Z\",\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"ubuntu-server-container\",\"sku\":\"16-04-lts\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
         16.04\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
         \     ],\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"ubuntu-server-container-rdma\",\"sku\":\"16-04-lts\",\"version\":\"latest\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"ubuntu-server-container\",\"sku\":\"20-04-lts\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
+        20.04\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"NvidiaGridDriverInstalled\"\r\n
+        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"microsoft-azure-batch\",\"offer\":\"ubuntu-server-container-rdma\",\"sku\":\"16-04-lts\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
         16.04\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"SupportsRDMAOnly\"\r\n
         \     ],\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-dsvm\",\"offer\":\"dsvm-win-2019\",\"sku\":\"server-2019\",\"version\":\"latest\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-azure-batch\",\"offer\":\"ubuntu-server-container-rdma\",\"sku\":\"20-04-lts\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
+        20.04\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\",\"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
+        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"microsoft-dsvm\",\"offer\":\"dsvm-win-2019\",\"sku\":\"server-2019\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-dsvm\",\"offer\":\"dsvm-windows\",\"sku\":\"server-2016\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
-        amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoft-dsvm\",\"offer\":\"linux-data-science-vm-ubuntu\",\"sku\":\"linuxdsvmubuntu\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoft-dsvm\",\"offer\":\"ubuntu-1804\",\"sku\":\"1804\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
-        16.04\",\"capabilities\":[\r\n        \"DockerCompatible\",\"NvidiaTeslaDriverInstalled\"\r\n
-        \     ],\"batchSupportEndOfLife\":\"2021-05-21T00:00:00Z\",\"osType\":\"linux\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoft-dsvm\",\"offer\":\"ubuntu-1804\",\"sku\":\"1804\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.ubuntu
-        16.04\",\"capabilities\":[\r\n        \"NvidiaTeslaDriverInstalled\"\r\n      ],\"osType\":\"linux\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2008-r2-sp1\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
-        amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2008-r2-sp1-smalldisk\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
-        amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2012-datacenter\",\"version\":\"latest\"\r\n
+        18.04\",\"capabilities\":[\r\n        \"NvidiaTeslaDriverInstalled\"\r\n      ],\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2012-datacenter\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
         \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2012-datacenter-smalldisk\",\"version\":\"latest\"\r\n
@@ -1094,11 +1227,23 @@ interactions:
         \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-gensecond\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-gs\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
         \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-smalldisk\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-with-containers\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-smalldisk-g2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-with-containers\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2016-datacenter-with-containers-gs\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
         \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
@@ -1106,30 +1251,53 @@ interactions:
         \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-smalldisk\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-g2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-smalldisk\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-with-containers\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-smalldisk-g2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-with-containers\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-with-containers-smalldisk\",\"version\":\"latest\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-with-containers-g2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\",\"Generation2VMImage\"\r\n
+        \     ],\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-core-with-containers-smalldisk\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-smalldisk\",\"version\":\"latest\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-gensecond\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-gs\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-smalldisk\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-with-containers\",\"version\":\"latest\"\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-smalldisk-g2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-with-containers\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-with-containers-g2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
+        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\",\"Generation2VMImage\"\r\n
+        \     ],\"osType\":\"windows\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-with-containers-gs\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
         \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"2019-datacenter-with-containers-smalldisk\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.windows
         amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"osType\":\"windows\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"datacenter-core-1903-with-containers-smalldisk\",\"version\":\"latest\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserver\",\"sku\":\"datacenter-core-2004-with-containers-smalldisk\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
-        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"batchSupportEndOfLife\":\"2021-01-08T00:00:00Z\",\"osType\":\"windows\"\r\n
-        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"microsoftwindowsserver\",\"offer\":\"windowsserversemiannual\",\"sku\":\"datacenter-core-1809-with-containers-smalldisk\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.windows
-        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"batchSupportEndOfLife\":\"2020-06-12T00:00:00Z\",\"osType\":\"windows\"\r\n
+        amd64\",\"capabilities\":[\r\n        \"DockerCompatible\"\r\n      ],\"batchSupportEndOfLife\":\"2022-01-14T00:00:00Z\",\"osType\":\"windows\"\r\n
         \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"7.3\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"7.4\",\"version\":\"latest\"\r\n
@@ -1139,12 +1307,22 @@ interactions:
         7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"7.6\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"7.7\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos-hpc\",\"sku\":\"7.1\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"capabilities\":[\r\n        \"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
-        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
-        \       \"publisher\":\"openlogic\",\"offer\":\"centos-hpc\",\"sku\":\"7.3\",\"version\":\"latest\"\r\n
+        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"7_8\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
+        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"7_8-gen2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
+        7\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"8_1\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
+        8\",\"batchSupportEndOfLife\":\"2021-12-31T00:00:00Z\",\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"8_2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
+        8\",\"batchSupportEndOfLife\":\"2021-12-31T00:00:00Z\",\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos\",\"sku\":\"8_2-gen2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
+        8\",\"capabilities\":[\r\n        \"Generation2VMImage\"\r\n      ],\"batchSupportEndOfLife\":\"2021-12-31T00:00:00Z\",\"osType\":\"linux\"\r\n
+        \   },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"openlogic\",\"offer\":\"centos-hpc\",\"sku\":\"7.3\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"capabilities\":[\r\n        \"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
         \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
@@ -1160,24 +1338,27 @@ interactions:
         \     },\"verificationType\":\"verified\",\"nodeAgentSKUId\":\"batch.node.centos
         7\",\"capabilities\":[\r\n        \"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\"\r\n
         \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
+        \       \"publisher\":\"openlogic\",\"offer\":\"centos-hpc\",\"sku\":\"7_7-gen2\",\"version\":\"latest\"\r\n
+        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
+        7\",\"capabilities\":[\r\n        \"SupportsRDMAOnly\",\"IntelMPIRuntimeInstalled\",\"Generation2VMImage\"\r\n
+        \     ],\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n
         \       \"publisher\":\"oracle\",\"offer\":\"oracle-linux\",\"sku\":\"7.4\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"oracle\",\"offer\":\"oracle-linux\",\"sku\":\"7.5\",\"version\":\"latest\"\r\n
+        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"oracle\",\"offer\":\"oracle-linux\",\"sku\":\"78\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"oracle\",\"offer\":\"oracle-linux\",\"sku\":\"7.6\",\"version\":\"latest\"\r\n
+        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"oracle\",\"offer\":\"oracle-linux\",\"sku\":\"81\",\"version\":\"latest\"\r\n
         \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"osType\":\"linux\"\r\n    },{\r\n      \"imageReference\":{\r\n        \"publisher\":\"oracle\",\"offer\":\"oracle-linux\",\"sku\":\"77\",\"version\":\"latest\"\r\n
-        \     },\"verificationType\":\"unverified\",\"nodeAgentSKUId\":\"batch.node.centos
-        7\",\"osType\":\"linux\"\r\n    }\r\n  ]\r\n}"
+        8\",\"batchSupportEndOfLife\":\"2021-12-31T00:00:00Z\",\"osType\":\"linux\"\r\n
+        \   }\r\n  ]\r\n}"
     headers:
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:39 GMT
+      - Fri, 07 May 2021 17:16:42 GMT
       request-id:
-      - 55a10c82-e4e0-453d-a700-3408a255ed36
+      - 21d9ea51-7dd0-42d3-af32-a9f00c49ea7b
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -1201,14 +1382,16 @@ interactions:
       Content-Length:
       - '0'
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:25 GMT
       return-client-request-id:
       - 'false'
     method: DELETE
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
       string: ''
@@ -1216,9 +1399,9 @@ interactions:
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:39 GMT
+      - Fri, 07 May 2021 17:16:43 GMT
       request-id:
-      - fa70f80d-215b-4656-88ce-2d6b79255ee3
+      - 4f069170-a284-421d-b951-fd86035ac505
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -1230,51 +1413,6 @@ interactions:
     status:
       code: 202
       message: Accepted
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      Connection:
-      - keep-alive
-      User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
-      accept-language:
-      - en-US
-      return-client-request-id:
-      - 'false'
-    method: GET
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-iaas?api-version=2020-03-01.11.0&$select=state&timeout=30
-  response:
-    body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#pools/@Element\",\"state\":\"deleting\"\r\n}"
-    headers:
-      content-type:
-      - application/json;odata=minimalmetadata
-      dataserviceversion:
-      - '3.0'
-      date:
-      - Fri, 03 Apr 2020 18:08:40 GMT
-      etag:
-      - '0x8D7D7FA09EE26D1'
-      last-modified:
-      - Fri, 03 Apr 2020 18:08:40 GMT
-      request-id:
-      - 302a77de-50ad-410b-ad89-8d723e76155a
-      server:
-      - Microsoft-HTTPAPI/2.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      x-content-type-options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
 - request:
     body: '{"id": "app_package_test", "vmSize": "small", "cloudServiceConfiguration":
       {"osFamily": "4"}, "applicationPackageReferences": [{"applicationId": "does-not-exist"}]}'
@@ -1290,32 +1428,34 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:25 GMT
       return-client-request-id:
       - 'false'
     method: POST
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#Microsoft.Azure.Batch.Protocol.Entities.Container.errors/@Element\",\"code\":\"InvalidApplicationPackageReferences\",\"message\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#Microsoft.Azure.Batch.Protocol.Entities.Container.errors/@Element\",\"code\":\"InvalidApplicationPackageReferences\",\"message\":{\r\n
         \   \"lang\":\"en-US\",\"value\":\"One or more of the specified application
-        package references are invalid.\\nRequestId:6189ea95-5476-4016-b6db-48069388c7e4\\nTime:2020-04-03T18:08:41.3090547Z\"\r\n
+        package references are invalid.\\nRequestId:a8554360-c41a-4756-baed-5b441073d033\\nTime:2021-05-07T17:16:44.5376768Z\"\r\n
         \ },\"values\":[\r\n    {\r\n      \"key\":\"does-not-exist\",\"value\":\"The
         specified application package does not exist.\"\r\n    }\r\n  ]\r\n}"
     headers:
       content-length:
-      - '517'
+      - '526'
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:41 GMT
+      - Fri, 07 May 2021 17:16:43 GMT
       request-id:
-      - 6189ea95-5476-4016-b6db-48069388c7e4
+      - a8554360-c41a-4756-baed-5b441073d033
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
@@ -1339,32 +1479,34 @@ interactions:
       Content-Type:
       - application/json; odata=minimalmetadata; charset=utf-8
       User-Agent:
-      - python/3.7.5 (Windows-10-10.0.18362-SP0) msrest/0.6.11 msrest_azure/0.6.3
-        azure-batch/9.0.0 Azure-SDK-For-Python
+      - python/3.8.3 (macOS-10.15.7-x86_64-i386-64bit) msrest/0.6.21 msrest_azure/0.6.3
+        azure-batch/10.0.0 Azure-SDK-For-Python
       accept-language:
       - en-US
+      ocp-date:
+      - Fri, 07 May 2021 17:16:25 GMT
       return-client-request-id:
       - 'false'
     method: PATCH
-    uri: https://sdktest2.westcentralus.batch.azure.com/pools/azure-cli-test-paas?api-version=2020-03-01.11.0&timeout=30
+    uri: https://clibatch000002.westus.batch.azure.com/pools/azure-cli-test-paas?api-version=2020-09-01.12.0&timeout=30
   response:
     body:
-      string: "{\r\n  \"odata.metadata\":\"https://sdktest2.westcentralus.batch.azure.com/$metadata#Microsoft.Azure.Batch.Protocol.Entities.Container.errors/@Element\",\"code\":\"InvalidApplicationPackageReferences\",\"message\":{\r\n
+      string: "{\r\n  \"odata.metadata\":\"https://clibatch000002.westus.batch.azure.com/$metadata#Microsoft.Azure.Batch.Protocol.Entities.Container.errors/@Element\",\"code\":\"InvalidApplicationPackageReferences\",\"message\":{\r\n
         \   \"lang\":\"en-US\",\"value\":\"One or more of the specified application
-        package references are invalid.\\nRequestId:051f613f-26d2-4579-b469-d4755ee73feb\\nTime:2020-04-03T18:08:41.8080832Z\"\r\n
+        package references are invalid.\\nRequestId:618d88dc-4281-4b5c-9824-c86720d0f753\\nTime:2021-05-07T17:16:44.9187907Z\"\r\n
         \ },\"values\":[\r\n    {\r\n      \"key\":\"does-not-exist\",\"value\":\"The
         specified application package does not exist.\"\r\n    }\r\n  ]\r\n}"
     headers:
       content-length:
-      - '517'
+      - '526'
       content-type:
       - application/json;odata=minimalmetadata
       dataserviceversion:
       - '3.0'
       date:
-      - Fri, 03 Apr 2020 18:08:41 GMT
+      - Fri, 07 May 2021 17:16:44 GMT
       request-id:
-      - 051f613f-26d2-4579-b469-d4755ee73feb
+      - 618d88dc-4281-4b5c-9824-c86720d0f753
       server:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:

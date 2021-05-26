@@ -24,10 +24,42 @@ base_url = 'https://api.github.com/repos/azure/azure-cli'
 commit_pr_url = '{}/commits/commit_id/pulls'.format(base_url)
 
 history_line_breaker = '==============='
+# A dict of {component name:list of notes} pairs
 history_notes = {}
 
+# key is lower case and removed spaces of a component
+# value is the recommended format of a component
+customized_dict = {
+    "privatedns": "Private DNS",
+    "appconfig": "App Config",
+}
+
+# This dict will be filled with all historical components.
+# key is lower case and removed spaces of a component
+# value is the recommended format of a component, when there're multiple formats,
+# the one with spaces will be picked, i.e. pick 'Key Vault' over 'KeyVault'.
+# If the key also exists in customized_dict, the value will be overwritten with customized_dict[key].
+component_dict = {}
+
+def get_component_dict():
+    with open('src/azure-cli/HISTORY.rst', 'r', encoding="utf-8") as history_file:
+        for line in history_file:
+            result = re.search(r'^\*\*(.*)\*\*$', line)
+            if result is not None:
+                comp = result.group(1)
+                key = comp.lower().replace(' ', '')
+                if key in customized_dict:
+                    component_dict[key] = customized_dict[key]
+                elif key in component_dict:
+                    if ' ' not in component_dict[key] and ' ' in comp:
+                        component_dict[key] = comp
+                else:
+                    component_dict[key] = comp
+    print('Component name mappings:')
+    print(component_dict)
 
 def generate_history_notes():
+    get_component_dict()
     dev_commits = get_commits()
     print("Get PRs for {} commits.".format(len(dev_commits)))
     for commit in dev_commits:
@@ -84,19 +116,25 @@ def modify_history_file(file: fileinput.FileInput, new_history: str):
 
 
 def construct_cli_history(component: str):
-    history = '**{}**\n\n'.format(component)
+    history = ['**{}**\n'.format(component)]
+    non_breaking_change_notes = []
     for note in history_notes[component]:
-        history += '* {}\n'.format(note)
-    history += '\n'
-    return history
+        if 'BREAKING CHANGE' in note.upper():
+            history.append('* {}'.format(note))
+        else:
+            non_breaking_change_notes.append(note)
+    for note in non_breaking_change_notes:
+        history.append('* {}'.format(note))
+    history.append('\n')
+    return '\n'.join(history)
 
 
 def construct_core_history(component: str):
-    history = ''
+    history = []
     for note in history_notes[component]:
-        history += '* {}\n'.format(note)
-    history += '\n'
-    return history
+        history.append('* {}'.format(note))
+    history.append('\n')
+    return '\n'.join(history)
 
 
 def get_commits():
@@ -132,18 +170,20 @@ def get_prs_for_commit(commit: str):
 def process_pr(pr):
     lines = [pr['title']]
     body = pr['body']
-    search_result = re.search(r'\*\*History Notes:\*\*(.*)---',
+    content = ''
+    search_result = re.search(r'\*\*History Notes\*\*(.*)---',
                               body,
                               flags=re.DOTALL)
     if search_result is None:
-        search_result = re.search(r'\*\*History Notes:\*\*(.*)',
+        search_result = re.search(r'\*\*History Notes\*\*(.*)',
                                   body,
                                   flags=re.DOTALL)
         if search_result is not None:
-            body = search_result.group(1)
+            content = search_result.group(1)
     else:
-        body = search_result.group(1)
-    lines.extend(body.splitlines())
+        content = search_result.group(1)
+    if content:
+        lines.extend(content.splitlines())
     process_lines(lines, pr['number'])
 
 
@@ -161,13 +201,25 @@ def process_lines(lines: [str], pr_num: str = None):
         component, note = parse_message(desc, pr_num)
         if component is not None:
             note_in_desc = True
+            component = process_component(component)
             history_notes.setdefault(component, []).append(note)
     # if description has no history notes, parse PR title/commit message
     # otherwise should skip PR title/commit message
     if not note_in_desc:
         component, note = parse_message(lines[0], pr_num)
         if component is not None:
+            component = process_component(component)
             history_notes.setdefault(component, []).append(note)
+
+
+def process_component(component):
+    key = component.lower().replace(' ', '')
+    if key in component_dict:
+        if ' ' not in component_dict[key] and ' ' in component:
+            component_dict[key] = component
+        else:
+            component = component_dict[key]
+    return component
 
 
 def parse_message(message: str, pr_num: str = None) -> (str, str):

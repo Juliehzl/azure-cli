@@ -122,7 +122,7 @@ long-summary: Get the details of the management group.
 parameters:
   - name: --name -n
     type: string
-    short-summary: Name of the management group.
+    short-summary: Name of the management group (the last segment of the resource ID). Do not use display name.
   - name: --expand -e
     type: bool
     short-summary: If given, lists the children in the first level of hierarchy.
@@ -253,9 +253,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --location -l
     short-summary: The location to store the deployment metadata.
   - name: --name -n
@@ -276,9 +278,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --location -l
     short-summary: The location to store the deployment metadata.
   - name: --name -n
@@ -297,6 +301,9 @@ examples:
     text: >
         az deployment create --location WestUS --template-file azuredeploy.json  \\
             --parameters @params.json --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+  - name: Create a deployment at subscription scope from a template-spec
+    text: >
+        az deployment create --location WestUS --template-spec "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myRG/providers/Microsoft.Resources/templateSpecs/myTemplateSpec/versions/1.0"
 """
 
 helps['deployment export'] = """
@@ -385,9 +392,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --location -l
     short-summary: The location to store the deployment metadata.
   - name: --name -n
@@ -411,9 +420,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --location -l
     short-summary: The location to store the deployment metadata.
   - name: --name -n
@@ -445,9 +456,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --location -l
     short-summary: The location to store the deployment What-If operation metadata.
   - name: --name -n
@@ -480,7 +493,7 @@ short-summary: Place the CLI in a waiting state until a deployment condition is 
 examples:
   - name: Place the CLI in a waiting state until a deployment condition is met. (autogenerated)
     text: |
-        az deployment sub wait --name MyDeployment --created
+        az deployment sub wait --created --name MyDeployment
     crafted: true
 """
 
@@ -492,6 +505,11 @@ short-summary: Manage deployment operations at subscription scope.
 helps['deployment operation sub list'] = """
 type: command
 short-summary: List deployment operations at subscription scope.
+examples:
+  - name: List deployment operations at subscription scope. (autogenerated)
+    text: |
+        az deployment operation sub list --name mydeployment
+    crafted: true
 """
 
 helps['deployment operation sub show'] = """
@@ -546,9 +564,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --resource-group -g
     short-summary: The resource group to create deployment at.
   - name: --name -n
@@ -574,9 +594,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --resource-group -g
     short-summary: The resource group to create deployment at.
   - name: --name -n
@@ -603,6 +625,9 @@ examples:
         az deployment group create --resource-group testrg --name rollout01 \\
             --template-file azuredeploy.json  --parameters @params.json \\
             --parameters https://mysite/params.json --parameters MyValue=This MyArray=@array.json
+  - name: Create a deployment at subscription scope from a template-spec
+    text: >
+        az deployment group create --resource-group testrg --template-spec "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/testrg/providers/Microsoft.Resources/templateSpecs/myTemplateSpec/versions/1.0"
 """
 
 helps['deployment group what-if'] = """
@@ -615,9 +640,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicpe file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --resource-group -g
     short-summary: The resource group to execute deployment What-If operation at.
   - name: --name -n
@@ -723,9 +750,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --management-group-id -m
     short-summary: The management group id to create deployment at.
   - name: --name -n
@@ -735,6 +764,10 @@ parameters:
 examples:
   - name: Validate whether a template is valid at management group.
     text: az deployment mg validate --management-group-id testmg --location WestUS --template-file {template-file}
+  - name: Validate whether a template is valid at management group. (autogenerated)
+    text: |
+        az deployment mg validate --location WestUS --management-group-id testmg --name mydeployment --parameters @myparameters.json --template-file azuredeploy.json
+    crafted: true
 """
 
 helps['deployment mg what-if'] = """
@@ -747,9 +780,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --management-group-id -m
     short-summary: The management group id to create deployment at.
   - name: --name -n
@@ -780,9 +815,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --management-group-id -m
     short-summary: The management group id to create deployment at.
   - name: --name -n
@@ -883,9 +920,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --name -n
     short-summary: The deployment name.
   - name: --location -l
@@ -893,6 +932,10 @@ parameters:
 examples:
   - name: Validate whether a template is valid at tenant scope.
     text: az deployment tenant validate --location WestUS --template-file {template-file}
+  - name: Validate whether a template is valid at tenant scope. (autogenerated)
+    text: |
+        az deployment tenant validate --location WestUS --name mydeployment --parameters @myparameters.json --template-file azuredeploy.json
+    crafted: true
 """
 
 helps['deployment tenant what-if'] = """
@@ -905,9 +948,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --location -l
     short-summary: The location to store the deployment What-If operation metadata.
   - name: --name -n
@@ -936,9 +981,11 @@ parameters:
         Parameters may be supplied from a file using the `@{path}` syntax, a JSON string, or as <KEY=VALUE> pairs. Parameters are evaluated in order, so when a value is assigned twice, the latter value will be used.
         It is recommended that you supply your parameters file first, and then override selectively using KEY=VALUE syntax.
   - name: --template-file -f
-    short-summary: The path to the template file.
+    short-summary: The path to the template file or Bicep file.
   - name: --template-uri -u
     short-summary: The URI to the template file.
+  - name: --template-spec -s
+    short-summary: The template spec resource id.
   - name: --name -n
     short-summary: The deployment name.
   - name: --location -l
@@ -1374,6 +1421,22 @@ examples:
             --create-ui-definition @myCreateUiDef.json --main-template @myMainTemplate.json
 """
 
+helps['managedapp definition update'] = """
+type: command
+short-summary: Update a managed application definition.
+examples:
+  - name: Update a managed application defintion.
+    text: >
+        az managedapp definition update -g MyResourceGroup -n MyManagedAppDef -l eastus --display-name "MyManagedAppDef" \\
+            --description "My Managed App Def description" -a "myPrincipalId:myRoleId" --lock-level None \\
+            --package-file-uri "https://path/to/myPackage.zip"
+  - name: Update a managed application defintion with inline values for createUiDefinition and mainTemplate.
+    text: >
+        az managedapp definition update -g MyResourceGroup -n MyManagedAppDef -l eastus --display-name "MyManagedAppDef" \\
+            --description "My Managed App Def description" -a "myPrincipalId:myRoleId" --lock-level None \\
+            --create-ui-definition @myCreateUiDef.json --main-template @myMainTemplate.json
+"""
+
 helps['managedapp definition delete'] = """
 type: command
 short-summary: Delete a managed application definition.
@@ -1400,7 +1463,7 @@ short-summary: Delete a managed application.
 examples:
   - name: Delete a managed application. (autogenerated)
     text: |
-        az managedapp delete --name MyManagedApplication --resource-group MyResourceGroup
+        az managedapp delete --name MyManagedApplication --resource-group MyResourceGroup --subscription MySubscription
     crafted: true
 """
 
@@ -1697,6 +1760,79 @@ examples:
             --definition-groups "[{ \\"name\\": \\"CostSaving\\" }, { \\"name\\": \\"Organizational\\" } ]"
 """
 
+helps['policy exemption'] = """
+type: group
+short-summary: Manage resource policy exemptions.
+"""
+
+helps['policy exemption create'] = """
+type: command
+short-summary: Create a policy exemption.
+examples:
+  - name: Create a policy exemption in default subscription.
+    text: |
+        az policy exemption create -n exemptTestVM \\
+            --policy-assignment "/subscriptions/mySubId/providers/Microsoft.Authorization/policyAssignments/limitVMSku" \\
+            --exemption-category "Waiver"
+  - name: Create a policy exemption in the resource group.
+    text: |
+        az policy exemption create -n exemptTestVM \\
+            --policy-assignment "/subscriptions/mySubId/providers/Microsoft.Authorization/policyAssignments/limitVMSku" \\
+            --exemption-category "Waiver" \\
+            --resource-group "myResourceGroup"
+  - name: Create a policy exemption in a management group.
+    text: |
+        az policy exemption create -n exemptTestVM \\
+            --policy-assignment "/providers/Microsoft.Management/managementGroups/myMG/providers/Microsoft.Authorization/policyAssignments/limitVMSku" \\
+            --exemption-category "Waiver" \\
+            --scope "/providers/Microsoft.Management/managementGroups/myMG"
+"""
+
+helps['policy exemption delete'] = """
+type: command
+short-summary: Delete a policy exemption.
+examples:
+  - name: Delete a policy exemption.
+    text: |
+        az policy exemption delete --name MyPolicyExemption --resource-group "myResourceGroup"
+    crafted: true
+"""
+
+helps['policy exemption list'] = """
+type: command
+short-summary: List policy exemptions.
+"""
+
+helps['policy exemption show'] = """
+type: command
+short-summary: Show a policy exemption.
+examples:
+  - name: Show a policy exemption.
+    text: |
+        az policy exemption show --name MyPolicyExemption --resource-group "myResourceGroup"
+    crafted: true
+"""
+
+helps['policy exemption update'] = """
+type: command
+short-summary: Update a policy exemption.
+examples:
+  - name: Update a policy exemption.
+    text: |
+        az policy exemption update -n exemptTestVM \\
+            --exemption-category "Mitigated"
+  - name: Update a policy exemption in the resource group.
+    text: |
+        az policy exemption update -n exemptTestVM \\
+            --exemption-category "Mitigated" \\
+            --resource-group "myResourceGroup"
+  - name: Update a policy exemption in a management group.
+    text: |
+        az policy exemption update -n exemptTestVM \\
+            --exemption-category "Mitigated" \\
+            --scope "/providers/Microsoft.Management/managementGroups/myMG"
+"""
+
 helps['provider'] = """
 type: group
 short-summary: Manage resource providers.
@@ -1738,6 +1874,12 @@ examples:
     text: |
         az provider register --namespace 'Microsoft.PolicyInsights'
     crafted: true
+  - name: Register a provider from RPaaS.
+    text: |
+        az provider register -n 'Microsoft.Confluent' --accept-terms
+  - name: Register a management group.
+    text: |
+        az provider register --namespace Microsoft.Automation -m mgID
 """
 
 helps['provider unregister'] = """
@@ -2012,13 +2154,17 @@ helps['resource update'] = """
 type: command
 short-summary: Update a resource.
 examples:
-  - name: Update a webapp. (autogenerated)
-    text: |
-        az resource update --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Web/sites/{WebApp} --set tags.key=value
-    crafted: true
   - name: Update a webapp by using the latest api-version whether this version is a preview version.
     text: >
         az resource update --ids /subscriptions/{SubID}/resourceGroups/{ResourceGroup}/providers/Microsoft.Web/sites/{WebApp} --set tags.key=value --latest-include-preview
+  - name: Update a resource. (autogenerated)
+    text: |
+        az resource update --ids $id --set properties.connectionType=Proxy
+    crafted: true
+  - name: Update a resource. (autogenerated)
+    text: |
+        az resource update --name myresource --resource-group myresourcegroup --resource-type subnets --set tags.key=value
+    crafted: true
 """
 
 helps['resource wait'] = """
@@ -2155,4 +2301,138 @@ examples:
   - name: Selectively update the set of tags on a resource with "delete" Operation.
     text: >
         az tag update --resource-id /subscriptions/{sub-id}/resourcegroups/{rg}/providers/Microsoft.Compute/virtualMachines/{vmName} --operation delete --tags key1=value1
+"""
+
+helps['ts'] = """
+type: group
+short-summary: Manage template specs at subscription or resource group scope.
+"""
+
+helps['ts create'] = """
+type: command
+short-summary: Create a template spec and or template spec version.
+examples:
+  - name: Create a template spec.
+    text: az ts create -g testRG --name TemplateSpecName -l WestUS --display-name "MyDisplayName" --description "Simple template spec" --tags key1=value1
+  - name: Create a template spec version.
+    text: az ts create -g testRG --name TemplateSpecName -v 2.0 -l WestUS --template-file templateSpec.json --version-description "Less simple template spec" --tags key1=value1 key3=value3
+  - name: Create a template spec and a version of the template spec.
+    text: az ts create -g testRG --name TemplateSpecName -v 1.0 -l WestUS --template-file templateSpec.json --display-name "MyDisplayName" --description "Simple template spec" --version-description "Version of simple template spec" --tags key1=value1 key2=value2
+"""
+
+helps['ts update'] = """
+type: command
+short-summary: Update a template spec version.
+examples:
+  - name: Update the template content of a template spec or template spec version based on the resource ID.
+    text: az ts update --template-spec resourceID -f updatedFile.json
+  - name: Update the display name and tag(s) of a template spec based on the resource ID.
+    text: az ts update --template-spec resourceID --display-name "NewParentDisplayName" --tags key1=value1
+  - name: Update the description of a template spec version with no prompt.
+    text: az ts update -g ExistingRG --name ExistingName -v 3.0 --version-description "New description" --yes
+  - name: Update all the properties of a template spec version.
+    text: az ts update -g ExistingRG --name ExistingName -v 3.0 -f updatedTemplate.json --display-name "New parent display name" --description "New parent description" --version-description "New child description" --ui-form-definition formDefinition.json
+  - name: Remove tag(s) from template spec version with no prompt.
+    text: az ts update -g ExistingRG --name ExistingName -v 3.0 -f updatedTemplate.json --tags --yes
+
+"""
+
+helps['ts show'] = """
+type: command
+short-summary: Get the specified template spec or template spec version.
+examples:
+  - name: Show the specified template spec.
+    text: az ts show -g testrg --name TemplateSpecName
+  - name: Show the specified template spec version.
+    text: az ts show -g testrg --name TemplateSpecName --version VersionName
+  - name: Show the specified template spec or template spec version based on the resource ID.
+    text: az ts show --template-spec resourceID
+"""
+
+helps['ts export'] = """
+type: command
+short-summary: Export the specified template spec version and artifacts (if any) to the specified output folder.
+examples:
+  - name: Export the specified template spec version based on resource ID.
+    text: az ts export -s resourceID --output-folder C:/path/
+  - name: Export the specified template spec version.
+    text: az ts export -g testrg --name TemplateSpecName --version VersionName --output-folder C:/path/
+"""
+
+helps['ts delete'] = """
+type: command
+short-summary: Delete a specified template spec or template spec version by name or resource ID..
+examples:
+  - name: Delete the specified template spec and all versions.
+    text: az ts delete -g MyResourceGroup --name TemplateSpecName
+  - name: Delete the specified version from the template spec.
+    text: az ts delete -g MyResourceGroup --name TemplateSpecName --version VersionName
+  - name: Delete the template spec or version based on resource ID.
+    text: az ts delete --template-spec resourceID
+"""
+
+helps['ts list'] = """
+type: command
+short-summary: List template specs or template spec versions.
+examples:
+  - name: List all template specs in current default subscription.
+    text: az ts list
+  - name: List all template specs in specified subscription.
+    text: az ts list --subscription Subscription
+  - name: List all template specs in resource group.
+    text: az ts list -g MyResourceGroup
+  - name: List all versions of parent template spec.
+    text: az ts list -g MyResourceGroup -n TemplateSpecName
+"""
+
+helps['bicep'] = """
+type: group
+short-summary: Bicep CLI command group.
+"""
+
+helps['bicep install'] = """
+type: command
+short-summary: Install Bicep CLI.
+examples:
+  - name: Install Bicep CLI.
+    text: az bicep install
+  - name: Install a specific version of Bicep CLI.
+    text: az bicep install --version v0.2.212
+"""
+
+helps['bicep upgrade'] = """
+type: command
+short-summary: Upgrade Bicep CLI to the latest version.
+"""
+
+helps['bicep build'] = """
+type: command
+short-summary: Build a Bicep file.
+examples:
+  - name: Build a Bicep file.
+    text: az bicep build --file {bicep_file}
+  - name: Build a Bicep file and print all output to stdout.
+    text: az bicep build --file {bicep_file} --stdout
+  - name: Build a Bicep file and save the result to the specified directory.
+    text: az bicep build --file {bicep_file} --outdir {out_dir}
+  - name: Build a Bicep file and save the result to the specified file.
+    text: az bicep build --file {bicep_file} --outfile {out_file}
+"""
+
+helps['bicep decompile'] = """
+type: command
+short-summary: Attempt to decompile an ARM template file to a Bicep file.
+examples:
+  - name: Decompile an ARM template file.
+    text: az bicep decompile --file {json_template_file}
+"""
+
+helps['bicep version'] = """
+type: command
+short-summary: Show the installed version of Bicep CLI.
+"""
+
+helps['bicep list-versions'] = """
+type: command
+short-summary: List out all available versions of Bicep CLI.
 """

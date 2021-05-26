@@ -11,12 +11,9 @@ interactions:
       Connection:
       - keep-alive
       User-Agent:
-      - python/3.7.4 (Linux-4.15.0-99-generic-x86_64-with-debian-buster-sid) msrest/0.6.16
-        msrest_azure/0.6.3 azure-mgmt-network/10.2.0 Azure-SDK-For-Python AZURECLI/2.7.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/networkProfiles?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/networkProfiles?api-version=2021-02-01
   response:
     body:
       string: '{"value":[]}'
@@ -28,7 +25,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 15 Jun 2020 01:51:08 GMT
+      - Fri, 14 May 2021 06:57:57 GMT
       expires:
       - '-1'
       pragma:
@@ -56,12 +53,9 @@ interactions:
       ParameterSetName:
       - -g
       User-Agent:
-      - python/3.7.4 (Linux-4.15.0-99-generic-x86_64-with-debian-buster-sid) msrest/0.6.16
-        msrest_azure/0.6.3 azure-mgmt-network/10.2.0 Azure-SDK-For-Python AZURECLI/2.7.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_network_profile000001/providers/Microsoft.Network/networkProfiles?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_network_profile000001/providers/Microsoft.Network/networkProfiles?api-version=2021-02-01
   response:
     body:
       string: '{"value":[]}'
@@ -73,7 +67,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 15 Jun 2020 01:51:08 GMT
+      - Fri, 14 May 2021 06:57:58 GMT
       expires:
       - '-1'
       pragma:
@@ -101,12 +95,9 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - python/3.7.4 (Linux-4.15.0-99-generic-x86_64-with-debian-buster-sid) msrest/0.6.16
-        msrest_azure/0.6.3 azure-mgmt-network/10.2.0 Azure-SDK-For-Python AZURECLI/2.7.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_network_profile000001/providers/Microsoft.Network/networkProfiles/dummy?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_network_profile000001/providers/Microsoft.Network/networkProfiles/dummy?api-version=2021-02-01
   response:
     body:
       string: '{"error":{"code":"ResourceNotFound","message":"The Resource ''Microsoft.Network/networkProfiles/dummy''
@@ -120,7 +111,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 15 Jun 2020 01:51:09 GMT
+      - Fri, 14 May 2021 06:57:59 GMT
       expires:
       - '-1'
       pragma:
@@ -150,12 +141,9 @@ interactions:
       ParameterSetName:
       - -g -n -y
       User-Agent:
-      - python/3.7.4 (Linux-4.15.0-99-generic-x86_64-with-debian-buster-sid) msrest/0.6.16
-        msrest_azure/0.6.3 azure-mgmt-network/10.2.0 Azure-SDK-For-Python AZURECLI/2.7.0
-      accept-language:
-      - en-US
+      - AZURECLI/2.23.0 azsdk-python-azure-mgmt-network/18.0.0 Python/3.7.3 (Windows-10-10.0.19041-SP0)
     method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_network_profile000001/providers/Microsoft.Network/networkProfiles/dummy?api-version=2020-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_network_profile000001/providers/Microsoft.Network/networkProfiles/dummy?api-version=2021-02-01
   response:
     body:
       string: ''
@@ -163,7 +151,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Mon, 15 Jun 2020 01:51:10 GMT
+      - Fri, 14 May 2021 06:57:59 GMT
       expires:
       - '-1'
       pragma:
@@ -173,7 +161,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-deletes:
-      - '14999'
+      - '14998'
     status:
       code: 204
       message: No Content

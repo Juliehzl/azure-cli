@@ -2,9 +2,8 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
-from __future__ import print_function
-
 from collections import namedtuple
+import hashlib
 import random
 import json
 import re
@@ -17,7 +16,7 @@ import colorama  # pylint: disable=import-error
 from azure.cli.core import telemetry as telemetry_core
 from azure.cli.core import __version__ as core_version
 from azure.cli.core.commands.constants import SURVEY_PROMPT
-from pkg_resources import parse_version
+from packaging.version import parse
 from knack.log import get_logger
 logger = get_logger(__name__)
 
@@ -95,9 +94,13 @@ def should_enable_styling():
 
 
 def call_aladdin_service(query):
-    version = str(parse_version(core_version))
+    version = str(parse(core_version))
     correlation_id = telemetry_core._session.correlation_id   # pylint: disable=protected-access
     subscription_id = telemetry_core._get_azure_subscription_id()  # pylint: disable=protected-access
+
+    # Used for DDOS protection and rate limiting
+    user_id = telemetry_core._get_installation_id()  # pylint: disable=protected-access
+    hashed_user_id = hashlib.sha256(user_id.encode('utf-8')).hexdigest()
 
     context = {
         "versionNumber": version,
@@ -111,7 +114,10 @@ def call_aladdin_service(query):
         context['subscriptionId'] = subscription_id
 
     api_url = 'https://app.aladdin.microsoft.com/api/v1.0/examples'
-    headers = {'Content-Type': 'application/json'}
+    headers = {
+        'Content-Type': 'application/json',
+        'X-UserId': hashed_user_id
+    }
 
     response = requests.get(
         api_url,

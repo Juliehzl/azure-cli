@@ -1,8 +1,7 @@
 interactions:
 - request:
-    body: 'b''b\''{"location": "eastasia", "properties": {"storageAccounts": [{"id":
-      "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Storage/storageAccounts/clitest000002",
-      "type": "Primary"}]}}\'''''
+    body: '{"location": "eastasia", "properties": {"storageAccounts": [{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Storage/storageAccounts/clitest000002",
+      "type": "Primary"}]}, "identity": {"type": "None"}}'
     headers:
       Accept:
       - application/json
@@ -13,33 +12,35 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '303'
+      - '333'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
       - -n -g --storage-account -l
       User-Agent:
-      - python/3.8.2 (Windows-10-10.0.18362-SP0) msrest/0.6.13 msrest_azure/0.6.3
-        azure-mgmt-media/2.1.0 Azure-SDK-For-Python AZURECLI/2.5.1
+      - python/3.8.2 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-media/3.0.0 Azure-SDK-For-Python AZURECLI/2.18.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Media/mediaservices/ams000003?api-version=2018-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Media/mediaservices/ams000003?api-version=2020-05-01
   response:
     body:
       string: "{\r\n  \"name\":\"ams000003\",\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Media/mediaservices/ams000003\",\"type\":\"Microsoft.Media/mediaservices\",\"location\":\"East
-        Asia\",\"properties\":{\r\n    \"mediaServiceId\":\"7ad602aa-6072-4f7c-a155-b0f42919e4e9\",\"storageAccounts\":[\r\n
+        Asia\",\"properties\":{\r\n    \"mediaServiceId\":\"166c74c5-ecac-47cb-b435-a8d1ba1d73f6\",\"storageAccounts\":[\r\n
         \     {\r\n        \"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Storage/storageAccounts/clitest000002\",\"type\":\"Primary\"\r\n
-        \     }\r\n    ]\r\n  }\r\n}"
+        \     }\r\n    ],\"storageAuthentication\":\"System\",\"encryption\":{\r\n
+        \     \"type\":\"SystemKey\"\r\n    }\r\n  },\"identity\":{\r\n    \"type\":\"None\"\r\n
+        \ }\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '665'
+      - '783'
       content-type:
       - application/json; odata.metadata=minimal
       date:
-      - Fri, 08 May 2020 18:50:03 GMT
+      - Thu, 21 Jan 2021 00:34:22 GMT
       expires:
       - '-1'
       odata-version:
@@ -53,7 +54,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1199'
+      - '1195'
     status:
       code: 201
       message: Created
@@ -83,17 +84,17 @@ interactions:
         --rental-and-lease-key-type --fp-playback-duration-seconds --fp-storage-duration-seconds
         --rental-duration --policy-option-name
       User-Agent:
-      - python/3.8.2 (Windows-10-10.0.18362-SP0) msrest/0.6.13 msrest_azure/0.6.3
-        azure-mgmt-media/2.1.0 Azure-SDK-For-Python AZURECLI/2.5.1
+      - python/3.8.2 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-media/3.0.0 Azure-SDK-For-Python AZURECLI/2.18.0
       accept-language:
       - en-US
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Media/mediaServices/ams000003/contentKeyPolicies/pn000004?api-version=2018-07-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Media/mediaServices/ams000003/contentKeyPolicies/pn000004?api-version=2020-05-01
   response:
     body:
       string: "{\r\n  \"name\":\"pn000004\",\"id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Media/mediaservices/ams000003/contentKeyPolicies/pn000004\",\"type\":\"Microsoft.Media/mediaservices/contentKeyPolicies\",\"properties\":{\r\n
-        \   \"policyId\":\"07c6c0d0-b038-4dc4-8480-12965700ebe7\",\"created\":\"2020-05-08T18:50:04.66Z\",\"lastModified\":\"2020-05-08T18:50:04.66Z\",\"description\":\"ExampleDescription\",\"options\":[\r\n
-        \     {\r\n        \"policyOptionId\":\"f92def0a-8f56-4e05-944a-9f0f541a8518\",\"name\":\"pon000005\",\"configuration\":{\r\n
+        \   \"policyId\":\"d638c858-1916-4967-9ced-d7dab848a206\",\"created\":\"2021-01-21T00:34:23.783Z\",\"lastModified\":\"2021-01-21T00:34:23.783Z\",\"description\":\"ExampleDescription\",\"options\":[\r\n
+        \     {\r\n        \"policyOptionId\":\"aebb6330-86b4-4780-ae39-6e16524db494\",\"name\":\"pon000005\",\"configuration\":{\r\n
         \         \"@odata.type\":\"#Microsoft.Media.ContentKeyPolicyFairPlayConfiguration\",\"ask\":null,\"fairPlayPfxPassword\":null,\"fairPlayPfx\":null,\"rentalAndLeaseKeyType\":\"DualExpiry\",\"rentalDuration\":0,\"offlineRentalConfiguration\":{\r\n
         \           \"playbackDurationSeconds\":60,\"storageDurationSeconds\":60\r\n
         \         }\r\n        },\"restriction\":{\r\n          \"@odata.type\":\"#Microsoft.Media.ContentKeyPolicyOpenRestriction\"\r\n
@@ -102,11 +103,11 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '1074'
+      - '1076'
       content-type:
       - application/json; odata.metadata=minimal
       date:
-      - Fri, 08 May 2020 18:50:04 GMT
+      - Thu, 21 Jan 2021 00:34:24 GMT
       expires:
       - '-1'
       odata-version:
@@ -124,7 +125,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1199'
+      - '1197'
     status:
       code: 200
       message: OK
