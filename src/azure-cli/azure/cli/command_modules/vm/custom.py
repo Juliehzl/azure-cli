@@ -2704,6 +2704,7 @@ def create_vmss(cmd, vmss_name, resource_group_name, image=None,
             vmss_resource['properties']['proximityPlacementGroup'] = {
                 'id': proximity_placement_group
             }
+
     else:
         raise CLIError('usage error: --orchestration-mode (Uniform | Flexible)')
 

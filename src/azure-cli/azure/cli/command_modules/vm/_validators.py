@@ -28,6 +28,7 @@ from azure.core.exceptions import ResourceNotFoundError
 from ._client_factory import _compute_client_factory
 from ._actions import _get_latest_image_version
 logger = get_logger(__name__)
+flexible_str = 'Flexible'
 
 
 def validate_asg_names_or_ids(cmd, namespace):
@@ -341,9 +342,17 @@ def _get_storage_profile_description(profile):
 
 
 def _validate_location(cmd, namespace, zone_info, size_info):
+    from azure.cli.core.azclierror import InvalidArgumentValueError
     if not namespace.location:
         get_default_location_from_resource_group(cmd, namespace)
+
         if zone_info:
+            # VMSS Flex only supports regional (no zones specified) or single zone for preview.
+            # Multi zone deployment will be enabled for GA
+            if namespace.orchestration_mode.lower() == flexible_str.lower() and len(zone_info) > 1:
+                raise InvalidArgumentValueError(
+                    'VMSS Flex only supports regional (no zones specified) or single zone for preview.')
+
             sku_infos = list_sku_info(cmd.cli_ctx, namespace.location)
             temp = next((x for x in sku_infos if x.name.lower() == size_info.lower()), None)
             # For Stack (compute - 2017-03-30), Resource_sku doesn't implement location_info property
@@ -390,7 +399,8 @@ def _validate_vm_create_storage_profile(cmd, namespace, for_scale_set=False):
             raise CLIError('Unrecognized image type: {}'.format(image_type))
     else:
         # did not specify image XOR attach-os-disk
-        raise CLIError('incorrect usage: --image IMAGE | --attach-os-disk DISK')
+        if namespace.orchestration_mode.lower() != flexible_str.lower():
+            raise CLIError('incorrect usage: --image IMAGE | --attach-os-disk DISK')
 
     auth_params = ['admin_password', 'admin_username', 'authentication_type',
                    'generate_ssh_keys', 'ssh_dest_key_path', 'ssh_key_value']
@@ -430,7 +440,11 @@ def _validate_vm_create_storage_profile(cmd, namespace, for_scale_set=False):
                      'storage_container_name', 'data_disk_sizes_gb', 'storage_sku'] + auth_params
 
     else:
-        raise CLIError('Unrecognized storage profile: {}'.format(namespace.storage_profile))
+        if namespace.orchestration_mode.lower() != flexible_str.lower():
+            raise CLIError('Unrecognized storage profile: {}'.format(namespace.storage_profile))
+        else:
+            required = []
+            forbidden = []
 
     logger.debug("storage profile '%s'", namespace.storage_profile)
 
@@ -505,7 +519,7 @@ def _validate_vm_create_storage_profile(cmd, namespace, for_scale_set=False):
             namespace.attach_data_disks = [_get_resource_id(cmd.cli_ctx, d, namespace.resource_group_name, 'disks',
                                                             'Microsoft.Compute') for d in namespace.attach_data_disks]
 
-    if not namespace.os_type:
+    if hasattr(namespace, 'os_type') and not namespace.os_type and namespace.os_offer:
         namespace.os_type = 'windows' if 'windows' in namespace.os_offer.lower() else 'linux'
 
     from ._vm_utils import normalize_disk_info
@@ -955,6 +969,9 @@ def _validate_vm_vmss_create_auth(namespace, cmd=None):
     namespace.admin_username = _validate_admin_username(namespace.admin_username, namespace.os_type)
 
     if not namespace.os_type:
+        if getattr(namespace, 'orchestration_mode', None) and namespace.orchestration_mode.lower() \
+                == flexible_str.lower():
+            return
         raise CLIError("Unable to resolve OS type. Specify '--os-type' argument.")
 
     if not namespace.authentication_type:
@@ -1016,6 +1033,8 @@ def _validate_admin_username(username, os_type):
     import re
     if not username:
         raise CLIError("admin user name can not be empty")
+    if not os_type:
+        return
     is_linux = (os_type.lower() == 'linux')
     # pylint: disable=line-too-long
     pattern = (r'[\\\/"\[\]:|<>+=;,?*@#()!A-Z]+' if is_linux else r'[\\\/"\[\]:|<>+=;,?*@]+')
@@ -1357,79 +1376,118 @@ def get_network_lb(cli_ctx, resource_group_name, lb_name):
 
 
 def process_vmss_create_namespace(cmd, namespace):
-    # uniform_str = 'Uniform'
-    flexible_str = 'Flexible'
+    from azure.cli.core.azclierror import InvalidArgumentValueError
     if namespace.orchestration_mode.lower() == flexible_str.lower():
-        validate_tags(namespace)
-        if not namespace.location:
-            get_default_location_from_resource_group(cmd, namespace)
         # The commentted parameters are also forbidden, but they have default values.
         # I don't know whether they are provided by user.
+        namespace.load_balancer_sku = 'Standard'  # lb sku MUST be standard
+        namespace.public_ip_per_vm = True  # default to true for VMSS Flex
+        namespace.disable_overprovision = True  # overprovisioning must be false for vmss flex preview
+        namespace.single_placement_group = False  # SPG must be false for VMSS flex
+        namespace.upgrade_policy_mode = None
+        namespace.use_unmanaged_disk = None
         banned_params = [
-            namespace.accelerated_networking,
-            namespace.admin_password,
+            # namespace.accelerated_networking,
+            # namespace.admin_password,
             # namespace.admin_username,
-            namespace.application_gateway,
+            # namespace.application_gateway,
             # namespace.app_gateway_capacity,
             # namespace.app_gateway_sku,
-            namespace.app_gateway_subnet_address_prefix,
-            namespace.application_security_groups,
-            namespace.assign_identity,
-            namespace.authentication_type,
-            namespace.backend_pool_name,
-            namespace.backend_port,
-            namespace.computer_name_prefix,
-            namespace.custom_data,
-            namespace.data_caching,
-            namespace.data_disk_sizes_gb,
+            # namespace.app_gateway_subnet_address_prefix,
+            # namespace.application_security_groups,
+            # namespace.assign_identity,
+            # namespace.authentication_type,
+            # namespace.backend_pool_name,
+            # namespace.backend_port,
+            # namespace.computer_name_prefix,
+            # namespace.custom_data,
+            # namespace.data_caching,
+            # namespace.data_disk_sizes_gb,
             # namespace.disable_overprovision,
-            namespace.dns_servers,
-            namespace.ephemeral_os_disk,
-            namespace.eviction_policy,
+            # namespace.dns_servers,
+            # namespace.ephemeral_os_disk,
+            # namespace.eviction_policy,
             # namespace.generate_ssh_keys,
-            namespace.health_probe,
-            namespace.image,
+            namespace.health_probe,  # health probe cannot be set for VMSS Flex preview
+            namespace.host_group,  # host group cannot be set for VMSS flex preview
+            # namespace.image,
             # namespace.instance_count,
-            namespace.load_balancer,
-            namespace.nat_pool_name,
-            namespace.load_balancer_sku,
-            namespace.license_type,
-            namespace.max_price,
-            namespace.nsg,
-            namespace.os_caching,
-            namespace.os_disk_name,
-            namespace.os_type,
-            namespace.plan_name,
-            namespace.plan_product,
-            namespace.plan_promotion_code,
-            namespace.plan_publisher,
-            namespace.priority,
-            namespace.public_ip_address,
-            namespace.public_ip_address_allocation,
-            namespace.public_ip_address_dns_name,
-            # namespace.public_ip_per_vm,
+            # namespace.load_balancer,
+            namespace.nat_pool_name,  # nat pool not available for VMSS flex
+            # namespace.load_balancer_sku,
+            # namespace.license_type,
+            # namespace.max_price,
+            # namespace.nsg,
+            # namespace.os_caching,
+            # namespace.os_disk_name,
+            # namespace.os_type,
+            # namespace.plan_name,
+            # namespace.plan_product,
+            # namespace.plan_promotion_code,
+            # namespace.plan_publisher,
+            # namespace.priority,
+            # namespace.public_ip_address,
+            # namespace.public_ip_address_allocation,
+            # namespace.public_ip_address_dns_name,
+            # namespace.public_ip_per_vm,  # Should default to TRUE for VMSS Flex
             # namespace.identity_role,
-            namespace.identity_scope,
-            namespace.secrets,
-            namespace.ssh_dest_key_path,
-            namespace.ssh_key_value,
+            # namespace.identity_scope,
+            # namespace.single_placement_group,  # SPG must be false for VMSS flex
+            namespace.scale_in_policy,  # Scale in policy cannot be set for VMSS Flex public preview
+            # namespace.secrets,
+            # namespace.ssh_dest_key_path,
+            # namespace.ssh_key_value,
             # namespace.storage_container_name,
-            namespace.storage_sku,
-            namespace.subnet,
-            namespace.subnet_address_prefix,
-            namespace.terminate_notification_time,
-            namespace.ultra_ssd_enabled,
-            # namespace.upgrade_policy_mode,
-            # namespace.use_unmanaged_disk,
-            namespace.vm_domain_name,
-            namespace.vm_sku,
+            # namespace.storage_sku,
+            # namespace.subnet,
+            # namespace.subnet_address_prefix,
+            # namespace.terminate_notification_time,
+            # namespace.ultra_ssd_enabled,
+            namespace.upgrade_policy_mode,  # Upgrade policty cannot be set for VMSS Flex preview
+            namespace.use_unmanaged_disk,  # Cannot use unmanaged disks with VMSS Flex
+            # namespace.vm_domain_name,
+            # namespace.vm_sku,
             # namespace.vnet_address_prefix,
-            namespace.vnet_name
+            # namespace.vnet_name
         ]
+
         if any(param is not None for param in banned_params):
             raise CLIError('usage error: In VM mode, only name, resource-group, location, '
                            'tags, zones, platform-fault-domain-count, single-placement-group and ppg are allowed')
+        validate_tags(namespace)
+        if namespace.vm_sku is None:
+            from azure.cli.core.cloud import AZURE_US_GOV_CLOUD
+            if cmd.cli_ctx.cloud.name != AZURE_US_GOV_CLOUD.name:
+                namespace.vm_sku = 'Standard_DS1_v2'
+            else:
+                namespace.vm_sku = 'Standard_D1_v2'
+        _validate_location(cmd, namespace, namespace.zones, namespace.vm_sku)
+        # validate_edge_zone(cmd, namespace)
+        validate_asg_names_or_ids(cmd, namespace)
+        _validate_vm_create_storage_profile(cmd, namespace, for_scale_set=True)
+        _validate_vm_vmss_create_vnet(cmd, namespace, for_scale_set=True)
+
+        _validate_vmss_single_placement_group(namespace) # SPG must be false for VMSS flex
+        _validate_vmss_create_load_balancer_or_app_gateway(cmd, namespace)
+        _validate_vmss_create_subnet(namespace)
+        _validate_vmss_create_public_ip(cmd, namespace)
+        _validate_vmss_create_nsg(cmd, namespace)
+        _validate_vm_vmss_accelerated_networking(cmd.cli_ctx, namespace)
+        _validate_vm_vmss_create_auth(namespace, cmd)
+        if namespace.assign_identity == '[system]':
+            raise InvalidArgumentValueError('usage error: only user assigned indetity is suppoprted for Flex mode.')
+        _validate_vm_vmss_msi(cmd, namespace)  # -- UserAssignedOnly
         _validate_proximity_placement_group(cmd, namespace)
+        _validate_vmss_terminate_notification(cmd, namespace)
+        _validate_vmss_create_automatic_repairs(cmd, namespace)
+        _validate_vmss_create_host_group(cmd, namespace)
+
+        if namespace.secrets:
+            _validate_secrets(namespace.secrets, namespace.os_type)
+
+        if namespace.eviction_policy and not namespace.priority:
+            raise CLIError('usage error: --priority PRIORITY [--eviction-policy POLICY]')
+
         return
 
     # Uniform mode
